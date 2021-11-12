@@ -39,11 +39,12 @@ const Title = () => {
                   "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
               }}
             >
-              {/* <Typography style={{ fontWeight: 600 }} variant={"h2"}>Coffey May</Typography> */}
-        
 
               <Typography className={classes.title} style={{ fontWeight: 900 }} variant={"h2"}> Coffey May </Typography>
-              <Typography className={classes.subtitle}  style={{ fontWeight: 100 }} variant={"h4"}>Software Developer</Typography>
+                <Typography className={classes.subtitle} style={{ fontWeight: 100 }} variant={"h4"}>Software Developer</Typography>
+                <Box pt={1} pb={1}>
+                <Button className={classes.subtitle} color="inherit" variant="outlined">
+                   <Typography  variant={"h5"}>Download Rèsumè </Typography></Button></Box>
             </div>
           </motion.div>
           </Grid>
@@ -67,9 +68,9 @@ const Title = () => {
               <Button style={{display:'block',margin:'0 auto'}}>
                  {/* <img style={{ background: 'radial-gradient(black,black,transparent,transparent)', transform: 'rotate(70deg)',position:'absolute'}} className={classes.memphis} src={`${Memphis}`} alt="memphis design" /> */}
                 <img style={{  background: 'radial-gradient(white,white,transparent,transparent)',filter: 'invert(1)' }} className={classes.memphis} src={`${Memphis}`} alt="memphis design" />
-                
-         
-<img className={classes.memphis}   style={{   background: 'radial-gradient(black,midnightblue,transparent,transparent)',position:'absolute',marginTop:'8vh'}}src={`${ResumePic}`} alt="memphis design" />
+ 
+{/*          
+<img className={classes.memphis}   style={{   background: 'radial-gradient(black,midnightblue,transparent,transparent)',position:'absolute',marginTop:'8vh'}}src={`${ResumePic}`} alt="memphis design" /> */}
 </Button>
             {/* <div style={{
               height:'15em',

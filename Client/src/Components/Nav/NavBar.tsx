@@ -13,7 +13,8 @@ import LogoutButton from "../Auth/LogoutButton";
 import LoginButton from "../Auth/LoginButton";
 import Profile from'../Auth/Profile'
 import { Button } from "@material-ui/core";
-import logo from '../../assets/logo1.png'
+import logo from '../../assets/logo1.png';
+import { Link } from 'react-router-dom';
 
 
 interface Props {
@@ -52,9 +53,13 @@ const Navbar = () => {
     return (
       <ul className={wide}>
          <li><Profile/></li>
-        <li> <Button href="#About" color="inherit"variant="outlined">ABOUT</Button></li>
+        <li> <Button href="#About" color="inherit" variant="outlined">
+          ABOUT
+        </Button></li>
          
-         <li><Button href="#Projects"  color="inherit"variant="outlined">PROJECTS</Button></li> 
+        <li><Button href="#Projects" color="inherit" variant="outlined">
+          PROJECTS</Button>
+        </li>
     
      <li><LoginButton/> </li>
      <li><LogoutButton/></li>   

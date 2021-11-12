@@ -24,14 +24,15 @@ export const useStyles = makeStyles((theme) => ({
     },  
   },
   nameTitle: {
-    marginTop: "35vh",
-    textAlign: "center",
+    marginTop: "22vh",
+
     textTransform: "uppercase",
     fontFamily: "verdana",
     color: "#f5f5f5",
     textShadow: " 0 0 0.05em currentColor",
       [theme.breakpoints.down(960)]: {
-        marginTop: "15vh",
+        marginTop: "20vh",
+        textAlign: "center",
       },  
  },
  splashLeft:{
@@ -47,26 +48,16 @@ memphis: {
   position:'relative',
   top:'15vh',
   [theme.breakpoints.down(960)]: {
-    width:'60%',
-    top: '8vh',
-    left: '10vw',
-  
-      
+  display:'none'
   }, 
-  [theme.breakpoints.down(700)]: {
-    width:'50%',
-    top:'8vh',
-
-  },  
-  [theme.breakpoints.down(550)]: {
-    width:'65%',
-    top:'8vh',
-   
-  }, 
+ 
 },
 
  about:{
-
+   marginTop: '-32vh',
+   [theme.breakpoints.down(960)]: {
+    marginTop: '-32vh',
+  }, 
  },
   splashWrapper: {
     display:'flex',
