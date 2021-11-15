@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { useStyles } from "./styles";
 import Memphis from '../../assets/memphis.png'
-import ResumePic from '../../assets/VaporResume.png'
+// import ResumePic from '../../assets/VaporResume.png'
 const Title = () => {
   const classes = useStyles();
   return (

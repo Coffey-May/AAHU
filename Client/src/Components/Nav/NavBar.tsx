@@ -1,7 +1,6 @@
 import React, { useState} from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import Box from "@material-ui/core/Box";
 import { useStyles } from "./styles";
@@ -14,7 +13,7 @@ import LoginButton from "../Auth/LoginButton";
 import Profile from'../Auth/Profile'
 import { Button } from "@material-ui/core";
 import logo from '../../assets/logo1.png';
-import { Link } from 'react-router-dom';
+
 
 
 interface Props {

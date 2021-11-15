@@ -10,14 +10,16 @@ export default makeStyles((theme) => ({
         width:'100%',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent:'space-between'
+        justifyContent: 'space-between',
+        padding: '6em',
+         textAlign:'center',
     },
     boxWrap: {
         display: 'flex',
         flexDirection: 'row',
-
+            justifyContent: 'space-evenly',
     },
-    // gridItem:{
-    //   paddingLeft:'7em', 
-    // }
+    hr: {
+//    border:'none'
+  }
 }));

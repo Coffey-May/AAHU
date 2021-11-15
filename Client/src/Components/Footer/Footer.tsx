@@ -11,36 +11,43 @@ import useStyles from './styles';
 const Footer = () => {
     const classes = useStyles();
     return (<>
-        <CssBaseline/>
-           <Grid className={classes.foot} container>
-
+        <CssBaseline />
+     
+           <Grid container className={classes.foot}>
+         
+    
                <Grid item xs={12} sm={3} >
-               <Typography  variant="h6" >
+               <Typography style={{fontWeight:'bolder'}}  variant="h5" >
                    Coffey May
-               </Typography>
+                </Typography>
+              
                    <Box><Link href="/" color="inherit">NASHVILLE, TN.</Link></Box>
-                   <Box><CopyrightIcon/>{new Date().getFullYear()}</Box>
+                   <Box pb={2}><CopyrightIcon/>{new Date().getFullYear()}</Box>
                </Grid>
 
                <Grid item xs={12} sm={3}>
-                   <Typography variant={'h6'}>ABOUT US</Typography>
+                <Typography style={{ fontWeight: 'bolder' }} variant={'h5'}>About Us</Typography>
+    
                    <Box><Link href="/" color="inherit">HISTORY</Link></Box>
                    <Box><Link href="/" color="inherit">TESTIMONIALS</Link></Box>
                    <Box><Link href="/" color="inherit">PRODUCT DETAILS</Link></Box>
-                   <Box><Link href="/" color="inherit">FAQ</Link></Box>
+                   <Box pb={2}><Link href="/" color="inherit">FAQ</Link></Box>
                </Grid>
               
                <Grid item xs={12} sm={3}>
-               <Typography variant={'h6'}>STAY CONNECTED</Typography>
-                   <Container className={classes.boxWrap}>
-                   <Box p={1}><Link href="/" color="inherit"><FacebookIcon/></Link></Box>
-                   <Box p={1}><Link href="/" color="inherit"><EmailIcon/></Link></Box>
-                   <Box p={1}><Link href="/" color="inherit"><LinkedInIcon/></Link></Box>
-                   <Box p={1}><Link href="/" color="inherit"><PhoneIphoneIcon/></Link></Box>
-                   </Container>
-               </Grid>
+                <Typography style={{ fontWeight: 'bolder' }} variant={'h5'}>Stay Connected</Typography>
+            
+                   <Grid className={classes.boxWrap}>
+                   <Box mr={0}><Link href="/" color="inherit"><FacebookIcon/></Link></Box>
+                   <Box mr={0}><Link href="/" color="inherit"><EmailIcon/></Link></Box>
+                   <Box mr={0}><Link href="/" color="inherit"><LinkedInIcon/></Link></Box>
+                   <Box mr={0}><Link href="/" color="inherit"><PhoneIphoneIcon/></Link></Box>
+                   </Grid>
+         
+                </Grid>
                
-           </Grid>
+            </Grid>
+        
 </>
     )
 }

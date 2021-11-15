@@ -4,7 +4,7 @@ import About from './About'
 import { useStyles } from "./styles";
 import Aside from "./Aside";
 import { CssBaseline } from "@material-ui/core";
-import Projects from "./Projects/Projects";
+import Projects from "../Projects/Projects";
 // import Paper from '@material-ui/core/Paper';
 
 const Splash = () => {
@@ -14,7 +14,7 @@ const Splash = () => {
     <CssBaseline/>
       <div id="Home" className={classes.splashWrapper}>
      
-        <div className={classes.stars}></div>
+        {/* <div className={classes.stars}></div> */}
         
         <Title />
       

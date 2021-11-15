@@ -27,14 +27,14 @@ const Aside = () => {
        <div className={classes.cloud4}></div>
        <div className={classes.cloud5}></div> */}
           <div style={{zIndex:0, height:'100vh',overflow:'hidden',bottom:'70vh',position:'relative'}}>
-{/*        
+       
     
         <img className={classes.cloud1} style={{overflow:'hidden',
-        marginTop:'-75vh',width:'400vw', height:'auto'}} src={`${cloud1}`} alt="" />  */}
+        marginTop:'-75vh',width:'400vw', height:'auto'}} src={`${cloud1}`} alt="" /> 
             
-        {/* <img className={classes.cloud1}style={{marginTop:'-2vh',overflow:'hidden',width:'250vw', height:'auto'}} src={`${cloud2}`} alt="" />  */}
+        <img className={classes.cloud1}style={{ position:'absolute',marginTop:'-110vh',overflow:'hidden',width:'150vw', height:'auto'}} src={`${cloud2}`} alt="" /> 
 
-        {/* <img className={classes.cloud2} style={{ position:'absolute',marginTop:'-180vh',overflow:'hidden',width:'1000vw', height:'auto'}} src={`${cloud3}`} alt="" /> */}
+        <img className={classes.cloud2} style={{ position:'absolute',marginTop:'-150vh',overflow:'hidden',width:'100vw', height:'auto'}} src={`${cloud3}`} alt="" />
 
               {/* <img className={classes.cloud3} style={{ position:'absolute',marginTop:'-160vh',overflow:'hidden',width:'550vw', height:'auto'}} src={`${cloud4}`} alt="" /> */}
 
