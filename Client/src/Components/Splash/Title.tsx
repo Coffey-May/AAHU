@@ -36,12 +36,14 @@ const Title = () => {
             <div
               style={{
                 WebkitBoxReflect:
-                  "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
+                    "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
+                color:'#ff6a00',zIndex:99
               }}
             >
 
               <Typography className={classes.title} style={{ fontWeight: 900 }} variant={"h2"}> Coffey May </Typography>
                 <Typography className={classes.subtitle} style={{ fontWeight: 100 }} variant={"h4"}>Software Developer</Typography>
+                <Typography className={classes.subtitle} style={{ fontSize: "medium" }} >Full Stack React, Typescript, and NodeJs Services...</Typography>
                 <Box pt={1} pb={1}>
                 <Button className={classes.subtitle} color="inherit" variant="outlined">
                    <Typography  variant={"h5"}>Download Rèsumè </Typography></Button></Box>
@@ -65,7 +67,7 @@ const Title = () => {
               duration: 2,
             }}
           >
-              <Button style={{display:'block',margin:'0 auto'}}>
+              <Button className={classes.btnFocus} style={{display:'block',margin:'0 auto'}}>
                  {/* <img style={{ background: 'radial-gradient(black,black,transparent,transparent)', transform: 'rotate(70deg)',position:'absolute'}} className={classes.memphis} src={`${Memphis}`} alt="memphis design" /> */}
                 <img style={{  background: 'radial-gradient(white,white,transparent,transparent)',filter: 'invert(1)' }} className={classes.memphis} src={`${Memphis}`} alt="memphis design" />
  

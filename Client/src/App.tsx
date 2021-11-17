@@ -21,9 +21,9 @@ function App() {
    
            <Router>
         <Switch>
-          <Route path="/"  exact component={Splash} />
-            <Route path="/multi-step-form" component={MultiStep} />
-    
+          <Route path="/" exact component={Splash} />
+          
+          <Route path="/multi-step-form" component={MultiStep} />
           </Switch>
           </Router>
         <Footer />

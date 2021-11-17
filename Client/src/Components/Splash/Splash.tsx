@@ -22,7 +22,7 @@ const Splash = () => {
        
       </div>
       <About/>
-        <Projects/>
+      <Projects/>
      
     </>
   );

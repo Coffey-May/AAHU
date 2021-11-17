@@ -11,8 +11,11 @@ import {useAuth0} from '@auth0/auth0-react';
 import LogoutButton from "../Auth/LogoutButton";
 import LoginButton from "../Auth/LoginButton";
 import Profile from'../Auth/Profile'
-import { Button } from "@material-ui/core";
+import { Button} from "@material-ui/core";
 import logo from '../../assets/logo1.png';
+import { NavLink } from 'react-router-dom';
+
+
 
 
 
@@ -51,21 +54,24 @@ const Navbar = () => {
   const NavItems = () => {
     return (
       <ul className={wide}>
-         <li><Profile/></li>
-        <li> <Button href="#About" color="inherit" variant="outlined">
-          ABOUT
-        </Button></li>
-         
-        <li><Button href="#Projects" color="inherit" variant="outlined">
-          PROJECTS</Button>
+
+        <li><Profile /></li>
+       
+        <li>
+          <Button href="/#About" color="inherit" variant="outlined">
+            ABOUT
+          </Button>
+        </li>
+  
+        <li>
+          <Button href="/#Projects" color="inherit" variant="outlined">
+            PROJECTS
+          </Button>
         </li>
     
-     <li><LoginButton/> </li>
-     <li><LogoutButton/></li>   
-        
-    
-      
-      </ul>
+        <li><LoginButton/> </li>
+        <li><LogoutButton /></li>
+     </ul>
     );
   };
   if (isLoading) return <div>Loading...</div>
@@ -81,7 +87,7 @@ const Navbar = () => {
             color="inherit"
             aria-label="menu"
             className={classes.menuButton}
-            href="#Home"
+            href="/#Home"
           >
        <img style={{height:'60px'}} src={`${logo}`} alt="" />
           </IconButton>

@@ -1,8 +1,6 @@
 
 import useStyles from './styles';
 
-
-
 function OtherInfo({ formData, setFormData }) {
     const classes = useStyles();
     return (

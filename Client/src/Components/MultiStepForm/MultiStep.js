@@ -4,7 +4,6 @@ import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Stepper } from 'react-form-stepper';
 import useStyles from './styles';
-import axios from "axios";
 
 //   type User = {
 //   email: string | null;
@@ -41,15 +40,6 @@ const Form = () => {
     });
 
     const classes = useStyles();
-
-    axios.get('http://localhost:5000', {
-        headers: {
-            'Content-type': 'application/json',
-
-        }
-    })
-        .then((response) => console.log("resopnse:", response))
-
 
     const FormTitles = ["Sign Up", "Personal Info", "Other"];
 
@@ -108,6 +98,7 @@ const Form = () => {
                     >
                         {page === FormTitles.length - 1 ? "Submit" : "Next"}
                     </button>
+
                 </div>
 
             </div>

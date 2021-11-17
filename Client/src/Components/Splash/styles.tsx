@@ -17,6 +17,11 @@ export const useStyles = makeStyles((theme) => ({
       letterSpacing:' .3rem',
     },  
   },
+  vanish: {
+     [theme.breakpoints.down(1400)]: {
+      display:'none'
+    }, 
+  },
   subtitle: {
     fontSize:'2.5rem',
     [theme.breakpoints.down(550)]: {
@@ -52,9 +57,17 @@ memphis: {
   }, 
  
 },
+  btnFocus: {
+ '&:hover': {
+        background: 'none',
+    },
 
+},
  about:{
    marginTop: '-32vh',
+    [theme.breakpoints.up(1400)]: {
+    marginTop: '-32h',
+  }, 
    [theme.breakpoints.down(960)]: {
     marginTop: '-32vh',
   }, 
