@@ -4,6 +4,7 @@ import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Stepper } from 'react-form-stepper';
 import useStyles from './styles';
+import axios from "axios";
 
 //   type User = {
 //   email: string | null;
@@ -38,6 +39,16 @@ const Form = () => {
         nationality: "",
         other: "",
     });
+
+    axios.get('http://localhost:5000', {
+        headers: {
+            'Content-type': 'application/json',
+
+        }
+    })
+        .then((response) => console.log("resopnse:", response))
+
+
 
     const classes = useStyles();
 
@@ -76,7 +87,6 @@ const Form = () => {
                 </div>
 
                 <div>{PageDisplay()}</div>
-
                 <div className="footer">
                     <button
                         disabled={page === 0}
