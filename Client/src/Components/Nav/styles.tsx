@@ -1,12 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
+
 export const useStyles = makeStyles(theme => ({
 
     nav: {
         // backgroundColor: 'black',
     minHeight:'10vh',
-        background: 'linear-gradient(rgba(0, 0, 0, 1) ,transparent)',
-        boxShadow: 'none'
+        background: `linear-gradient(rgba(0, 0, 0, 1) ,transparent)`,
+    // background: 'rgba(0, 0, 0, .7)',
+    boxShadow: 'none',
+      
     },
     menuButton: {
         marginRight: theme.spacing(2),

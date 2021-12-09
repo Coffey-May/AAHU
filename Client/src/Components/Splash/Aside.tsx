@@ -1,6 +1,6 @@
 
 // import { motion } from 'framer-motion'
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useStyles } from "./styles";
 import Box from '@material-ui/core/Box'
 
@@ -17,38 +17,63 @@ import cloud3 from "../../assets/cloud3.png";
 import cloud4 from "../../assets/cloud4.png";
 import cloud5 from "../../assets/cloud5.png";
 
+
+const cloudToggle = () => {
+ 
+    document.addEventListener('scroll', function (e) {
+
+   
+    let el = document.querySelector<HTMLElement>('.vanish')
+    // el!.style.opacity = ".8"
+    el!.style.display = 'block'
+    //        var currScrollPos2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (window.pageYOffset <= 0) {
+      document.querySelector<HTMLElement>('.vanish')!.style.display = "block"
+    }
+    else if (window.pageYOffset > 0 ) {
+      document.querySelector<HTMLElement>('.vanish')!.style.display = "none"
+    }
+
+    })
+}
+
+
+
 const Aside = () => {
     const classes = useStyles()
+
+     useEffect(() => {
+    cloudToggle()
+  
+  }, [])
     return (
         <>
-       {/* <div className={classes.cloud1}></div>
-       <div className={classes.cloud2}></div>
-       <div className={classes.cloud3}></div>
-       <div className={classes.cloud4}></div>
-       <div className={classes.cloud5}></div> */}
-          <div className={classes.vanish} style={{zIndex:0, height:'100vh',overflow:'hidden',bottom:'70vh',position:'relative'}}>
-       
-    
-        <img className={classes.cloud1} style={{overflow:'hidden',
-        marginTop:'-75vh',width:'400vw', height:'auto'}} src={`${cloud1}`} alt="" /> 
-            
-        <img className={classes.cloud1}style={{ position:'absolute',marginTop:'-110vh',overflow:'hidden',width:'150vw', height:'auto'}} src={`${cloud2}`} alt="" /> 
-
-        <img className={classes.cloud2} style={{ position:'absolute',marginTop:'-150vh',overflow:'hidden',width:'100vw', height:'auto'}} src={`${cloud3}`} alt="" />
-
-              <img className={classes.cloud3} style={{ position:'absolute',marginTop:'-160vh',overflow:'hidden',width:'170vw', height:'auto'}} src={`${cloud4}`} alt="" />
-
-              <img className={classes.cloud5} style={{ position:'absolute',marginTop:'-140vh',overflow:'hidden',width:'170vw', height:'auto'}} src={`${cloud5}`} alt="" />
-         
+            <div className="vanish">
+            <div className={classes.vanish} style={{marginTop:'70vh', zIndex: 0, height: '110vh', overflow: 'hidden', bottom: '70vh', position: 'relative',opacity:'.3' }}>
 
 
-             
-    
-          </div>
-    
+                <img className={classes.cloud1} style={{
+                    overflow: 'hidden',
+                    marginTop: '-75vh', width: '400vw', height: 'auto'
+                }} src={`${cloud1}`} alt="" />
+
+                <img className={classes.cloud1} style={{ position: 'absolute', marginTop: '-110vh', overflow: 'hidden', width: '150vw', height: 'auto' }} src={`${cloud2}`} alt="" />
+
+                <img className={classes.cloud2} style={{ position: 'absolute', marginTop: '-150vh', overflow: 'hidden', width: '100vw', height: 'auto' }} src={`${cloud3}`} alt="" />
+
+                <img className={classes.cloud3} style={{ position: 'absolute', marginTop: '-160vh', overflow: 'hidden', width: '170vw', height: 'auto' }} src={`${cloud4}`} alt="" />
+
+                <img className={classes.cloud5} style={{ position: 'absolute', marginTop: '-140vh', overflow: 'hidden', width: '170vw', height: 'auto' }} src={`${cloud5}`} alt="" />
+
+
+
+
+
+            </div>
+</div>
         </>
 
     )
 }
 
-export default Aside
+export default React.memo(Aside)

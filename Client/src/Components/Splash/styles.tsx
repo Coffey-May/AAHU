@@ -1,6 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
 import image from "../../assets/gradientSky.jpeg";
-import image1 from "../../assets/stars.jpeg";
+// import image1 from "../../assets/stars.jpeg";
+import image1 from "../../assets/sun.gif";
+import dots from "../../assets/dots.png";
 
 // let pine = '#157A6E'
 // let shamRock = '#157A6E',
@@ -11,10 +13,13 @@ import image1 from "../../assets/stars.jpeg";
 export const useStyles = makeStyles((theme) => ({
   title: {
     fontSize:'4rem',
-    letterSpacing:' .4rem',
+    // letterSpacing: ' .4rem',
+    overflow:'hidden',
     [theme.breakpoints.down(550)]: {
-      fontSize:'2.75rem',
-      letterSpacing:' .3rem',
+      fontSize:'3em',
+      // letterSpacing: ' .3rem',
+   
+    
     },  
   },
   vanish: {
@@ -23,21 +28,28 @@ export const useStyles = makeStyles((theme) => ({
     }, 
   },
   subtitle: {
-    fontSize:'2.5rem',
+    fontSize: '2.5rem',
     [theme.breakpoints.down(550)]: {
-      fontSize:'1.75rem',
+      fontSize:'.75rem',
+    },  
+  },
+    subtitle1: {
+    fontSize: '2.5rem',
+    [theme.breakpoints.down(550)]: {
+      fontSize: '1.25rem',
+
     },  
   },
   nameTitle: {
-    marginTop: "22vh",
-
+    marginTop: "18vh",
     textTransform: "uppercase",
     fontFamily: "verdana",
-    color: "#f5f5f5",
+    color: "#f5f5f5", 
     textShadow: " 0 0 0.05em currentColor",
-      [theme.breakpoints.down(960)]: {
+      [theme.breakpoints.down(660)]: {
         marginTop: "20vh",
         textAlign: "center",
+      width:'70vw'
       },  
  },
  splashLeft:{
@@ -48,41 +60,72 @@ memphis: {
   zIndex:99,
   overflow:'hidden',
   display:'block',
-  width:'90%',
+  width:'50%',
   margin:'0 auto',
   position:'relative',
-  top:'15vh',
+  top:'25vh',
   [theme.breakpoints.down(960)]: {
   display:'none'
   }, 
  
 },
   btnFocus: {
+     fontSize: '4em',
  '&:hover': {
         background: 'none',
     },
+    [theme.breakpoints.down(960)]: {
+      display: 'none',
+      fontSize:'2em'
+  },
 
 },
- about:{
-   marginTop: '-32vh',
+  about: {
+    backgroundImage: `url(${dots})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '40vw',
+    backgroundPosition:'right 0px',
+   marginTop: '-15vh',
     [theme.breakpoints.up(1400)]: {
-    marginTop: '-32h',
+    marginTop: '-15vh',
   }, 
    [theme.breakpoints.down(960)]: {
-    marginTop: '-32vh',
+    marginTop: '-15vh',
   }, 
  },
   splashWrapper: {
     display:'flex',
-    flexDirection:'row',
-    flexWrap:'wrap',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     minHeight: "100vh",
+  
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 255, 0.1), rgba(255, 254, 199, 0.5)), 
-        url(${image})`,
-    animation: "$move-twink-back 2s infinite",
+    width:'100vw',
+    // backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 255, 0.1), rgba(255, 254, 199, 0.5)), 
+    //     url(${image})`,
+    backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255,0), rgba(100,0,0,0.4)), 
+        url(${image1})`,
+ 
+    // animation: "$move-twink-back 2s infinite",
+       
   },
+
+overlay :{
+  position: 'absolute',
+  top: 0,
+  left: 0,
+
+  bottom:0,
+  width: '100%',
+  // height: '80%',
+  background: 'rgb(177,177,177)',
+ 
+  opacity: '0.5',
+   [theme.breakpoints.down(960)]: {
+    //  height: '60vh',
+  }, 
+},
 
   stars: {
 
@@ -154,70 +197,10 @@ left:-100,
 
    },
 
- },
+  },
+  hide: {
+   
+ }
 
-
-
-  // star: {
-  //   position: 'absolute',
-
-  //   top:Math.floor(Math.random() * 600) + 1,
-  //   width: Math.floor(Math.random() * 2.2) + 1,
-  //   height: Math.floor(Math.random() * 2.2) + 1,
-  //   background: 'rgba(255,255,255,0.0)',
-  //   borderRadius: '99px',
-  //   animation: "$twinkle 2s infinite",
-  //   margin: Math.random() * Math.random(),
-
-  // },
-
-  // "@keyframes twinkle" :{
-  //  "0%" :{
-  //     transform: 'scale(1, 1)',
-  //     background: 'rgba(255,255,255,0.0)',
-  //     animationTimingFunction: `${rand}`,
-
-  //   },
-  //   "60%" :{
-  //     transform: 'scale(0.8, 0.8)',
-  //     background: 'rgba(255,255,255,.7)',
-  //     animationTimingFunction: 'ease-out',
-
-  //   },
-  //  "80%":{
-  //     background: 'rgba(255,255,255,0.00)',
-  //     transform: 'scale(1, 1)',
-
-  //   },
-  //   "100%": {
-  //     background: 'rgba(255,255,255,0.0)',
-  //     transform: 'scale(1, 1)',
-
-  //   },
-
-  // },
 }));
 
-// position: 'absolute',
-// top: '50%',
-// right: '50%',
-// transform: 'translate(50%,-50%)',
-// textTransform: 'uppercase',
-// fontFamily: 'verdana',
-// // font-size: '12em',
-// // font-weight: 700;
-// color: '#f5f5f5',
-// textShadow: '1px 1px 1px #919191,
-//     1px 2px 1px #919191,
-//     1px 3px 1px #919191,
-//     1px 4px 1px #919191,
-//     1px 5px 1px #919191,
-//     1px 6px 1px #919191,
-//     1px 7px 1px #919191,
-//     1px 8px 1px #919191,
-//     1px 9px 1px #919191,
-//     1px 10px 1px #919191,
-// 1px 18px 6px rgba(16,16,16,0.4),
-// 1px 22px 10px rgba(16,16,16,0.2),
-// 1px 25px 35px rgba(16,16,16,0.2),
-// 1px 30px 60px rgba(16,16,16,0.4)',

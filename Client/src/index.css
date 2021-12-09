@@ -5,10 +5,12 @@
   position: relative;
   height: 100%;
 } */
+
 * {
   outline-color: transparent;
   /* border: none; */
   scroll-behavior: smooth;
+
 }
 /* hr{
   color:white;

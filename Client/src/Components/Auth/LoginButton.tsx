@@ -7,11 +7,11 @@ const LoginButton = () => {
     return (
 
         !isAuthenticated ?
-            <Button color="inherit" variant="outlined"
+            <Button color="inherit"
                 className="btn btn-primary btn-block"
                 onClick={() => loginWithRedirect()}
             >
-                Log In
+             <h3>Log In</h3>
             </Button>
             : null
     );

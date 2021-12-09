@@ -13,14 +13,18 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function ImgMediaCard( {projectData} : {projectData:any} ,{index} : {index:any}) {
+export default function ImgMediaCard({ projectData }: { projectData: any }, { index }: { index: any }) {
+    
+// {projectData.image.includes("http") ?"blank":null}
+
+//  let condition = true
     return (
 
-        <Grid container spacing={2} id="Projects" style={{ color: 'white', padding: '2em', minHeight: '70vh', width: '100%', margin: '0 auto', backgroundColor: `${projectData.bgColor}`, display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center' }} >
+        <Grid container  id="Projects" style={{ color: 'white', padding: '2em', minHeight: '70vh', width: '100%', margin: '0 auto', backgroundColor: `${projectData.bgColor}`, display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center' }} >
 
-            <Grid spacing={2} item xs={10} sm={5} md={5} lg={4}>
-                <h1>{projectData.title}</h1>
-                <p>{projectData.description}</p>
+            <Grid  item xs={10} sm={5} md={5} lg={4}>
+                <h1 style={{fontSize:'xx-large'}}>{projectData.title}</h1>
+                <h2>{projectData.description}</h2>
             </Grid>
 
             <Grid item xs={10} sm={5} md={5} lg={4} >
@@ -29,8 +33,8 @@ export default function ImgMediaCard( {projectData} : {projectData:any} ,{index}
                         component="img"
                         alt="green iguana"
                         height="240"
-                        image={projectData.imageMultiForm}
-                    />
+                        image={projectData.image}
+                   />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
                             Lizard
@@ -42,7 +46,10 @@ export default function ImgMediaCard( {projectData} : {projectData:any} ,{index}
                     </CardContent>
                     <CardActions>
                         <Button>
-                            <a href={projectData.linkMultiForm}>View Project </a>
+                            <a href={projectData.linkMultiForm}
+                            target={projectData.linkMultiForm.includes("http")?"_blank":undefined}
+                            >View Project </a>
+
                             {/* <Link target="_blank" to={projectData.linkMultiForm}>View Project </Link> */}
                         </Button>
 

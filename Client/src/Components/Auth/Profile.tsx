@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <div >
 
-            {!user ? null : <h3 style={{ margin: '0 auto', paddingTop: '5px' }}>Welcome, {JSON.stringify(user.name, null, 2)}</h3>}
+            {!user ? null : <h3 style={{ margin: '0 auto', paddingTop: '5px' }}>Welcome, {JSON.stringify(user.name, null, 2)}...</h3>}
         </div>
     )
 }
