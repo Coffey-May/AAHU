@@ -27,7 +27,7 @@ const About = () => {
   return (
     <>
 
-      <div id="About" className={classes.about} style={{  zIndex: 99,  minWidth: '100vw', backgroundColor: '#FFFFF3' }}>
+      <div id="About" className={classes.about} style={{ zIndex: 99,  minWidth: '100vw', backgroundColor: '#FFFFF3' }}>
         <Container>
           <img style={{ background: 'radial-gradient(black,black,transparent,transparent)', transform: 'rotate(70deg)', position: 'absolute', width: '5vw' }} src={`${Memphis}`} alt="memphis design" />
           <div style={{ width: '80%', margin: '0 auto' }}>
@@ -35,7 +35,7 @@ const About = () => {
             <h1 style={{ padding: '3em 0em 2em 0em ', color: '#d1006c', borderBottom:'1px solid #d1006c' }}>ABOUT ME</h1>
 
 
-            <p style={width < 900 ? { columnCount: 1,padding:'2em 0em 6em 0em',lineHeight:'2em' } : { columnCount: 2 ,padding:'2em 0em 6em 0em',lineHeight:'2em' }}  > “That brain of mine is something more than merely mortal; as time will show.”
+            <p style={width < 900 ? { columnCount: 1,padding:'2em 0em 6em 0em',lineHeight:'2em',fontSize:'1.25em' } : { columnCount: 2 ,padding:'2em 0em 6em 0em',lineHeight:'2em',fontSize:'1.25em' }}  > “That brain of mine is something more than merely mortal; as time will show.”
 
 “If you can’t give me poetry, can’t you give me poetical science?”
 

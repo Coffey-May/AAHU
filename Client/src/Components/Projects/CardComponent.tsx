@@ -20,11 +20,14 @@ export default function ImgMediaCard({ projectData }: { projectData: any }, { in
 //  let condition = true
     return (
 
-        <Grid container  id="Projects" style={{ color: 'white', padding: '2em', minHeight: '70vh', width: '100%', margin: '0 auto', backgroundColor: `${projectData.bgColor}`, display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center' }} >
+        <Grid container  id="Projects" style={{border:` 25px solid ${projectData.bgColor}`, color: 'rgba(100,100,100)', padding: '2em', minHeight: '70vh', width: '100%', margin: '0 auto', backgroundColor: 'rgba(245,245,245)', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'center',boxShadow: 'inset 1px 1px 15px 5px #000000, 1px 1px 35px 5px rgba(0,0,0,0.76)'}} >
 
-            <Grid  item xs={10} sm={5} md={5} lg={4}>
-                <h1 style={{fontSize:'xx-large'}}>{projectData.title}</h1>
-                <h2>{projectData.description}</h2>
+            <Grid item xs={10} sm={5} md={5} lg={4} style={{padding:'0em 0em 2em 0em'}}>
+            
+                <h1 style={{fontSize: 'xx-large',color:`${projectData.bgColor}` }}>{projectData.title}</h1>
+                    <hr />
+                <h3 style={{ lineHeight: '1.25em', fontSize: '1.5em' }}>{projectData.description}</h3>
+                 <i className="devicon-github-original"  style={{fontSize:'2em'}} ></i>
             </Grid>
 
             <Grid item xs={10} sm={5} md={5} lg={4} >
@@ -54,7 +57,7 @@ export default function ImgMediaCard({ projectData }: { projectData: any }, { in
                         </Button>
 
                         <a href={projectData.linkMultiForm}></a>
-
+  
                     </CardActions>
                 </Card>
             </Grid>
