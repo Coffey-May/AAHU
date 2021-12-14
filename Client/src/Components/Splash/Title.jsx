@@ -77,7 +77,7 @@ const Title = () => {
 
                 <Typography className={classes.title} style={{ fontWeight: 900, }} variant={"h2"}> Coffey May </Typography>
                 <Typography className={classes.subtitle1} style={{ fontWeight: 600 }} variant={"h5"}>Software Developer</Typography>
-                <Typography className={classes.subtitle} style={{ padding: ' 20px 0px 25px 0px', fontSize: "medium", fontWeight: 300 }} >Progressive Web Applications in React, Typescript, and NodeJs.</Typography>
+                <Typography className={classes.subtitle} style={{ padding: ' 20px 0px 25px 0px', fontSize: "medium", fontWeight: 300 }} >Progressive Web Applications in React, NodeJs, JAM Stack and more...</Typography>
 
                 <Box pt={1} pb={1}>
                   <a style={{ textDecoration: 'none' }} href={Resume} target="blank">

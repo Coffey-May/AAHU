@@ -27,7 +27,7 @@ const About = () => {
   return (
     <>
 
-      <div id="About" className={classes.about} style={{ zIndex: 99,  minWidth: '100vw', backgroundColor: '#FFFFF3' }}>
+      <div id="About" className={classes.about} style={{ zIndex: 99,  minWidth: '100vw', backgroundColor: 'rgba(245,245,245)' }}>
         <Container>
           <img style={{ background: 'radial-gradient(black,black,transparent,transparent)', transform: 'rotate(70deg)', position: 'absolute', width: '5vw' }} src={`${Memphis}`} alt="memphis design" />
           <div style={{ width: '80%', margin: '0 auto' }}>

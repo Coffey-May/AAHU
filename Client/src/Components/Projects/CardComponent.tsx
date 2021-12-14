@@ -20,7 +20,7 @@ export default function ImgMediaCard({ projectData }: { projectData: any }, { in
 //  let condition = true
     return (
 
-        <Grid container  id="Projects" style={{border:` 25px solid ${projectData.bgColor}`, color: 'rgba(100,100,100)', padding: '2em', minHeight: '70vh', width: '100%', margin: '0 auto', backgroundColor: 'rgba(245,245,245)', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'center',boxShadow: 'inset 1px 1px 15px 5px #000000, 1px 1px 35px 5px rgba(0,0,0,0.76)'}} >
+        <Grid container  id="Projects" style={{border:` 25px solid ${projectData.bgColor}`, color: 'rgba(100,100,100)', padding: '2em', minHeight: '70vh', width: '100%', margin: '0 auto', backgroundColor: 'rgba(245,245,245)', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'center',boxShadow: 'inset 1px 1px 15px 5px #000000'}} >
 
             <Grid item xs={10} sm={5} md={5} lg={4} style={{padding:'0em 0em 2em 0em'}}>
             
