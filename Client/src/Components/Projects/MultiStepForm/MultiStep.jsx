@@ -1,4 +1,4 @@
-import React, { FC, useState ,useEffect} from "react";
+import React, { FC, useState, useEffect } from "react";
 import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
@@ -30,8 +30,7 @@ import { ContactSupportOutlined } from "@material-ui/icons";
 //  other: string;
 // };
 
-const Form = ({ }) => {
-  
+const Form = ({}) => {
   let initialState = {
     email: "",
     password: "",
@@ -41,22 +40,20 @@ const Form = ({ }) => {
     userName: "",
     nationality: "",
     other: "",
-
-  }
-  
+  };
+  const [error, setError] = useState(false);
   const [page, setPage] = useState(0);
- const [list, setList] = useState([])
+  const [list, setList] = useState([]);
   const [formData, setFormData] = useState(initialState);
   useEffect(() => {
-   setList([{...formData}])
-  }, [])
+    setList([{ ...formData }]);
+  }, []);
 
- 
   const classes = useStyles();
 
-//   const handleAdd = (formData) => {
-//   setList();
-// }
+  //   const handleAdd = (formData) => {
+  //   setList();
+  // }
 
   // axios
   //   .get("http://localhost:5000", {
@@ -70,21 +67,48 @@ const Form = ({ }) => {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <SignUpInfo formData={formData} setFormData={setFormData} />;
+      return (
+        <SignUpInfo
+          setError={setError}
+          formData={formData}
+          setFormData={setFormData}
+        />
+      );
     } else if (page === 1) {
-      return <PersonalInfo formData={formData} setFormData={setFormData} />;
+      return (
+        <PersonalInfo
+          setError={setError}
+          formData={formData}
+          setFormData={setFormData}
+        />
+      );
     } else {
-      return <OtherInfo formData={formData} setFormData={setFormData} />;
+      return (
+        <OtherInfo
+          setError={setError}
+          formData={formData}
+          setFormData={setFormData}
+        />
+      );
     }
   };
 
   const handleDelete = (id) => {
-    let filteredList = list.filter((el) => (
-      el.nationality != id
-    ))
-      
-  setList(filteredList)
-  }
+    let filteredList = list.filter((el) => el.nationality != id);
+
+    setList(filteredList);
+  };
+
+  const checkZero = () => {
+    if (
+      formData.email === "" ||
+      formData.password == "" ||
+      formData.confirmPassword == ""
+    ) {
+      setError(true);
+      return;
+    }
+  };
 
   return (
     <div
@@ -132,6 +156,13 @@ const Form = ({ }) => {
 
             <div>
               <Button
+                style={{
+                  backgroundColor: "rgba(150,150,150)",
+                  borderRadius: "15px",
+                  width: "10vw",
+                  color: "white",
+                  margin: "1em",
+                }}
                 disabled={page === 0}
                 onClick={() => {
                   setPage((currPage) => currPage - 1);
@@ -140,16 +171,54 @@ const Form = ({ }) => {
                 Prev
               </Button>
               <Button
+                style={{
+                  backgroundColor: "rgba(0,150,0)",
+                  borderRadius: "15px",
+                  width: "10vw",
+                  color: "white",
+                  margin: "1em",
+                }}
                 onClick={() => {
+                  if (page === FormTitles.length - 3) {
+                    //  alert('first')
+                    if (
+                      formData.email === "" ||
+                      formData.password === "" ||
+                      formData.confirmPassword === ""
+                    ) {
+                      setError(true);
+                      return;
+                    }
+                  }
+                  if (page === FormTitles.length - 2) {
+                    // alert("second");
+                    if (
+                      !formData.firstName ||
+                      !formData.lastName ||
+                      !formData.userName
+                    ) {
+                      setError(true);
+                      return;
+                    }
+                  }
+
                   if (page === FormTitles.length - 1) {
+                    if (
+                      !formData.nationality ||
+                      !formData.other
+                    ) {
+                      setError(true);
+                      return;
+                    }
+
                     alert("FORM SUBMITTED");
-                    console.log(formData, list);
-                    let newArr = [...list]
-                    console.log("new",newArr)
-                    newArr.push(formData)
-                    setList(newArr)
-                    setFormData(initialState)
-                    setPage(0)
+                    // console.log(formData, list);
+                    let newArr = [...list];
+                    console.log("new", newArr);
+                    newArr.push(formData);
+                    setList(newArr);
+                    setFormData(initialState);
+                    setPage(0);
                   } else {
                     setPage((currPage) => currPage + 1);
                   }
@@ -157,9 +226,12 @@ const Form = ({ }) => {
               >
                 {page === FormTitles.length - 1 ? "Submit" : "Next"}
               </Button>
+              {error && (
+                <b style={{ color: "tomato" }}>Please fill out all fields...</b>
+              )}
             </div>
           </div>
-          <MessageList list={list} handleDelete={handleDelete}/>
+          <MessageList key={formData.firstName} list={list} handleDelete={handleDelete} />
         </div>
       </div>
     </div>

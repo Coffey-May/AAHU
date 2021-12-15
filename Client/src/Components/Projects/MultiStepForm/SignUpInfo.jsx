@@ -12,7 +12,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 
-function SignUpInfo({ formData, setFormData }) {
+function SignUpInfo({ formData, setFormData, setError }) {
   const classes = useStyles();
   return (
     <>
@@ -33,53 +33,58 @@ function SignUpInfo({ formData, setFormData }) {
               Sign Up
             </Typography>
             <TextField
-              margin="normal"
-              required
+          margin="normal"
+          required
               
-              name="e-mail"
-              label="Email"
-              id="e-mail"
-              autoComplete="e-mail"
-              autoFocus
-              type="text"
-              placeholder="Email..."
-              value={formData.email}
-              onChange={(event) =>
-                setFormData({ ...formData, email: event.target.value })
-              }
-            />
-            <TextField
-              required
-           
-              name="password"
-              label="PassWord"
-              autoFocus
-              id="password"
-              autoComplete="password"
-              type="text"
-              placeholder="Password..."
-              value={formData.password}
-              onChange={(event) =>
-                setFormData({ ...formData, password: event.target.value })
-              }
-            />
-            <TextField
-              required
+          name="e-mail"
+          label="Email"
+          id="e-mail"
+          autoComplete="e-mail"
+          autoFocus
+          type="text"
+          placeholder="Email..."
+          value={formData.email}
+          onChange={(event) => {
             
-              name="confirm-password"
-              label="Confirm PassWord"
-              autoFocus
-              id="confirm-password"
-              autoComplete="confirm-password"
-              type="text"
-              placeholder="Confirm Password..."
-              value={formData.confirmPassword}
-              onChange={(event) =>
-                setFormData({
-                  ...formData,
-                  confirmPassword: event.target.value,
-                })
-              }
+            setError(false)
+            setFormData({ ...formData, email: event.target.value })
+          }}
+        />
+            <TextField
+          required
+           
+          name="password"
+          label="PassWord"
+          autoFocus
+          id="password"
+          autoComplete="password"
+          type="text"
+          placeholder="Password..."
+          value={formData.password}
+          onChange={(event) => {
+            setError(false)
+            setFormData({ ...formData, password: event.target.value })
+          }
+          }
+            />
+            <TextField
+          required
+            
+          name="confirm-password"
+          label="Confirm PassWord"
+          autoFocus
+          id="confirm-password"
+          autoComplete="confirm-password"
+          type="text"
+          placeholder="Confirm Password..."
+          value={formData.confirmPassword}
+          onChange={(event) => {
+            setError(false)
+            setFormData({
+              ...formData,
+              confirmPassword: event.target.value,
+            })
+          }}
             />
           </Box>
        

@@ -15,7 +15,7 @@ import Container from "@material-ui/core/Container";
 
 // { projectData }: { projectData: any }, { index }: { index: any }
 
-function OtherInfo({ formData, setFormData }) {
+function OtherInfo({ formData, setFormData,setError }) {
   const classes = useStyles();
   return (
     <>
@@ -42,6 +42,7 @@ function OtherInfo({ formData, setFormData }) {
           placeholder="Nationality..."
           value={formData.nationality}
           onChange={(e) => {
+       
             setFormData({ ...formData, nationality: e.target.value });
           }}
         />
@@ -57,6 +58,7 @@ function OtherInfo({ formData, setFormData }) {
           placeholder="Other..."
           value={formData.other}
           onChange={(e) => {
+             
             setFormData({ ...formData, other: e.target.value });
           }}
         />

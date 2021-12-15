@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { RecipeComponent } from './RecipeComponent';
+require('dotenv').config();
 
-const APP_ID = 'bda981b2';
-const API_KEY = '51d23d506ab149659791d984fa1a008f'
+const APP_ID = process.env.REACT_APP_APP_ID
+const API_KEY = process.env.REACT_APP_API_KEY2
 
 export const Recipe = () => {
     const [inputText, setInputText] = useState('')
@@ -18,7 +19,7 @@ export const Recipe = () => {
             const data = await response.json()
 
             setRecipes(data.hits)
-
+            console.log(data)
         }
         getRecipes()
     }, [query])

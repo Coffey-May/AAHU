@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 // import Avatar from '@mui/material/Avatar';
 import Button from "@material-ui/core/Button";
@@ -14,8 +14,10 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import useStyles from "./styles";
 
-function PersonalInfo({ formData, setFormData }) {
+function PersonalInfo({ formData, setFormData,setError }) {
   const classes = useStyles();
+
+
   return (
     <>
       <CssBaseline />
@@ -42,6 +44,7 @@ function PersonalInfo({ formData, setFormData }) {
           placeholder="First Name..."
           value={formData.firstName}
           onChange={(e) => {
+         setError(false)
             setFormData({ ...formData, firstName: e.target.value });
           }}
         />
@@ -56,6 +59,8 @@ function PersonalInfo({ formData, setFormData }) {
           placeholder="Last Name..."
           value={formData.lastName}
           onChange={(e) => {
+           
+         setError(false)
             setFormData({ ...formData, lastName: e.target.value });
           }}
         />
@@ -68,9 +73,10 @@ function PersonalInfo({ formData, setFormData }) {
           autoComplete="user-name"
           type="text"
           placeholder="Username..."
-          value={formData.username}
+          value={formData.userName}
           onChange={(e) => {
-            setFormData({ ...formData, username: e.target.value });
+         setError(false)
+            setFormData({ ...formData, userName: e.target.value });
           }}
         />
       </Box>

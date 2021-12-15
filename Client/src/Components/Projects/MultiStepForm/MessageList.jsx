@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button"
 const MessageList = ({list, handleDelete}) => {
   const classes = useStyles();
   return (
-    <div
+    <div  
       className={classes.messages}
       style={{
         backgroundColor: "rgba(245,245,245)",
@@ -18,7 +18,7 @@ const MessageList = ({list, handleDelete}) => {
       <div>
         {list.map((elem) => (
 
-          <div style={{display:'flex',flexDirection:'row'}} >
+          <div key={elem.firstName} style={{display:'flex',flexDirection:'row'}} >
           <h2>{elem.nationality}dfdf</h2>
             <Button onClick={()=>handleDelete(elem.nationality)}>X</Button>
             </div>
