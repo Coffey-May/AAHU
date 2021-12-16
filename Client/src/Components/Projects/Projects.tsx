@@ -55,7 +55,7 @@ const projectData = [
     description: `${decriptions.Recipe}`,
     image: `${Memphis}`,
     linkMultiForm: "/recipe",
-    bgColor: "#724CF9",
+    bgColor: "#00F5D4",
   },
 ];
 
