@@ -13,7 +13,6 @@ import LoginButton from "../Auth/LoginButton";
 import Profile from "../Auth/Profile";
 import { Button } from "@material-ui/core";
 import logi3 from "../../assets/logi3.png";
-import { NavLink } from "react-router-dom";
 import Container from "@material-ui/core/Container";
 
 interface Props {

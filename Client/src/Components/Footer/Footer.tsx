@@ -1,16 +1,8 @@
 import React, { memo } from "react";
-import {
-  Container,
-  Grid,
-  Box,
-  Link,
-  CssBaseline,
-  Typography,
-} from "@material-ui/core";
+import { Grid, Box, Link, CssBaseline, Typography } from "@material-ui/core";
 
 import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
 import CopyrightIcon from "@material-ui/icons/Copyright";
 import useStyles from "./styles";
 import GitHub from "@material-ui/icons/GitHub";

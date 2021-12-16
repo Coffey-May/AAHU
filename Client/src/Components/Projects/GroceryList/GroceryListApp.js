@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import GroceryForm from './GroceryForm'
 import GroceryList from './GroceryList'
-// import { FaCopyright } from 'react-icons/fa';
-// import { useAuth } from "../../AuthContext"
-import { NavLink } from "react-router-dom";
-// import "./ToDo.css"
-//Todo Component 
+
 const GroceryListApp = () => {
     // const { currentUser } = useAuth();
     const [inputText, setInputText] = useState('')
@@ -58,11 +54,11 @@ const GroceryListApp = () => {
         }
     }
 
-    const onClose = () => {
-        window.opener = null;
-        window.open("", "_self");
-        window.close();
-    };
+    // const onClose = () => {
+    //     window.opener = null;
+    //     window.open("", "_self");
+    //     window.close();
+    // };
 
     // if (currentUser === null) {
     //     return (

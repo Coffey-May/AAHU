@@ -6,7 +6,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import { Link } from "react-router-dom";
 
 export default function ImgMediaCard(
   { projectData }: { projectData: any },
@@ -73,6 +72,7 @@ export default function ImgMediaCard(
           <CardActions>
             <Button>
               <a
+                rel="noreferrer"
                 href={projectData.linkMultiForm}
                 target={
                   projectData.linkMultiForm.includes("http")

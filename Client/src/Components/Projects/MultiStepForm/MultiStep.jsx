@@ -1,13 +1,13 @@
-import React, { FC, useState, useEffect } from "react";
+import React, {  useState, useEffect } from "react";
 import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Stepper } from "react-form-stepper";
 import useStyles from "./styles";
-import axios from "axios";
-import { Button, Typography, Container } from "@material-ui/core";
+// import axios from "axios";
+import { Button, Typography} from "@material-ui/core";
 import MessageList from "./MessageList";
-import { ContactSupportOutlined } from "@material-ui/icons";
+
 
 //  interface User {
 //   email: string | null;
