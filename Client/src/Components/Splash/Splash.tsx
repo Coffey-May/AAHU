@@ -18,7 +18,7 @@ import Projects from "../Projects/Projects";
       // el!.style.opacity = ".8"
       // el!.style.background = 'rgb(10,10,10,0.8)'
       //        var currScrollPos2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      console.log(window.pageYOffset);
+      console.log("hello", window.pageYOffset);
       if (window.pageYOffset <= 0) {
         document.querySelector<HTMLElement>(".overlay")!.style.background =
           "rgb(10,10,10,0.8)";
