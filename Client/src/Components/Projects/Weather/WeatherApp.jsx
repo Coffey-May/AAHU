@@ -19,10 +19,10 @@ const WeatherApp = () => {
     const [city, setCity] = useState('')
      const [country,setCountry] = useState('')
 
-  useEffect(() => {
-    getWeather();
-  }, []);
+ 
 
+  useEffect(() => {
+     
   const getWeather = async () => {
     const res = await fetch(
       `${url}/data/2.5/weather?q=Nashville,US&appid=${API_KEY}&units=imperial`
@@ -38,6 +38,9 @@ const WeatherApp = () => {
       error: undefined,
     });
   };
+    getWeather();
+   }, []);
+  
   const searchWeather = async (e) => {
     e.preventDefault();
     // const city = e.target.elements.city.value;

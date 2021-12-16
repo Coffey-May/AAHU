@@ -1,11 +1,10 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Title from "./Title";
 import About from "./About";
 import { useStyles } from "./styles";
-import Aside from "./Aside";
+// import Aside from "./Aside";
 import { CssBaseline } from "@material-ui/core";
 import Projects from "../Projects/Projects";
-import { Parallax } from "react-scroll-parallax";
 
 {
   if (
@@ -110,6 +109,6 @@ const Splash = () => {
 };
 
 export default Splash;
-function rgba(arg0: number, arg1: number, arg2: number, arg3: number): string {
-  throw new Error("Function not implemented.");
-}
+// function rgba(arg0: number, arg1: number, arg2: number, arg3: number): string {
+//   throw new Error("Function not implemented.");
+// }

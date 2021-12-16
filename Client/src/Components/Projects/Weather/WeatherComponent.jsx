@@ -27,7 +27,7 @@ function imageFilter(x) {
 var today = new Date();
 var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
-var time = new Date().toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' });
+// var time = new Date().toLocaleTimeString('en-US', { hour: 'numeric', hour12: true, minute: 'numeric' });
 
 const WeatherComponent = ({time,temperature,humidity,city,country,description,error}) => {
     return (

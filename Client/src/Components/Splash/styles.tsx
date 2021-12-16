@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import image from "../../assets/gradientSky.jpeg";
+// import image from "../../assets/gradientSky.jpeg";
 // import image1 from "../../assets/stars.jpeg";
 import image1 from "../../assets/sun.gif";
 import dots from "../../assets/dots.png";

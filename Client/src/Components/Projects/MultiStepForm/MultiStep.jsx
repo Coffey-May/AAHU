@@ -1,13 +1,12 @@
-import React, {  useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Stepper } from "react-form-stepper";
 import useStyles from "./styles";
 // import axios from "axios";
-import { Button, Typography} from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import MessageList from "./MessageList";
-
 
 //  interface User {
 //   email: string | null;
@@ -30,7 +29,7 @@ import MessageList from "./MessageList";
 //  other: string;
 // };
 
-const Form = ({}) => {
+const Form = () => {
   let initialState = {
     email: "",
     password: "",
@@ -47,7 +46,7 @@ const Form = ({}) => {
   const [formData, setFormData] = useState(initialState);
   useEffect(() => {
     setList([{ ...formData }]);
-  }, []);
+  }, [formData]);
 
   const classes = useStyles();
 
@@ -94,21 +93,21 @@ const Form = ({}) => {
   };
 
   const handleDelete = (id) => {
-    let filteredList = list.filter((el) => el.nationality != id);
+    let filteredList = list.filter((el) => el.nationality !== id);
 
     setList(filteredList);
   };
 
-  const checkZero = () => {
-    if (
-      formData.email === "" ||
-      formData.password == "" ||
-      formData.confirmPassword == ""
-    ) {
-      setError(true);
-      return;
-    }
-  };
+  // const checkZero = () => {
+  //   if (
+  //     formData.email === "" ||
+  //     formData.password === "" ||
+  //     formData.confirmPassword === ""
+  //   ) {
+  //     setError(true);
+  //     return;
+  //   }
+  // };
 
   return (
     <div
@@ -203,10 +202,7 @@ const Form = ({}) => {
                   }
 
                   if (page === FormTitles.length - 1) {
-                    if (
-                      !formData.nationality ||
-                      !formData.other
-                    ) {
+                    if (!formData.nationality || !formData.other) {
                       setError(true);
                       return;
                     }
@@ -231,7 +227,11 @@ const Form = ({}) => {
               )}
             </div>
           </div>
-          <MessageList key={formData.firstName} list={list} handleDelete={handleDelete} />
+          <MessageList
+            key={formData.firstName}
+            list={list}
+            handleDelete={handleDelete}
+          />
         </div>
       </div>
     </div>
