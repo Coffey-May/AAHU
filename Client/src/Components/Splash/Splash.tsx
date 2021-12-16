@@ -95,7 +95,7 @@ const Splash = () => {
           </div>
            */}
 
-          {/* <Aside/> */}
+          {/* <Aside /> */}
         </div>
 
         <Title />

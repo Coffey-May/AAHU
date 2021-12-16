@@ -13,16 +13,31 @@ import Resume from "../../PDFS/CoffeyMayResume2021.pdf";
 
 const divToggle = () => {
   document.addEventListener("scroll", function (e) {
-    console.log(window.innerWidth);
+    console.log("hello", window.innerWidth);
     // else
 
     if (window.pageYOffset >= 1) {
       document.querySelector(".overlay2").style.display = "none";
+       document.querySelector(".reveal").style.display = "block";
     } else if (window.pageYOffset < 1) {
       document.querySelector(".overlay2").style.display = "block";
+            document.querySelector(".reveal").style.display = "none";
     }
   });
 };
+
+// const revToggle = () => {
+//   document.addEventListener("scroll", function (e) {
+//     console.log("hello", window.innerWidth);
+//     // else
+
+//     if (window.pageYOffset >= 1) {
+//       document.querySelector(".reveal").style.display = "none";
+//     } else if (window.pageYOffset < 1) {
+//       document.querySelector(".reveal").style.display = "block";
+//     }
+//   });
+// };
 
 const Title = () => {
   const classes = useStyles();
@@ -80,6 +95,7 @@ const Title = () => {
                     padding: " 20px 0px 25px 0px",
                     fontSize: "medium",
                     fontWeight: 300,
+               
                   }}
                 >
                   Progressive Web Applications in React, NodeJs, and more...
@@ -212,6 +228,9 @@ const Title = () => {
               </div>
               {/* <img style={{ background: 'radial-gradient(white,white,transparent,transparent)', filter: 'invert(1)' }} className={classes.memphis} src={`${Memphis}`} alt="memphis design" /> */}
             </motion.div>
+            <h1 className="reveal" style={{
+              color: 'white', position: 'absolute', top:'35vh',display:'none'
+            }}><em>“That brain of mine is something more than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>
           </Grid>
         </Grid>
       </Box>

@@ -34,7 +34,8 @@ export const useStyles = makeStyles((theme) => ({
   subtitle1: {
     fontSize: "2.5rem",
     [theme.breakpoints.down(550)]: {
-      fontSize: "1.25rem",
+      padding: ".45rem",
+      fontSize: "1.4rem",
     },
   },
   nameTitle: {
