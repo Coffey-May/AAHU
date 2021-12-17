@@ -87,7 +87,7 @@ const Title = () => {
                   style={{ fontWeight: 600 }}
                   variant={"h5"}
                 >
-                  Software Developer
+                  Software Engineer
                 </Typography>
                 <Typography
                   className={classes.subtitle}

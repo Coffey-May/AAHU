@@ -7,12 +7,14 @@ import { CssBaseline } from "@material-ui/core";
 import Projects from "../Projects/Projects";
 
 {
-  if (
-    window.location.href === "http://localhost:3000" ||
-    window.location.href === "http://localhost:3000/#Home" ||
-    window.location.href === "http://localhost:3000/#About" ||
-    window.location.href === "http://localhost:3000/#Projets"
-  ) {
+  // if (
+  //   window.location.href === "http://localhost:3000" ||
+  //   window.location.href === "http://localhost:3000/#Home" ||
+  //   window.location.href === "http://localhost:3000/#About" ||
+  //   window.location.href === "http://localhost:3000/#Projets"
+  // )
+
+  {
     document.addEventListener("scroll", function (e) {
       // let el = document.querySelector<HTMLElement>('.overlay')
       // el!.style.opacity = ".8"

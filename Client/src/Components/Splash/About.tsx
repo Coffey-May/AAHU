@@ -82,11 +82,11 @@ const About = () => {
               all share similar characteristics with code writing. Time plus
               experimentation all help to determine success through trial and
               error. This is the nature of mastery. I can solve nearly any
-              coding problem, and aam eager to work with likeminded individuals.
-              But to use and apply that language, we must be able to fully to
-              appreciate, to feel, to seize the unseen, the unconscious.” “As
-              soon as I have got flying to perfection, I have got a scheme about
-              a steam engine.”{" "}
+              coding problem, and am eager to work with likeminded individuals.
+              While it is good to be a strong programmer, the nature of well
+              constructed software consists of collaborative efforts and a
+              shared outcome. “As soon as I have got flying to perfection, I
+              have got a scheme about a steam engine.”{" "}
             </p>
           </div>
         </Container>
