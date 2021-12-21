@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles((theme) => ({
+export const useStyles = makeStyles((theme) => ({
   formWrap: {
     margin: "0 auto",
     maxWidth: "80vw",
@@ -11,9 +11,20 @@ export default makeStyles((theme) => ({
     justifyContent: "space-evenly",
   },
   messages: {
-    width: "40vw",
+    width: "50vw",
     [theme.breakpoints.down(1160)]: {
       width: "76.5vw",
+    },
+  },
+  modalForm: {
+    width: "80vw",
+    height: "53vh",
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    boxShadow: "2px 8px 25px 3px #000000",
+    "&:hover": {
+      boxShadow: "2px 5px 38px -3px #000000",
     },
   },
 }));

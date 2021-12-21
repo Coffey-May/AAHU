@@ -39,7 +39,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   nameTitle: {
-    marginTop: "18vh",
+    marginTop: "20.5vh",
     textTransform: "uppercase",
     fontFamily: "verdana",
     color: "#f5f5f5",

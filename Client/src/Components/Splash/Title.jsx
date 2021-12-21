@@ -14,9 +14,10 @@ import Resume from "../../PDFS/CoffeyMayResume2021.pdf";
 const divToggle = () => {
   document.addEventListener("scroll", function (e) {
     console.log("hello", window.innerWidth);
-    // else
-
-    if (window.pageYOffset >= 1) {
+    if (window.innerWidth < 900) {
+    document.querySelector(".reveal").style.display = "none";
+ }
+    else if (window.pageYOffset >= 1) {
       document.querySelector(".overlay2").style.display = "none";
        document.querySelector(".reveal").style.display = "block";
     } else if (window.pageYOffset < 1) {
@@ -92,9 +93,9 @@ const Title = () => {
                 <Typography
                   className={classes.subtitle}
                   style={{
-                    padding: " 20px 0px 25px 0px",
+                    padding: " 10px 0px 15px 0px",
                     fontSize: "medium",
-                    fontWeight: 300,
+                    fontWeight: 500,
                
                   }}
                 >
@@ -230,7 +231,7 @@ const Title = () => {
             </motion.div>
             <h1 className="reveal" style={{
               color: 'white', position: 'absolute', top:'35vh',display:'none'
-            }}><em>“That brain of mine is something more than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>
+            }}><em>“That brain of mine is something more <br></br>than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>
           </Grid>
         </Grid>
       </Box>

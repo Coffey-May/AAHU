@@ -85,8 +85,8 @@ const About = () => {
               coding problem, and am eager to work with likeminded individuals.
               While it is good to be a strong programmer, the nature of well
               constructed software consists of collaborative efforts and a
-              shared outcome. “As soon as I have got flying to perfection, I
-              have got a scheme about a steam engine.”{" "}
+              shared outcome. Being a good softwaare developer today is akin to
+              being an egyptian scribe.{" "}
             </p>
           </div>
         </Container>

@@ -1,5 +1,9 @@
 import Card from "./CardComponent";
 import Memphis from "../../assets/memphis.png";
+import ArtSite from "../../assets/Screen Shot 2020-12-10 at 4.41.07 PM.png";
+import WeatherSite from "../../assets/Screen Shot 2021-02-04 at 12.52.31 PM.png";
+import BonesMalone from "../../assets/Screen Shot 2020-02-20 at 9.40.16 PM.png";
+
 import TravelShare from "../../assets/Screen Shot 2021-03-11 at 11.52.32 AM.png";
 
 let decriptions = {
@@ -12,6 +16,8 @@ let decriptions = {
   Grocery: "sklfnldfnl",
   Recipe: "ldfnldnfldsnf",
   Weather: "kasbbaskfjbk",
+  BonesMalone: "kasbbaskfjbk",
+  GirlForce: "dnkjsndknsdkjndnasjkndkjsna",
 };
 
 const projectData = [
@@ -39,14 +45,14 @@ const projectData = [
   {
     title: "Coffey May Fine Art",
     description: `${decriptions.Art}`,
-    image: `${Memphis}`,
+    image: `${ArtSite}`,
     linkMultiForm: "https://coffeymayart.com",
     bgColor: "#F43E8A",
   },
   {
     title: "ForecasterPlus",
     description: `${decriptions.Weather}`,
-    image: `${Memphis}`,
+    image: `${WeatherSite}`,
     linkMultiForm: "/weather",
     bgColor: "#724CF9",
   },
@@ -56,6 +62,20 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/recipe",
     bgColor: "#00F5D4",
+  },
+  {
+    title: "Bones Malone",
+    description: `${decriptions.BonesMalone}`,
+    image: `${BonesMalone}`,
+    linkMultiForm: "/bonesMalones",
+    bgColor: "#2978A0",
+  },
+  {
+    title: "Girl Force",
+    description: `${decriptions.GirlForce}`,
+    image: `${Memphis}`,
+    linkMultiForm: "/girlForce",
+    bgColor: "#861388",
   },
 ];
 

@@ -31,7 +31,7 @@ export default function ImgMediaCard(
         flexWrap: "wrap",
         justifyContent: "space-evenly",
         alignItems: "center",
-        boxShadow: "inset 1px 1px 15px 5px #000000",
+        boxShadow: "inset 1px 1px 15px 2px #000000",
       }}
     >
       <Grid
@@ -57,17 +57,15 @@ export default function ImgMediaCard(
           <CardMedia
             component="img"
             alt="green iguana"
-            height="240"
+            height="240px"
+            width="auto"
             image={projectData.image}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              {projectData.title}
             </Typography>
-            <Typography variant="body2">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
+            <Typography variant="body2">{projectData.description}</Typography>
           </CardContent>
           <CardActions>
             <Button>

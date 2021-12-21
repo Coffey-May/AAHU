@@ -3,31 +3,10 @@ import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Stepper } from "react-form-stepper";
-import useStyles from "./styles";
+import {useStyles }from "./styles";
 // import axios from "axios";
 import { Button, Typography } from "@material-ui/core";
 import MessageList from "./MessageList";
-
-//  interface User {
-//   email: string | null;
-//   password:  string |  null;
-//     confirmPassword: string;
-//     firstName: string;
-//   lastName:  string;
-//     userName: string;
-//     nationality:  string;
-//  other: string;
-// }
-// type Props = {
-//    email: string;
-//   password:  string;
-//     confirmPassword: string;
-//     firstName: string;
-//   lastName:  string;
-//     userName: string;
-//     nationality:  string;
-//  other: string;
-// };
 
 const Form = () => {
   let initialState = {
@@ -39,20 +18,28 @@ const Form = () => {
     userName: "",
     nationality: "",
     other: "",
+    id: 0
   };
   const [error, setError] = useState(false);
   const [page, setPage] = useState(0);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState([{
+     email: "demo@demo.com",
+    password: "MSFDemo1!",
+    confirmPassword: "MSFDemo1!",
+    firstName: "John",
+    lastName: "Demo",
+    userName: "J Demo",
+    nationality: "Antarctica",
+    other: "Its cold here, please bring a jacket...",
+    id: 0
+  }]);
   const [formData, setFormData] = useState(initialState);
-  useEffect(() => {
-    setList([{ ...formData }]);
-  }, [formData]);
 
   const classes = useStyles();
 
-  //   const handleAdd = (formData) => {
-  //   setList();
-  // }
+  useEffect(() => {
+
+  }, [list])
 
   // axios
   //   .get("http://localhost:5000", {
@@ -93,22 +80,16 @@ const Form = () => {
   };
 
   const handleDelete = (id) => {
-    let filteredList = list.filter((el) => el.nationality !== id);
+    let filteredList = list.filter((el) => el.id !== id);
 
     setList(filteredList);
   };
 
-  // const checkZero = () => {
-  //   if (
-  //     formData.email === "" ||
-  //     formData.password === "" ||
-  //     formData.confirmPassword === ""
-  //   ) {
-  //     setError(true);
-  //     return;
-  //   }
-  // };
+  const handleEdit = () => {
+    alert('recahed')
+  }
 
+  console.log("list1", list, formData);
   return (
     <div
       style={{
@@ -116,6 +97,7 @@ const Form = () => {
         width: "100vw",
         backgroundColor: "rgba(232,232,232)",
         paddingTop: "13vh",
+         paddingBottom: "13vh",
       }}
     >
       <div className={classes.formWrap}>
@@ -134,6 +116,7 @@ const Form = () => {
         <div
           style={{
             marginTop: "2em",
+            marginBottom: "2em",
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
@@ -147,7 +130,7 @@ const Form = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              flexGrow: 0.9,
+              flexGrow: 1,
               padding: "1em",
             }}
           >
@@ -178,6 +161,7 @@ const Form = () => {
                   margin: "1em",
                 }}
                 onClick={() => {
+
                   if (page === FormTitles.length - 3) {
                     //  alert('first')
                     if (
@@ -206,15 +190,23 @@ const Form = () => {
                       setError(true);
                       return;
                     }
+                    let newEntry = {
+                      email: formData.email,
+                      password: formData.password,
+                      confirmPassword: formData.confirmPassword,
+                      firstName: formData.firstName,
+                      lastName: formData.lastName,
+                      userName: formData.userName,
+                      nationality: formData.nationality,
+                      other: formData.other,
+                      id: Math.random() * 5000 
+                    };
+                    setList((list) => [...list, newEntry]);
 
-                    alert("FORM SUBMITTED");
-                    // console.log(formData, list);
-                    let newArr = [...list];
-                    console.log("new", newArr);
-                    newArr.push(formData);
-                    setList(newArr);
                     setFormData(initialState);
                     setPage(0);
+                    console.log("list", list);
+                    setError(false)
                   } else {
                     setPage((currPage) => currPage + 1);
                   }
@@ -228,9 +220,15 @@ const Form = () => {
             </div>
           </div>
           <MessageList
-            key={formData.firstName}
+            // key={formData.firstName}
+            key={list.id}
             list={list}
+            setError={setError}
+            setList={setList}
             handleDelete={handleDelete}
+            handleEdit={handleEdit}
+            setFormData={setFormData}
+            formData={formData}
           />
         </div>
       </div>

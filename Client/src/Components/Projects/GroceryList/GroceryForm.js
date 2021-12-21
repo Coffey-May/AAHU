@@ -1,3 +1,6 @@
+
+import { Button, Typography, Box, TextField, Select, MenuItem } from "@material-ui/core";
+// import { TextField } from "@material-ui/core/Button/TextField";
 import "./Grocery.css";
 
 const GroceryForm = ({
@@ -11,6 +14,7 @@ const GroceryForm = ({
     todos,
     setTodos,
     setStatus,
+    status
 }) => {
     const setInputTextHandler = (e) => {
         e.preventDefault();
@@ -53,10 +57,12 @@ const GroceryForm = ({
         e.preventDefault();
         setStatus(e.target.value);
     };
+    let optionLabel = "filter by status"
     return (
-        <div>
+        <Box
+        >
             <form>
-                <input
+                <TextField
                     style={{ height: "2rem" }}
                     value={inputText}
                     onChange={setInputTextHandler}
@@ -64,20 +70,26 @@ const GroceryForm = ({
                     placeholder="Grocery Item?"
                 />
 
-                <button className="button1" onClick={submitTodoHandler}>
+                <Button className="button1" onClick={submitTodoHandler}>
                     Add
-                </button>
+                </Button>
                 <br />
                 <br />
-                <h2 style={{}}>𝔽𝕚𝕝𝕥𝕖𝕣 𝕚𝕥𝕖𝕞𝕤 𝕓𝕪 𝕤𝕥𝕒𝕥𝕦𝕤.</h2>
+                <Typography style={{}}>Filter grocery list status</Typography>
                 <select className="select-css" onChange={statusHandler} name="" id="">
                     <option value="all ">Filter options ⟱</option>
                     <option value="all ">All</option>
                     <option value="completed">Check Off List</option>
                     <option value="incomplete">Still Need</option>
                 </select>
+                <Select label={status} value={status} className="select-css" onChange={statusHandler} name="" id="">
+                    {/* <MenuItem MenuItem value={'all'}>Filter options ⟱</MenuItem> */}
+                    <MenuItem value={'all'}>All Items</MenuItem>
+                    <MenuItem value={'completed'}>Check Off List</MenuItem>
+                    <MenuItem value={'incomplete'}>Still Need</MenuItem>
+                </Select>
             </form>
-        </div>
+        </Box >
     );
 };
 export default GroceryForm;
