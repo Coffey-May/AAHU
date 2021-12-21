@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import Memphis from "../../assets/memphis.png";
 import Container from "@material-ui/core/Container";
+import best from "../../assets/Screen Shot 2021-12-21 at 3.14.35 AM.png";
+// ../assets/Screen Shot 2021 - 12 - 21 at 3.14.35 AM.png
 
 function useWindowDimensions() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -30,20 +32,27 @@ const About = () => {
           zIndex: 99,
           minWidth: "100vw",
           backgroundColor: "rgba(245,245,245)",
+          // padding: "2em 2em 2em 2em",
         }}
       >
+        <img
+          style={{
+            background: "radial-gradient(black,black,transparent,transparent)",
+            transform: "rotate(70deg)",
+            position: "absolute",
+            width: "20vw",
+            left: "-9vw",
+            top: "85.5vh",
+            // zIndex: "-1",
+            // margin: "0em 3em 0em 0em",
+            // padding: "0em 5em -2em 0em",
+
+            // position: "relative",
+          }}
+          src={`${Memphis}`}
+          alt="memphis design"
+        />
         <Container>
-          <img
-            style={{
-              background:
-                "radial-gradient(black,black,transparent,transparent)",
-              transform: "rotate(70deg)",
-              position: "absolute",
-              width: "5vw",
-            }}
-            src={`${Memphis}`}
-            alt="memphis design"
-          />
           <div style={{ width: "80%", margin: "0 auto" }}>
             <h1
               style={{
@@ -86,8 +95,14 @@ const About = () => {
               While it is good to be a strong programmer, the nature of well
               constructed software consists of collaborative efforts and a
               shared outcome. Being a good softwaare developer today is akin to
-              being an egyptian scribe.{" "}
+              being an egyptian scribe. Coding is like using only two stones to
+              traverse a creek without getting wet. Toss a stone, hop on it,
+              toss the second stone, pickup the first, and repeat. The
+              challaange is through navigativing next steps.{" "}
             </p>
+            <img style={{ width: "3rem" }} src={best} alt="" />
+            <img style={{ width: "3rem" }} src={best} alt="" />
+            <img style={{ width: "3rem" }} src={best} alt="" />
           </div>
         </Container>
       </div>

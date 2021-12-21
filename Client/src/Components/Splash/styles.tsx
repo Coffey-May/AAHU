@@ -44,8 +44,8 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "verdana",
     color: "#f5f5f5",
     textShadow: " 0 0 0.05em currentColor",
-    [theme.breakpoints.down(660)]: {
-      marginTop: "20vh",
+    [theme.breakpoints.down(900)]: {
+      marginTop: "21.75vh",
       textAlign: "center",
       width: "70vw",
     },

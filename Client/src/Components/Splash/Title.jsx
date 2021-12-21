@@ -9,6 +9,8 @@ import { useStyles } from "./styles";
 // import Memphis from '../../assets/memphis.png'
 // import Resume from '../../PDFS/CoffeyMayResume2021.pdf'
 import Resume from "../../PDFS/CoffeyMayResume2021.pdf";
+
+
 // import Waves from './Waves';
 
 const divToggle = () => {
@@ -123,6 +125,8 @@ const Title = () => {
                       </Typography>
                     </Button>
                   </a>
+
+                 
                 </Box>
               </div>
             </motion.div>
@@ -185,6 +189,7 @@ const Title = () => {
                           "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
                       }}
                     >
+                      
                       <i
                         style={{ padding: "10px" }}
                         className="devicon-html5-plain"

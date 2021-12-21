@@ -68,7 +68,7 @@ const Navbar = () => {
 
         <li>
           <Button href="/#Projects" color="inherit">
-            <h3> PROJECTS</h3>
+            <h3> PROJECTS </h3>
           </Button>
         </li>
         {user ? (

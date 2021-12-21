@@ -1,8 +1,9 @@
-import React from 'react'
+import Container from '@material-ui/core/Container'
 
 const WeatherForm = ({searchWeather,setCity,setCountry}) => {
     return (
-     <form onSubmit={searchWeather} className='weatherInput' >
+        <Container>
+     <form style={{padding:'4em', position:'absolute',marginTop:'-33vh'}} onSubmit={searchWeather} className='weatherInput' >
             <input
                 onChange={(e)=> setCity(e.target.value)}
          type="text" name="city" placeholder="City..." />
@@ -22,7 +23,8 @@ const WeatherForm = ({searchWeather,setCity,setCountry}) => {
             </button>
         </div>
 
-    </form>
+            </form>
+            </Container>
     )
 }
 

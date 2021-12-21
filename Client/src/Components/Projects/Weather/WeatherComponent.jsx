@@ -4,6 +4,7 @@ import Pic2 from '../Weather/WeatherImages/cloudygif.gif'
 import Pic3 from '../Weather/WeatherImages/raingif.gif'
 import Pic4 from '../Weather/WeatherImages/snowgif.gif'
 import Pic5 from '../Weather/WeatherImages/foggif.gif'
+import Container from '@material-ui/core/Container'
 var image;
 function imageFilter(x) {
 
@@ -31,11 +32,12 @@ var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getD
 
 const WeatherComponent = ({time,temperature,humidity,city,country,description,error}) => {
     return (
-         <div style={{ display: "flex", FlexDirection: 'row', flexWrap: 'wrap', overflow: '  scroll' }} className="weather__info">
-
-        <div style={{ paddingTop: '2em', width: '100vw', fontSize: '1em', margin: '0 auto' }}>
+         <div style={{ marginTop:'-13vh',  display: "flex", FlexDirection: 'row', flexWrap: 'wrap', overflow: '  scroll' }} className="weather__info">
+<Container>
+            <div style={{padding:'4em',backgroundColor:'rgba(0,0,0,0.7)', color:'white', top: '13vh', position: 'absolute', paddingTop: '2em', width: '80vw',height:'80vh', fontSize: '1em', margin: '0 auto' }}>
+                 <hr />
             <h2 style={{ margin: '0 auto' }}>Currently: {time}<br />{date} </h2>
-            <hr />
+           
 
 
             {
@@ -63,13 +65,14 @@ const WeatherComponent = ({time,temperature,humidity,city,country,description,er
                     <span className="weather__value"> {description} </span>
                 </h2>
             }
-        </div>
+                </div>
+                </Container>
         <div>
             {imageFilter(description)}
             {
-                <div className="sun-2-container">
+                <div >
                     <img
-                        style={{ padding: '2em', height: '100%', width: '40vw' }} src={image} alt="gif that shows weather condition" />
+                        style={{ objectFit: 'cover',height: '100vh',width:'100vw', backgroundSize:'cover'}} src={image} alt="gif that shows weather condition" />
                 </div>
             }
 
