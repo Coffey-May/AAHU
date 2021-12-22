@@ -43,10 +43,10 @@ const SingleItem = ({ currentId, setCurrentId, editMessage, setEditMessage, inpu
                 <div style={{ height: '10px', width: '10px', backgroundColor: 'white' }}></div>
             </div>
             <Tilt>
-                <li style={{ width: '60vw', color: 'white' }} className={`todo-item ${todo.completed ? "completed" : ""}`}>
+                <li style={{margin:'0 auto',padding:'.5em',display: 'flex', flexDirection: 'row', width: '40vw', color: 'white' }} className={`todo-item ${todo.completed ? "completed" : ""}`}>
 
 
-                    <h4 style={{ letterSpacing: '.25em', margin: '0 auto', padding: '5px' }}>{text}</h4>
+                    <h4 style={{fontFamily: 'Waiting for the Sunrise, cursive', letterSpacing: '.25em', margin: '0 auto', padding: '5px' }}>{text}</h4>
                     <br />
                     <button onClick={completedHandler}> Check Off List </button>
                     <button onClick={editHandler}> Edit </button>
