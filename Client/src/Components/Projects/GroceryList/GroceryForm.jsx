@@ -57,40 +57,17 @@ const GroceryForm = ({
         e.preventDefault();
         setStatus(e.target.value);
     };
-    let optionLabel = "filter by status"
+    // let optionLabel = "filter by status"
     return (
         <Box id="form-bg">
-             <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-                    width: "20px",
-               
-          }}
-        >
-          <div
-            style={{
-              height: "10px",
-              width: "10px",
-              backgroundColor: "yellow",
-            }}
-          ></div>
-          <div
-            style={{ height: "10px", width: "10px", backgroundColor: "red" }}
-          ></div>
-          <div
-            style={{ height: "10px", width: "10px", backgroundColor: "blue" }}
-          ></div>
-          <div
-            style={{
-              height: "10px",
-              width: "10px",
-              backgroundColor: "white",
-            }}
-          ></div>
-        </div>
-            <Typography variant={'h3'} style={{ margin: "0 auto", paddingTop: "5vh" }}>Grocery List</Typography>
+{/*             
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '20px' }}>
+                <div style={{ height: '10px', width: '10px', backgroundColor: 'yellow' }}></div>
+                <div style={{ height: '10px', width: '10px', backgroundColor: 'red' }}></div>
+                <div style={{ height: '10px', width: '10px', backgroundColor: 'blue' }}></div>
+                <div style={{ height: '10px', width: '10px', backgroundColor: 'white' }}></div>
+            </div> */}
+            <Typography variant={'h3'} style={{ fontWeight: 600, margin: "0 auto", paddingTop: "5vh" }}>Grocery List</Typography>
             <form>
                 <TextField 
                     inputProps={{style: {fontSize: 40,padding: "1rem",display:'flex',flexGrow:1,fontFamily: 'Waiting for the Sunrise, cursive',textAlign:'center',fontWeight:'bolder'}}}
@@ -103,12 +80,12 @@ const GroceryForm = ({
                     placeholder="Grocery Item?"
                 />
 
-                <Button style={{marginTop:'1em', backgroundColor: 'darkgoldenrod', width: '80%', color:'white', fontSize:'xx-large'}}  onClick={submitTodoHandler}>
+                <Button type="submit" style={{marginTop:'1em', backgroundColor: 'darkgoldenrod', width: '80%', color:'white', fontSize:'xx-large'}}  onClick={submitTodoHandler}>
                   Add 
                 </Button>
                 <br />
                 <br />
-                <Typography variant={'h4'} style={{padding:'1em'}}>Filter grocery list status</Typography>
+                <Typography variant={'h4'} style={{fontWeight: 600,}}>Checklist Filter</Typography>
                 {/* <select className="select-css" onChange={statusHandler} name="" id="">
                     <option value="all ">Filter options ⟱</option>
                     <option value="all ">All</option>

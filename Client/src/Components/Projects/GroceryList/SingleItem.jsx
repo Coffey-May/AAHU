@@ -32,35 +32,34 @@ const SingleItem = ({ currentId, setCurrentId, editMessage, setEditMessage, inpu
             return item
         })
     }
+    const rndInt = Math.ceil((Math.random() - 0.5) * 2) < 1 ? -1 : 1;
+    
+  let colors= ['#feff9c','#ff7eb9','#7afcff','#fff740','#ff65a3','#FFFF99'] 
+    let num = colors[Math.floor(Math.random() * 5) + 1]
+    console.log(num)
     return (
 
-        <div className="gradient-border" id="box" style={{ margin: '5px', textAlign: 'center' }}>
+        // <div className="gradient-border" id="box" style={{ margin: '5px', textAlign: 'center' }}>
 
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '20px' }}>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'yellow' }}></div>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'red' }}></div>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'blue' }}></div>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'white' }}></div>
-            </div>
-            <Tilt>
-                <li style={{margin:'0 auto',padding:'.5em',display: 'flex', flexDirection: 'row', width: '40vw', color: 'white' }} className={`todo-item ${todo.completed ? "completed" : ""}`}>
-
-
-                    <h4 style={{fontFamily: 'Waiting for the Sunrise, cursive', letterSpacing: '.25em', margin: '0 auto', padding: '5px' }}>{text}</h4>
-                    <br />
+        <Tilt>
+            
+            <li style={{ background: `${num}`,  transform: `rotate(${rndInt}deg)`, margin: '1em', padding: '1em', display: 'flex', flexDirection: 'row', width: '15vw',height:'25vh', color:'slategray'}} className={`todo-item ${todo.completed ? "completed" : ""}`}>
+                <div  style={{overflow:'scroll', display: 'flex', flexDirection: 'column',justifyContent:'space-between', textAlign: 'center' }}>
+                    <div>
+                    <h2 style={{fontFamily: 'Waiting for the Sunrise, cursive',paddingTop:'1.5em' }}>{text}</h2>
+                    </div>
+                     <div>
                     <button onClick={completedHandler}> Check Off List </button>
                     <button onClick={editHandler}> Edit </button>
                     <button onClick={deleteHandler}> Delete </button>
-                </li>
+                </div>
+                </div>
+            </li>
+           
             </Tilt>
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '20px' }}>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'yellow' }}></div>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'red' }}></div>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'blue' }}></div>
-                <div style={{ height: '10px', width: '10px', backgroundColor: 'white' }}></div>
-            </div>
+      
 
-        </div>
+        // 
     )
 }
 export default SingleItem

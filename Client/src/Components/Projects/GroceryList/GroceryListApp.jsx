@@ -2,6 +2,7 @@ import { Container } from "@material-ui/core";
 import React, { useState, useEffect, useCallback } from "react";
 import GroceryForm from "./GroceryForm";
 import GroceryList from "./GroceryList";
+import CssBaseLine from '@material-ui/core/CssBaseline'
 
 const GroceryListApp = () => {
   // const { currentUser } = useAuth();
@@ -72,23 +73,25 @@ const GroceryListApp = () => {
   return (
    
     <>
+     {/* <CssBaseLine /> */}
       <div
       id="mondrian"
-      style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", height: '100vh' }}
+      style={{  overflow:' hidden', display: "flex", flexDirection: "row", flexWrap: "wrap",justifyContent:'space-around' }}
     >
-   <Container>
-      <div
+   
+      {/* <div
      
         style={{
         
           height: "50vh",
           margin: "2em",
-       
+       width:'100%',
           
           display: "flex", flexDirection: "row", flexWrap: "wrap"
         }}
-          >
-            <div>
+          > */}
+        {/* <Container> */}
+            <div style={{marginLeft:'5vw'}}>
         <GroceryForm
           currentId={currentId}
           setCurrentId={setCurrentId}
@@ -102,7 +105,7 @@ const GroceryListApp = () => {
           status={status} />
             </div>
             
-          <div style={{ width: "50vw", height: "80vh" }}>
+            <div style={{ }}>
           <GroceryList
           currentId={currentId}
           setCurrentId={setCurrentId}
@@ -115,10 +118,10 @@ const GroceryListApp = () => {
           filteredTodos={filteredTodos} />
           </div>
             
-        </div>
+        {/* </div> */}
         
         
-     </Container>
+     {/* </Container> */}
     {/* </div><div style={{ width: '100vw', minHeight: '60vh', backgroundColor: 'white' }}> */}
 
 

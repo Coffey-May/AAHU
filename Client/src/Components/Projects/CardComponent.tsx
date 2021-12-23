@@ -19,7 +19,7 @@ export default function ImgMediaCard(
       container
       id="Projects"
       style={{
-        border: ` 10px solid ${projectData.bgColor}`,
+        border: ` 5px solid ${projectData.bgColor}`,
         color: "rgba(100,100,100)",
         padding: "2em",
         minHeight: "70vh",

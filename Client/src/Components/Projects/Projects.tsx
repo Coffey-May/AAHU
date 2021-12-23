@@ -3,6 +3,8 @@ import Memphis from "../../assets/memphis.png";
 import ArtSite from "../../assets/Screen Shot 2020-12-10 at 4.41.07 PM.png";
 import WeatherSite from "../../assets/Screen Shot 2021-02-04 at 12.52.31 PM.png";
 import BonesMalone from "../../assets/Screen Shot 2020-02-20 at 9.40.16 PM.png";
+import Grocery from "../../assets/Screen Shot 2021-12-22 at 11.39.44 PM.png";
+import MultiStep from "../../assets/Screen Shot 2021-12-22 at 11.55.46 PM.png";
 
 import TravelShare from "../../assets/Screen Shot 2021-03-11 at 11.52.32 AM.png";
 
@@ -22,23 +24,23 @@ let decriptions = {
 
 const projectData = [
   {
-    title: "Multi Step Form",
+    title: "Multi Step Form Validator",
     description: `${decriptions.Multi}`,
-    image: `${Memphis}`,
+    image: `${MultiStep}`,
     linkMultiForm: "/multi-step-form",
     bgColor: "#54731e",
   },
   {
-    title: "Travel Share",
+    title: "Traveler Share Guide",
     description: `${decriptions.TravelShare}`,
     image: `${TravelShare}`,
     linkMultiForm: "https://coffey-may-coffey-may-merntime.zeet.app/",
     bgColor: "#FAA613",
   },
   {
-    title: "Piet Mondrian Grocery List",
+    title: " Sticky Note Grocery Check-List",
     description: `${decriptions.Grocery}`,
-    image: `${Memphis}`,
+    image: `${Grocery}`,
     linkMultiForm: "/groceries",
     bgColor: "#F44708",
   },
@@ -50,14 +52,14 @@ const projectData = [
     bgColor: "#F43E8A",
   },
   {
-    title: "ForecasterPlus",
+    title: "Forecaster Daily Plus",
     description: `${decriptions.Weather}`,
     image: `${WeatherSite}`,
     linkMultiForm: "/weather",
     bgColor: "#724CF9",
   },
   {
-    title: "Recipe Search",
+    title: "Dinner Solver",
     description: `${decriptions.Recipe}`,
     image: `${Memphis}`,
     linkMultiForm: "/recipe",

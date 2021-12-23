@@ -12,16 +12,23 @@ const GroceryList = ({
   setTodos,
   filteredTodos,
 }) => {
+
+  
   return (
-    <div>
+    // <div>
       <ol
         className="tilesWrap"
         style={{
           overflow: "scroll",
           display: "flex",
-          flexDirection: "column",
-          marginLeft: "2em",
-          marginTop: "15vh",
+          flexDirection: "row",
+          flexWrap:'wrap',
+         
+          // width:'60vw',
+
+          
+
+          
         }}
       >
         {filteredTodos.map((todo) => (
@@ -40,7 +47,7 @@ const GroceryList = ({
           />
         ))}
       </ol>
-    </div>
+    // </div>
   );
 };
 export default GroceryList;
