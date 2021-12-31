@@ -1,11 +1,11 @@
-import React from 'react'
+import React,{memo,useEffect} from 'react'
 import Tilt from 'react-parallax-tilt';
 
 
 
 
 
-const SingleItem = ({ currentId, setCurrentId, editMessage, setEditMessage, inputText, setInputText, text, todo, todos, setTodos }) => {
+const SingleItem = ({ currentId, setCurrentId, editMessage, setEditMessage, inputText, setInputText, text, todo, todos, setTodos, }) => {
     const completedHandler = e => {
         e.preventDefault();
         setTodos(todos.map((item) => {
@@ -32,18 +32,20 @@ const SingleItem = ({ currentId, setCurrentId, editMessage, setEditMessage, inpu
             return item
         })
     }
-    const rndInt = Math.ceil((Math.random() - 0.5) * 2) < 1 ? -1 : 1;
+
+   
     
-  let colors= ['#feff9c','#ff7eb9','#7afcff','#fff740','#ff65a3','#FFFF99'] 
+
+    let rndInt = Math.ceil((Math.random() - 0.5) * 2) < 1 ? -3 : 3;
+    let colors = ['#feff9c','#ff7eb9','#7afcff','#fff740','#ff65a3','#FFFF99'] 
     let num = colors[Math.floor(Math.random() * 5) + 1]
-    console.log(num)
+
     return (
 
-        // <div className="gradient-border" id="box" style={{ margin: '5px', textAlign: 'center' }}>
-
+  
         <Tilt>
             
-            <li style={{ background: `${num}`,  transform: `rotate(${rndInt}deg)`, margin: '1em', padding: '1em', display: 'flex', flexDirection: 'row', width: '15vw',height:'25vh', color:'slategray'}} className={`todo-item ${todo.completed ? "completed" : ""}`}>
+            <li style={{ background: `${num}`,  transform: `rotate(${rndInt}deg)`, margin: '1em', padding: '1em', display: 'flex', flexDirection: 'row', width: '15em',height:'17em'}} className={`todo-item ${todo.completed ? "completed" : ""}`}>
                 <div  style={{overflow:'scroll', display: 'flex', flexDirection: 'column',justifyContent:'space-between', textAlign: 'center' }}>
                     <div>
                     <h2 style={{fontFamily: 'Waiting for the Sunrise, cursive',paddingTop:'1.5em' }}>{text}</h2>
@@ -59,7 +61,6 @@ const SingleItem = ({ currentId, setCurrentId, editMessage, setEditMessage, inpu
             </Tilt>
       
 
-        // 
     )
 }
-export default SingleItem
+export default SingleItem 

@@ -31,13 +31,14 @@ export const RecipeComponent = (recipe: {
   return (
     <div
       style={{
-        padding: "1em",
+        // padding: "1em",
         margin: "1em",
         display: "inline-block",
-        minWidth: "30vw",
-        height: "775px",
-        backgroundColor: "rgba(210,210,210)",
-        borderRadius: "15px",
+
+        width: window.innerWidth > 900 ? "33vw" : "100vw",
+
+        backgroundColor: "rgba(240,250,250)",
+        borderRadius: "99px 0px 99px 0px",
       }}
     >
       <div
@@ -45,14 +46,26 @@ export const RecipeComponent = (recipe: {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
+          padding: "1em",
         }}
       >
-        <div>
-          <img src={recipe.recipe.recipe.image} alt="" />
-        </div>
+        <img
+          style={{ width: "100%", borderRadius: "99px 0px 99px 0px" }}
+          src={recipe.recipe.recipe.image}
+          alt=""
+        />
 
         <div>
-          <h2 style={{ color: "black" }}>{recipe.recipe.recipe.label}</h2>
+          <h2
+            style={{
+              maxWidth: "30vw",
+              color: "black",
+              fontSize: "2em",
+              overflowWrap: "break-word",
+            }}
+          >
+            {recipe.recipe.recipe.label}
+          </h2>
         </div>
         <div>
           <p style={{ color: "black" }}>
@@ -62,7 +75,7 @@ export const RecipeComponent = (recipe: {
             Cuisine Type: {recipe.recipe.recipe.cuisineType}
           </p>
         </div>
-        <div style={{ color: "black" }}>
+        <div style={{ color: "black", lineHeight: "1em" }}>
           INGREDIENTS:
           {recipe.recipe.recipe.ingredients.map((item, index) => (
             <Ingredients key={index} item={item} />

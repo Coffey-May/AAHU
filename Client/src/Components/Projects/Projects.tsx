@@ -12,13 +12,16 @@ let decriptions = {
   TravelShare:
     "This Full stack MERN application leverages backend technologies to offer a unique user experience. State management, handled client side via Redux, communicates with the express server after authentication via Google OAuth or local sign/signup is completed. This project performs CRUD opertations on multi depth JSON formatted resources. Users  are allowed affordances common to social media style posts.",
   Multi:
-    "This project displays a multi step form, and mimics the format of many online forms that collect large amouts of user data. A stepper component is implimented to show the progress of the form as it is completed. Error checking and validation ensure that the form is filled out properly and ready to be received by the NodeJs server. A count of the amount of users who have completed the form will be displayed. ",
+    "This project displays a multi step form, and mimics the format of many online forms that collect large amouts of user data. A stepper component is implimented to show the progress of the form as it is completed. Error checking and validation ensure that the form is filled out properly and ready to be received server side.",
 
   Art: "One of my very first projects. This project is a portfolio of my many oil paintings. Visitors can explore my virtual exhibit, and view detail modals of each painting for a closer inspection. A contact page is also provided for inquiries regarding commissioning new work.",
-  Grocery: "sklfnldfnl",
-  Recipe: "ldfnldnfldsnf",
-  Weather: "kasbbaskfjbk",
+  Grocery:
+    "This application serves as an all purpose groocery list or ToDo app.  Full CRUD operations are exhibited, as weel as conditional rendering. ",
+  Recipe: "fbdnskjfbkj",
+  Weather:
+    "This Project makes user dependant queries to multiple external apis for complete data fetching, National weather data, as well as select dropdowns populatable via a Country/State/City NPM, make the ultimate fetch call truly international, and instantaneous.",
   BonesMalone: "kasbbaskfjbk",
+  BloodPressure: "sklfnldfnndsfkjbfkbdl",
   GirlForce: "dnkjsndknsdkjndnasjkndkjsna",
 };
 
@@ -71,6 +74,13 @@ const projectData = [
     image: `${BonesMalone}`,
     linkMultiForm: "/bonesMalones",
     bgColor: "#2978A0",
+  },
+  {
+    title: "Fine Tuned Blood Pressure Chart",
+    description: `${decriptions.BloodPressure}`,
+    image: `${Memphis}`,
+    linkMultiForm: "/blood-pressure-monitor",
+    bgColor: "#861388",
   },
   {
     title: "Girl Force",

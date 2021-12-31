@@ -6,6 +6,7 @@ import MultiStep from "./Components/Projects/MultiStepForm/MultiStep";
 import GroceryListApp from "./Components/Projects/GroceryList/GroceryListApp";
 import { Recipe } from "./Components/Projects/RecipeFinder/Recipe";
 import Weather from "./Components/Projects/Weather/WeatherApp";
+import { Bp } from "./Components/Projects/BloodPressureMonitor/BP";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/multi-step-form" component={MultiStep} />
           <Route path="/groceries" component={GroceryListApp} />
           <Route path="/weather" component={Weather} />
+          <Route path="/blood-pressure-monitor" component={Bp} />
         </Switch>
       </Router>
       <Footer />

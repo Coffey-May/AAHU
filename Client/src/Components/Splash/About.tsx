@@ -76,12 +76,11 @@ const About = () => {
                   : {
                       columnCount: 2,
                       padding: "2em 0em 6em 0em",
-                      lineHeight: "2em",
-                      fontSize: "1.25em",
+                      lineHeight: "1.5em",
+                      fontSize: "1.44em",
                     }
               }
             >
-              {" "}
               Why paint in 10 brushstrokes what could be achieived with one? Why
               program a function in ten lines rather than one? Why learn through
               rote, brute force memorization, as opposed to a blend of exposure,

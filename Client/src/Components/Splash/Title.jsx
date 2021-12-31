@@ -82,12 +82,12 @@ const Title = () => {
                   style={{ fontWeight: 900 }}
                   variant={"h2"}
                 >
-                  {" "}
-                  Coffey May{" "}
+               
+                  Coffey May
                 </Typography>
                 <Typography
                   className={classes.subtitle1}
-                  style={{ fontWeight: 600 }}
+                  style={{ fontWeight: 900 }}
                   variant={"h5"}
                 >
                   Software Engineer
@@ -97,7 +97,7 @@ const Title = () => {
                   style={{
                     padding: " 10px 0px 15px 0px",
                     fontSize: "medium",
-                    fontWeight: 500,
+                    fontWeight: 600,
                
                   }}
                 >

@@ -60,17 +60,17 @@ const GroceryForm = ({
     // let optionLabel = "filter by status"
     return (
         <Box id="form-bg">
-{/*             
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '20px' }}>
+            
+            <div style={{padding:'1em',  display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '20px' }}>
                 <div style={{ height: '10px', width: '10px', backgroundColor: 'yellow' }}></div>
                 <div style={{ height: '10px', width: '10px', backgroundColor: 'red' }}></div>
                 <div style={{ height: '10px', width: '10px', backgroundColor: 'blue' }}></div>
                 <div style={{ height: '10px', width: '10px', backgroundColor: 'white' }}></div>
-            </div> */}
-            <Typography variant={'h3'} style={{ fontWeight: 600, margin: "0 auto", paddingTop: "5vh" }}>Grocery List</Typography>
+            </div>
+            <Typography variant={'h3'} style={{ fontWeight: 600, margin: "0 auto" }}>Grocery List</Typography>
             <form>
                 <TextField 
-                    inputProps={{style: {fontSize: 40,padding: "1rem",display:'flex',flexGrow:1,fontFamily: 'Waiting for the Sunrise, cursive',textAlign:'center',fontWeight:'bolder'}}}
+                    inputProps={{style: {fontSize: '2em',padding: "1rem",display:'flex',flexGrow:1,fontFamily: 'Waiting for the Sunrise, cursive',textAlign:'center',fontWeight:'bolder'}}}
                     // style={{ }}
                     value={inputText}
 
@@ -80,7 +80,7 @@ const GroceryForm = ({
                     placeholder="Grocery Item?"
                 />
 
-                <Button type="submit" style={{marginTop:'1em', backgroundColor: 'darkgoldenrod', width: '80%', color:'white', fontSize:'xx-large'}}  onClick={submitTodoHandler}>
+                <Button type="submit" style={{marginTop:'1em', backgroundColor: 'darkgoldenrod', width: '80%', color:'white',fontSize: '2em'}}  onClick={submitTodoHandler}>
                   Add 
                 </Button>
                 <br />
@@ -92,7 +92,7 @@ const GroceryForm = ({
                     <option value="completed">Check Off List</option>
                     <option value="incomplete">Still Need</option>
                 </select> */}
-                <Select disableUnderline label={status} value={status} className="select-css" onChange={statusHandler} name="" id="">
+                <Select disableUnderline label={status} value={status} className="select-css" onChange={statusHandler} id="select"style={{color:'#666'}}>
                     {/* <MenuItem MenuItem value={'all'}>Filter options ⟱</MenuItem> */}
                     <MenuItem value={'all'}> <h3>All Items</h3></MenuItem>
                     <MenuItem value={'completed'}><h3>Check Off List</h3></MenuItem>

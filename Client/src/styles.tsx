@@ -1,10 +1,13 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
-    appWrapper:{
-        minHeight:'100%',
-        boxSizing:'border-box',
-        overflow:'hidden',
-        outline:0
-    }
+  //   rooot: {
+  //     margin: "0 auto",
+  //   },
+  appWrapper: {
+    minHeight: "100%",
+    boxSizing: "border-box",
+    overflow: "hidden",
+    outline: 0,
+  },
 }));

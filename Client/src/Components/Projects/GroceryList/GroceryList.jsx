@@ -23,7 +23,7 @@ const GroceryList = ({
           display: "flex",
           flexDirection: "row",
           flexWrap:'wrap',
-         
+         justifyContent:'space-around'
           // width:'60vw',
 
           

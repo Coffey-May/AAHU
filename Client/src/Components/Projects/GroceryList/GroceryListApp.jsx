@@ -52,45 +52,15 @@ const GroceryListApp = () => {
     }
   };
 
-  // const onClose = () => {
-  //     window.opener = null;
-  //     window.open("", "_self");
-  //     window.close();
-  // };
-
-  // if (currentUser === null) {
-  //     return (
-  //         <div>
-  //             <h2>Please log in to use this feature</h2>
-
-  //             <NavLink to="/login" style={{ paddingTop: '2px', textDecoration: 'none', color: 'white' }} className="chi nav-link">
-  //                 <button class="glow-on-hover" type="button">Log In</button>
-  //             </NavLink>
-
-  //         </div>
-  //     )
-  // } else if (currentUser != null && localStorage.getItem("todo_user")) {
   return (
    
     <>
-     {/* <CssBaseLine /> */}
+
       <div
       id="mondrian"
       style={{  overflow:' hidden', display: "flex", flexDirection: "row", flexWrap: "wrap",justifyContent:'space-around' }}
     >
-   
-      {/* <div
-     
-        style={{
-        
-          height: "50vh",
-          margin: "2em",
-       width:'100%',
-          
-          display: "flex", flexDirection: "row", flexWrap: "wrap"
-        }}
-          > */}
-        {/* <Container> */}
+  
             <div style={{marginLeft:'5vw'}}>
         <GroceryForm
           currentId={currentId}
@@ -105,27 +75,22 @@ const GroceryListApp = () => {
           status={status} />
             </div>
             
-            <div style={{ }}>
+            <div >
           <GroceryList
-          currentId={currentId}
-          setCurrentId={setCurrentId}
-          editMessage={editMessage}
-          setEditMessage={setEditMessage}
-          inputText={inputText}
-          setInputText={setInputText}
-          todos={todos}
-          setTodos={setTodos}
-          filteredTodos={filteredTodos} />
+            currentId={currentId}
+            setCurrentId={setCurrentId}
+            editMessage={editMessage}
+            setEditMessage={setEditMessage}
+            inputText={inputText}
+            setInputText={setInputText}
+            todos={todos}
+            setTodos={setTodos}
+            filteredTodos={filteredTodos}
+            />
+          
           </div>
             
-        {/* </div> */}
         
-        
-     {/* </Container> */}
-    {/* </div><div style={{ width: '100vw', minHeight: '60vh', backgroundColor: 'white' }}> */}
-
-
-
       </div>
     </>
    

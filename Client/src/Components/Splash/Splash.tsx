@@ -6,38 +6,32 @@ import { useStyles } from "./styles";
 import { CssBaseline } from "@material-ui/core";
 import Projects from "../Projects/Projects";
 
-let url = 'http://localhost:3000'
+// let url = 'http://localhost:3000'
 
+// if (
+//   window.location.href === `${url}` ||
+//   window.location.href === `${url}/#Home` ||
+//   window.location.href === `${url}/#About `||
+//   window.location.href === `${url}/#Projets`
+// )
 
-  // if (
-  //   window.location.href === `${url}` ||
-  //   window.location.href === `${url}/#Home` ||
-  //   window.location.href === `${url}/#About `||
-  //   window.location.href === `${url}/#Projets`
-  // )
+{
+  document.addEventListener("scroll", function (e) {
+    let elem = document.querySelector<HTMLElement>(".overlay") || null;
 
-  {
-    document.addEventListener("scroll", function (e) {
-      let elem = document.querySelector<HTMLElement>(".overlay") || null
-
-
-        const hideCheck = () => {
-          if(!elem){
-            return
-          }
-         if (window.pageYOffset <= 0) {
-         elem!.style.background =
-          "rgb(10,10,10,0.8)";
-        } else if (window.pageYOffset > 0 || window.pageYOffset < 100) {
-          elem!.style.background =
-          "rgb(5,5,5,0)";
-        }
-    }
-   hideCheck()
-   
-    });
-  }
-
+    const hideCheck = () => {
+      if (!elem) {
+        return;
+      }
+      if (window.pageYOffset <= 0) {
+        elem!.style.background = "rgb(10,10,10,0.8)";
+      } else if (window.pageYOffset > 0 || window.pageYOffset < 100) {
+        elem!.style.background = "rgb(5,5,5,0)";
+      }
+    };
+    hideCheck();
+  });
+}
 
 const Splash = () => {
   const classes = useStyles();

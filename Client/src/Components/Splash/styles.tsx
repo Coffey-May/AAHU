@@ -1,7 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 // import image from "../../assets/gradientSky.jpeg";
 // import image1 from "../../assets/stars.jpeg";
-import image1 from "../../assets/sun.gif";
+// import image1 from "../../assets/sun.gif";
+
+import image1 from "../../assets/sunweb.webp";
 import dots from "../../assets/dots.png";
 
 // let pine = '#157A6E'
@@ -15,9 +17,11 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "4rem",
     // letterSpacing: ' .4rem',
     overflow: "hidden",
+
+    letterSpacing: ".25em",
     [theme.breakpoints.down(550)]: {
       fontSize: "3em",
-      // letterSpacing: ' .3rem',
+      letterSpacing: " 0em",
     },
   },
   vanish: {
@@ -27,15 +31,18 @@ export const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     fontSize: "2.5rem",
+
     [theme.breakpoints.down(550)]: {
       fontSize: ".75rem",
     },
   },
   subtitle1: {
     fontSize: "2.5rem",
+    letterSpacing: ".20em",
     [theme.breakpoints.down(550)]: {
       padding: ".45rem",
       fontSize: "1.4rem",
+      letterSpacing: "0em",
     },
   },
   nameTitle: {
@@ -44,6 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "verdana",
     color: "#f5f5f5",
     textShadow: " 0 0 0.05em currentColor",
+
     [theme.breakpoints.down(900)]: {
       marginTop: "21.75vh",
       textAlign: "center",

@@ -56,9 +56,9 @@ export default function ImgMediaCard(
         <Card>
           <CardMedia
             component="img"
-            alt="green iguana"
-            height="240px"
-            width="auto"
+            alt={projectData.title}
+            height="auto"
+            width="100%"
             image={projectData.image}
           />
           <CardContent>

@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   nav: {
     // backgroundColor: 'black',
-    minHeight: "10vh",
+    margin: "0 auto",
+
     background: `linear-gradient(rgba(0, 0, 0, 1) ,transparent)`,
     // background: 'rgba(0, 0, 0, .7)',
     boxShadow: "none",
@@ -22,7 +23,8 @@ export const useStyles = makeStyles((theme) => ({
   toolBar: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+
+    justifyContent: "space-around",
   },
 
   navDisplaySmall: {

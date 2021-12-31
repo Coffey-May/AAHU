@@ -43,24 +43,51 @@ export const Recipe = () => {
     <div
       style={{
         minHeight: "100vh",
-        backgroundColor: "#666",
+        backgroundColor: "rgba(170,50,50)",
         marginTop: "-3vh",
       }}
     >
       <Container>
         <form onSubmit={getSearch} style={{ margin: "0 auto" }}>
-          <h1 style={{ color: "white", paddingTop: "15vh" }}>
-            WHAT SHOULD I EAT?
+          <h1
+            style={{
+              color: "white",
+              paddingTop: "2em",
+              display: "block",
+              textAlign: "center",
+
+              fontSize: "4em",
+            }}
+          >
+            DINNER SOLVER
           </h1>
           <input
             value={inputText}
-            style={{ backgroundColor: "goldenrod" }}
+            style={{
+              display: "block",
+              margin: "2em auto",
+              fontSize: "2em",
+              width: "70%",
+              padding: "1em",
+              backgroundColor: "rgba(250, 255, 147, 0.8)",
+              borderRadius: "99px",
+              color: "black",
+            }}
             onChange={captureInput}
+            placeholder="Search recipes"
             type="text"
           />
         </form>
 
-        <div style={{ margin: "0 auto" }}>
+        <div
+          style={{
+            margin: "0 auto",
+            display: "flex",
+            justifyContent: "space-around",
+
+            flexWrap: "wrap",
+          }}
+        >
           {" "}
           {recipes.map((recipe, index) => (
             <RecipeComponent key={index} recipe={recipe} />

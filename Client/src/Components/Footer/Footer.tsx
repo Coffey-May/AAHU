@@ -25,7 +25,7 @@ const Footer = () => {
             </Link>
           </Box>
           <Box pb={2}>
-            <CopyrightIcon />
+            &copy;
             {new Date().getFullYear()}
           </Box>
         </Grid>
@@ -64,17 +64,31 @@ const Footer = () => {
 
           <Grid className={classes.boxWrap}>
             <Box mr={0}>
-              <Link href="/" color="inherit">
+              <Link
+                href="https://github.com/Coffey-May"
+                color="inherit"
+                target="_blank"
+              >
                 <GitHub />
               </Link>
             </Box>
             <Box mr={0}>
-              <Link href="/" color="inherit">
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                href="mailto: jcoffeymay6@gmail.com"
+                color="inherit"
+              >
                 <EmailIcon />
               </Link>
             </Box>
             <Box mr={0}>
-              <Link href="/" color="inherit">
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/in/coffey-may"
+                color="inherit"
+              >
                 <LinkedInIcon />
               </Link>
             </Box>
