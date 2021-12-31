@@ -4,6 +4,7 @@ import Pic2 from "../Weather/WeatherImages/cloudygif.gif";
 import Pic3 from "../Weather/WeatherImages/raingif.gif";
 import Pic4 from "../Weather/WeatherImages/snowgif.gif";
 import Pic5 from "../Weather/WeatherImages/foggif.gif";
+
 import Container from "@material-ui/core/Container";
 var image;
 function imageFilter(x) {
@@ -73,6 +74,7 @@ const WeatherComponent = ({
   country,
   description,
   error,
+  flag
 }) => {
   return (
     <div
@@ -94,27 +96,32 @@ const WeatherComponent = ({
           backgroundColor: "rgba(0,0,0,0.7)",
           color: "white",
           position: "absolute",
-        //   paddingTop: "1em",
+          //   paddingTop: "1em",
           height: "80vh",
           width: "90vw",
           fontSize: "1em",
         }}
+      >
+        <div>
+          <h1
+            style={{
+              textShadow:
+                "inset -10px 14px 21px -4px rgba(255, 255, 255, 0.753)",
+              "inset 17px 22px 21px 4px rgba(0, 0, 0, 0.46)":
+                "1px 16px 29px 9px rgba(0, 0, 0, 0.932)",
+              color: "rgba(70,70,70,0.7)",
+              //   background: 'rgba(0,0,0,0.0)',
+              textTransform: "uppercase",
+              textShadow:
+                "-3px 3px 4px rgba(0, 0, 0), 2px -2px 6px rgb(255, 255, 255,0.7)",
+              fontSize: "6vw",
+              margin: "0 0 0 0",
+              textAlign: "center",
+            }}
           >
-              <div >
-                  <h1 style={{
-                     
-                      textShadow: 'inset -10px 14px 21px -4px rgba(255, 255, 255, 0.753)',
-   'inset 17px -22px 21px -4px rgba(0, 0, 0, 0.46)':
-    '1px 16px 29px 9px rgba(0, 0, 0, 0.932)',
-  color: 'rgba(70,70,70,0.7)',
-//   background: 'rgba(0,0,0,0.0)',
-  textTransform: 'uppercase',
-                      textShadow: '-3px 3px 4px rgba(0, 0, 0), 2px -2px 6px rgb(255, 255, 255,0.7)',
-                      fontSize: '7vw',
-                      margin: '0 0 0 0',
-                      textAlign:'center'
-                  }}>FORECASTER PLUS <b>+</b> </h1>
-                  </div>
+            FORECASTER PLUS <b>+</b>{" "}
+          </h1>
+        </div>
         <hr />
         <h2 style={{ margin: "0 auto" }}>
           Currently: {time}
@@ -128,11 +135,12 @@ const WeatherComponent = ({
             Location:
             <span className="weather__value">
               {" "}
-              {city}, {country}
+              {city}, {country}, {flag}
             </span>
           </h2>
         )}
-
+        { <h2>{flag}</h2>
+        }
         {temperature && (
           <h3 style={{ margin: "0 auto" }} className="weather__key">
             {" "}

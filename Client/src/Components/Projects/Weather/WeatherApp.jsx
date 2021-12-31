@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Form from "./WeatherForm";
-// import WForm from './WForm';
+import Map from './Map'
 
 import WeatherComponent from "./WeatherComponent";
 
@@ -20,6 +20,7 @@ const WeatherApp = () => {
   const [wData, setWData] = useState(initialState);
   const [country, setCountry] = useState("Afghanistan");
   const [city, setCity] = useState("");
+  const [flag, setSelectedFlag] = useState("");
 
   console.log("render");
 
@@ -127,9 +128,11 @@ const WeatherApp = () => {
         country={wData.country}
         description={wData.description}
         error={wData.error}
+        flag={flag}
       />
 
       <Form
+        setSelectedFlag={setSelectedFlag}
         country={country}
         city={city}
         data={wData}
@@ -137,7 +140,7 @@ const WeatherApp = () => {
         setCity={setCity}
         setCountry={setCountry}
       />
-      {/* <WForm/> */}
+      <Map/>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
 import { Country, State, City } from "country-state-city";
 
-const WeatherForm = ({ searchWeather, setCity, setCountry, countrys }) => {
+const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelectedFlag,flag }) => {
   const [isocode, setIsoCode] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [countries, setCountries] = useState([]);
@@ -10,6 +10,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys }) => {
   const [states, setStates] = useState([]);
   const [selectedCity, setSelectedCity] = useState("");
   const [cities, setCities] = useState([]);
+  
 
   // const getCitiesOfCountry = City.getCitiesOfCountry("AU")
   // console.log(getCitiesOfCountry)
@@ -21,7 +22,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys }) => {
     fetchCountries();
   }, [countries]);
   {
-    console.log("country", selectedCountry, states, cities);
+    console.log("country", selectedCountry, states, cities, flag);
   }
 
   return (
@@ -35,22 +36,26 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys }) => {
                     onChange={(e) => setCountry(e.target.value)}
                     type="text" name="country" placeholder="Country..." />
   */}
+      
         <select 
           onChange={(e) => (
             setSelectedCountry(e.target.value),
+            // setSelectedFlag(e.target.value),
             // setSelectedCity(''),
             // setSelectedState(''),
-            setStates(State.getStatesOfCountry(e.target.value))
+            setStates(State.getStatesOfCountry(e.target.value)),
+            console.log()
           )}
               >
                      <option value="" selected disabled hidden>Choose Country</option>
                   {countries.map((c) => (
-            
-            <option key={c.flag} value={c.isoCode}>
-              {c.name}
+      
+            <option key={c.flag} value={c.isoCode} > 
+                      {c.name}{c.flag}
             </option>
           ))}
         </select>
+
         <select
           onChange={(e) => (
             setSelectedState(e.target.value),
@@ -65,6 +70,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys }) => {
             </option>
           ))}
         </select>
+
         <select onChange={(e) => setCity(e.target.value)}>
           {cities.map((c) => (
             <option key={c.name} value={c.name}>
