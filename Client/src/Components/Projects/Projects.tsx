@@ -32,6 +32,7 @@ const projectData = [
     image: `${MultiStep}`,
     linkMultiForm: "/multi-step-form",
     bgColor: "#54731e",
+    techs: ["REACT", "CRUD", "VALIDATION", "STEPPER"],
   },
   {
     title: "Traveler Share Guide",
@@ -39,6 +40,15 @@ const projectData = [
     image: `${TravelShare}`,
     linkMultiForm: "https://coffey-may-coffey-may-merntime.zeet.app/",
     bgColor: "#FAA613",
+    techs: [
+      "REACT",
+      "REDUX",
+      "EXPRESS",
+      "NODEJS",
+      "MONGOOSE",
+      "AUTH",
+      "PERSISTANT DATA",
+    ],
   },
   {
     title: " Sticky Note Grocery Check-List",
@@ -46,6 +56,7 @@ const projectData = [
     image: `${Grocery}`,
     linkMultiForm: "/groceries",
     bgColor: "#F44708",
+    techs: [],
   },
   {
     title: "Coffey May Fine Art",
@@ -53,6 +64,7 @@ const projectData = [
     image: `${ArtSite}`,
     linkMultiForm: "https://coffeymayart.com",
     bgColor: "#F43E8A",
+    techs: [],
   },
   {
     title: "Forecaster Daily Plus",
@@ -60,6 +72,7 @@ const projectData = [
     image: `${WeatherSite}`,
     linkMultiForm: "/weather",
     bgColor: "#724CF9",
+    techs: [],
   },
   {
     title: "Dinner Solver",
@@ -67,6 +80,7 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/recipe",
     bgColor: "#00F5D4",
+    techs: [],
   },
   {
     title: "Bones Malone",
@@ -74,6 +88,7 @@ const projectData = [
     image: `${BonesMalone}`,
     linkMultiForm: "/bonesMalones",
     bgColor: "#2978A0",
+    techs: [],
   },
   {
     title: "Fine Tuned Blood Pressure Chart",
@@ -81,6 +96,7 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/blood-pressure-monitor",
     bgColor: "#861388",
+    techs: [],
   },
   {
     title: "Girl Force",
@@ -88,6 +104,7 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/girlForce",
     bgColor: "#861388",
+    techs: [],
   },
 ];
 

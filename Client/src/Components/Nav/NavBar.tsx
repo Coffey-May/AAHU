@@ -52,7 +52,7 @@ const Navbar = () => {
 
     return (
       <ul className={wide}>
-        <li>
+        <li style={{ marginLeft: "7em" }}>
           <Button color="inherit">
             <h3>
               <Profile />
@@ -60,23 +60,23 @@ const Navbar = () => {
           </Button>
         </li>
 
-        <li>
+        <li style={{ marginLeft: "7em" }}>
           <Button href="/#About" color="inherit">
             <h3> ABOUT</h3>
           </Button>
         </li>
 
-        <li>
+        <li style={{ marginLeft: "7em" }}>
           <Button href="/#Projects" color="inherit">
             <h3> PROJECTS </h3>
           </Button>
         </li>
         {user ? (
-          <li>
+          <li style={{ marginLeft: "7em" }}>
             <LogoutButton />
           </li>
         ) : (
-          <li>
+          <li style={{ marginLeft: "7em" }}>
             <LoginButton />
           </li>
         )}

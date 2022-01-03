@@ -65,7 +65,42 @@ export default function ImgMediaCard(
             <Typography gutterBottom variant="h5" component="div">
               {projectData.title}
             </Typography>
-            <Typography variant="body2">{projectData.description}</Typography>
+            {/* <Typography variant="body2">{projectData.description}</Typography> */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+              }}
+            >
+              {projectData.techs.map(
+                (
+                  t:
+                    | boolean
+                    | React.ReactChild
+                    | React.ReactFragment
+                    | React.ReactPortal
+                    | null
+                    | undefined
+                ) => (
+                  <p
+                    style={{
+                      backgroundColor: `${projectData.bgColor}`,
+                      borderRadius: "99px",
+                      padding: "1em",
+                      marginRight: "1em",
+                      width: "10vw",
+                      color: "white",
+                      textAlign: "center",
+                    }}
+                    // variant="body2"
+                  >
+                    {t}
+                  </p>
+                )
+              )}
+            </div>
           </CardContent>
           <CardActions>
             <Button>

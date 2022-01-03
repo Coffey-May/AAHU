@@ -59,12 +59,13 @@ export const useStyles = makeStyles((theme) => ({
 
   navDisplay: {
     listStyleType: "none",
-    paddingLeft: "7em",
+    paddingLeft: "9em",
+    justifyContent: "right",
     width: "90vw",
+
     [theme.breakpoints.up(600)]: {
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-evenly",
     },
     [theme.breakpoints.down(600)]: {
       display: "none",

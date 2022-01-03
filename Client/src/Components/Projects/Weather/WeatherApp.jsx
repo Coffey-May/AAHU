@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Form from "./WeatherForm";
-import Map from './Map'
+import Map from './Map';
+
+
 
 import WeatherComponent from "./WeatherComponent";
 
@@ -21,8 +23,10 @@ const WeatherApp = () => {
   const [country, setCountry] = useState("Afghanistan");
   const [city, setCity] = useState("");
   const [flag, setSelectedFlag] = useState("");
+  const [latitude, setLatitude] = useState(0);
+  const [longitude, setLongitude] = useState(0);
 
-  console.log("render");
+  console.log("render", latitude,longitude, city,flag);
 
   useEffect(() => {
     // console.log("render")
@@ -50,6 +54,7 @@ const WeatherApp = () => {
     // const city = e.target.elements.city.value;
     // const country = e.target.elements.country.value;
     console.log("in:", country, city);
+    
 
     const api_call = await fetch(
       `${url}/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`
@@ -130,8 +135,10 @@ const WeatherApp = () => {
         error={wData.error}
         flag={flag}
       />
-
+      
       <Form
+        setLatitude={setLatitude}
+        setLongitude={setLongitude}
         setSelectedFlag={setSelectedFlag}
         country={country}
         city={city}
@@ -140,7 +147,11 @@ const WeatherApp = () => {
         setCity={setCity}
         setCountry={setCountry}
       />
-      <Map/>
+      <div style={{
+        position:'absolute',marginTop:'-60vh',marginLeft:'49vw'
+      }}><Map latitude={latitude} longitude={longitude} flag={flag} city={city} /></div>
+   
+     
     </div>
   );
 };

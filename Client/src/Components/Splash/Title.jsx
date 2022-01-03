@@ -6,6 +6,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { useStyles } from "./styles";
+import { Parallax } from "react-scroll-parallax";
 // import Memphis from '../../assets/memphis.png'
 // import Resume from '../../PDFS/CoffeyMayResume2021.pdf'
 import Resume from "../../PDFS/CoffeyMayResume2021.pdf";
@@ -17,14 +18,14 @@ const divToggle = () => {
   document.addEventListener("scroll", function (e) {
     console.log("hello", window.innerWidth);
     if (window.innerWidth < 900) {
-    document.querySelector(".reveal").style.display = "none";
- }
+      document.querySelector(".reveal").style.display = "none";
+    }
     else if (window.pageYOffset >= 1) {
       document.querySelector(".overlay2").style.display = "none";
-       document.querySelector(".reveal").style.display = "block";
+      document.querySelector(".reveal").style.display = "block";
     } else if (window.pageYOffset < 1) {
       document.querySelector(".overlay2").style.display = "block";
-            document.querySelector(".reveal").style.display = "none";
+      document.querySelector(".reveal").style.display = "none";
     }
   });
 };
@@ -52,7 +53,9 @@ const Title = () => {
   return (
     <Container>
       <Box>
+
         <Grid container>
+        
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <motion.div
               className={classes.nameTitle}
@@ -82,7 +85,7 @@ const Title = () => {
                   style={{ fontWeight: 900 }}
                   variant={"h2"}
                 >
-               
+
                   Coffey May
                 </Typography>
                 <Typography
@@ -98,7 +101,7 @@ const Title = () => {
                     padding: " 10px 0px 15px 0px",
                     fontSize: "medium",
                     fontWeight: 600,
-               
+
                   }}
                 >
                   Progressive Web Applications in React, NodeJs, and more...
@@ -126,11 +129,12 @@ const Title = () => {
                     </Button>
                   </a>
 
-                 
+
                 </Box>
               </div>
             </motion.div>
           </Grid>
+        
 
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <motion.div
@@ -189,7 +193,7 @@ const Title = () => {
                           "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
                       }}
                     >
-                      
+
                       <i
                         style={{ padding: "10px" }}
                         className="devicon-html5-plain"
@@ -235,10 +239,11 @@ const Title = () => {
               {/* <img style={{ background: 'radial-gradient(white,white,transparent,transparent)', filter: 'invert(1)' }} className={classes.memphis} src={`${Memphis}`} alt="memphis design" /> */}
             </motion.div>
             <h1 className="reveal" style={{
-              color: 'white', position: 'absolute', top:'36vh',display:'none'
+              color: 'white', position: 'absolute', marginLeft: '3em', top: '36vh', display: 'none'
             }}><em>“That brain of mine is something more <br></br>than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>
           </Grid>
-        </Grid>
+          </Grid>
+
       </Box>
     </Container>
   );

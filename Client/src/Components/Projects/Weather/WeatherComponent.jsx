@@ -1,4 +1,6 @@
 import React from "react";
+
+
 import Pic from "../Weather/WeatherImages/weathergif.gif";
 import Pic2 from "../Weather/WeatherImages/cloudygif.gif";
 import Pic3 from "../Weather/WeatherImages/raingif.gif";
@@ -139,8 +141,7 @@ const WeatherComponent = ({
             </span>
           </h2>
         )}
-        { <h2>{flag}</h2>
-        }
+     
         {temperature && (
           <h3 style={{ margin: "0 auto" }} className="weather__key">
             {" "}
@@ -166,6 +167,7 @@ const WeatherComponent = ({
         )}
       </div>
       {/* </Container> */}
+    
       {/* <div> */}
       {imageFilter(description)}
       {
@@ -195,6 +197,7 @@ const WeatherComponent = ({
           {error}
         </h3>
       )}
+
     </div>
   );
 };
