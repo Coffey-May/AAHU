@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import Memphis from "../../assets/memphis.png";
 import Container from "@material-ui/core/Container";
-import best from "../../assets/Screen Shot 2021-12-21 at 3.14.35 AM.png";
-// ../assets/Screen Shot 2021 - 12 - 21 at 3.14.35 AM.png
+import best from "../../assets/Screen-Shot-2021-12-21-at-3.14.35-AM.webp";
+import best1 from "../../assets/Screen-Shot-2022-01-03-at-10.21.41-PM.webp";
 
 function useWindowDimensions() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -69,13 +69,13 @@ const About = () => {
                 width < 900
                   ? {
                       columnCount: 1,
-                      padding: "2em 0em 6em 0em",
+                      padding: "2em 0em 2em 0em",
                       lineHeight: "2em",
                       fontSize: "1.25em",
                     }
                   : {
                       columnCount: 2,
-                      padding: "2em 0em 6em 0em",
+                      padding: "2em 0em 2em 0em",
                       lineHeight: "1.5em",
                       fontSize: "1.44em",
                     }
@@ -99,9 +99,41 @@ const About = () => {
               toss the second stone, pickup the first, and repeat. The
               challaange is through navigativing next steps.{" "}
             </p>
-            <img style={{ width: "3rem" }} src={best} alt="" />
-            <img style={{ width: "3rem" }} src={best} alt="" />
-            <img style={{ width: "3rem" }} src={best} alt="" />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "space-around",
+                backgroundColor: "#222",
+                borderRadius: "15px",
+                marginBottom: "4em",
+              }}
+            >
+              <img
+                style={{
+                  // marginTop: "-20vh",
+
+                  width: "5rem",
+                  opacity: "0.7",
+                  borderRadius: "15px",
+                }}
+                src={best}
+                alt="devtools lighthouse report stats"
+              />
+              <img
+                style={{
+                  // marginTop: "-20vh",
+
+                  width: "5rem",
+                  opacity: "0.7",
+                  borderRadius: "15px",
+                }}
+                src={best1}
+                alt="devtools lighthouse report stats"
+              />
+            </div>
+
+            {/* <img style={{ width: "3rem" }} src={best} alt="" /> */}
           </div>
         </Container>
       </div>

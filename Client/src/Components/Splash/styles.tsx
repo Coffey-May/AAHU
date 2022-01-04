@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // import image1 from "../../assets/sun.gif";
 
 import image1 from "../../assets/sunweb.webp";
-import dots from "../../assets/dots.png";
-
+import dots from "../../assets/dots.webp";
+// Client/src/assets/Screen-Shot-2021-12-06-at-11.05.26-AM.webp
 // let pine = '#157A6E'
 // let shamRock = '#157A6E',
 // let ashGray = '#C2C5BB'

@@ -25,7 +25,7 @@ export default function ImgMediaCard(
         minHeight: "70vh",
         width: "100%",
         margin: "0 auto",
-        backgroundColor: "rgba(245,245,245)",
+        backgroundColor: "rgba(240,240,240)",
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
@@ -49,16 +49,25 @@ export default function ImgMediaCard(
         <h3 style={{ lineHeight: "1.25em", fontSize: "1.5em" }}>
           {projectData.description}
         </h3>
-        <i className="devicon-github-original" style={{ fontSize: "2em" }}></i>
+        <a
+          style={{ textDecoration: "none", color: "#666" }}
+          target="_blank"
+          href={projectData.gitHubLink}
+        >
+          <i
+            className="devicon-github-original"
+            style={{ fontSize: "2em" }}
+          ></i>
+        </a>
       </Grid>
 
       <Grid item xs={10} sm={5} md={5} lg={4}>
-        <Card>
+        <Card style={{ boxShadow: "0px 5px 17px 6px rgba(0,0,0,0.88)" }}>
           <CardMedia
             component="img"
             alt={projectData.title}
             height="auto"
-            width="100%"
+            width="100vw"
             image={projectData.image}
           />
           <CardContent>
@@ -71,7 +80,7 @@ export default function ImgMediaCard(
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
-                justifyContent: "space-between",
+                justifyContent: "space-around",
               }}
             >
               {projectData.techs.map(
@@ -86,17 +95,22 @@ export default function ImgMediaCard(
                 ) => (
                   <p
                     style={{
+                      clipPath:
+                        " polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0%)",
                       backgroundColor: `${projectData.bgColor}`,
                       borderRadius: "99px",
-                      padding: "1em",
-                      marginRight: "1em",
-                      width: "10vw",
+                      padding: ".5rem",
+                      fontSize: ".75rem",
+                      verticalAlign: "middle",
+                      width: "8rem",
                       color: "white",
                       textAlign: "center",
+                      display: "flex",
+                      justifyContent: "space-evenly",
                     }}
                     // variant="body2"
                   >
-                    {t}
+                    • {t}
                   </p>
                 )
               )}

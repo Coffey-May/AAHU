@@ -1,12 +1,13 @@
 import Card from "./CardComponent";
 import Memphis from "../../assets/memphis.png";
-import ArtSite from "../../assets/Screen Shot 2020-12-10 at 4.41.07 PM.png";
+import ArtSite from "../../assets/Screen-Shot-2020-12-10-at-4.41.07-PM.webp";
 import WeatherSite from "../../assets/Screen Shot 2021-02-04 at 12.52.31 PM.png";
 import BonesMalone from "../../assets/Screen Shot 2020-02-20 at 9.40.16 PM.png";
-import Grocery from "../../assets/Screen Shot 2021-12-22 at 11.39.44 PM.png";
+import Grocery from "../../assets/Screen-Shot-2021-12-22-at-11.39.44-PM.webp";
 import MultiStep from "../../assets/Screen Shot 2021-12-22 at 11.55.46 PM.png";
+// Client/src/assets/Screen-Shot-2020-12-10-at-4.41.07-PM.webp
 
-import TravelShare from "../../assets/Screen Shot 2021-03-11 at 11.52.32 AM.png";
+import TravelShare from "../../assets/Screen-Shot-2021-03-11-at-11.53.18-AM.webp";
 
 let decriptions = {
   TravelShare:
@@ -32,6 +33,8 @@ const projectData = [
     image: `${MultiStep}`,
     linkMultiForm: "/multi-step-form",
     bgColor: "#54731e",
+    gitHubLink:
+      "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/MultiStepForm",
     techs: ["REACT", "CRUD", "VALIDATION", "STEPPER"],
   },
   {
@@ -40,6 +43,7 @@ const projectData = [
     image: `${TravelShare}`,
     linkMultiForm: "https://coffey-may-coffey-may-merntime.zeet.app/",
     bgColor: "#FAA613",
+    gitHubLink: "https://github.com/Coffey-May/MERNTime",
     techs: [
       "REACT",
       "REDUX",
@@ -56,7 +60,9 @@ const projectData = [
     image: `${Grocery}`,
     linkMultiForm: "/groceries",
     bgColor: "#F44708",
-    techs: [],
+    gitHubLink:
+      "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/GroceryList",
+    techs: ["CRUD OPERATIONS", "DYNAMIC RENDERING", "NEXT-GEN-FORMATTING"],
   },
   {
     title: "Coffey May Fine Art",
@@ -64,7 +70,8 @@ const projectData = [
     image: `${ArtSite}`,
     linkMultiForm: "https://coffeymayart.com",
     bgColor: "#F43E8A",
-    techs: [],
+    gitHubLink: "",
+    techs: ["DYNAMIC RENDERING", "BLOG STYLE PORTFOLIO", "FINE ART SERVICES"],
   },
   {
     title: "Forecaster Daily Plus",
@@ -72,7 +79,14 @@ const projectData = [
     image: `${WeatherSite}`,
     linkMultiForm: "/weather",
     bgColor: "#724CF9",
-    techs: [],
+    gitHubLink:
+      "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/Weather",
+    techs: [
+      "MULTIPLE APIS",
+      "CASCADING SELECT",
+      "INTERACTIVE WORLD MAP",
+      "LIVE WEATHER DATA",
+    ],
   },
   {
     title: "Dinner Solver",
@@ -80,6 +94,8 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/recipe",
     bgColor: "#00F5D4",
+    gitHubLink:
+      "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/RecipeFinder",
     techs: [],
   },
   {
@@ -88,6 +104,7 @@ const projectData = [
     image: `${BonesMalone}`,
     linkMultiForm: "/bonesMalones",
     bgColor: "#2978A0",
+    gitHubLink: "https://github.com/Coffey-May/E-Store",
     techs: [],
   },
   {
@@ -96,6 +113,8 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/blood-pressure-monitor",
     bgColor: "#861388",
+    gitHubLink:
+      "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/BloodPressureMonitor",
     techs: [],
   },
   {
@@ -104,6 +123,7 @@ const projectData = [
     image: `${Memphis}`,
     linkMultiForm: "/girlForce",
     bgColor: "#861388",
+    gitHubLink: "",
     techs: [],
   },
 ];
