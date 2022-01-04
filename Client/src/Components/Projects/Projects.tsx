@@ -5,7 +5,8 @@ import WeatherSite from "../../assets/Screen Shot 2021-02-04 at 12.52.31 PM.png"
 import BonesMalone from "../../assets/Screen Shot 2020-02-20 at 9.40.16 PM.png";
 import Grocery from "../../assets/Screen-Shot-2021-12-22-at-11.39.44-PM.webp";
 import MultiStep from "../../assets/Screen Shot 2021-12-22 at 11.55.46 PM.png";
-// Client/src/assets/Screen-Shot-2020-12-10-at-4.41.07-PM.webp
+import Recipe from "../../assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp";
+// Client/src/assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp
 
 import TravelShare from "../../assets/Screen-Shot-2021-03-11-at-11.53.18-AM.webp";
 
@@ -91,21 +92,21 @@ const projectData = [
   {
     title: "Dinner Solver",
     description: `${decriptions.Recipe}`,
-    image: `${Memphis}`,
+    image: `${Recipe}`,
     linkMultiForm: "/recipe",
-    bgColor: "#00F5D4",
+    bgColor: "hotpink",
     gitHubLink:
       "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/RecipeFinder",
-    techs: [],
+    techs: ["API FETCHES", "QUERY PARAMETERS", "RESPONSIVE RETRO DESIGN"],
   },
   {
     title: "Bones Malone",
     description: `${decriptions.BonesMalone}`,
     image: `${BonesMalone}`,
     linkMultiForm: "/bonesMalones",
-    bgColor: "#2978A0",
+    bgColor: "navy",
     gitHubLink: "https://github.com/Coffey-May/E-Store",
-    techs: [],
+    techs: ["E-COMMERCE", "JAM-STACK", "COMMERCEJS", "STRIPE", "ASYNC"],
   },
   {
     title: "Fine Tuned Blood Pressure Chart",
@@ -115,7 +116,7 @@ const projectData = [
     bgColor: "#861388",
     gitHubLink:
       "https://github.com/Coffey-May/portfolioV3/tree/master/Client/src/Components/Projects/BloodPressureMonitor",
-    techs: [],
+    techs: ["INTERACTIVE CHART", "CRUD"],
   },
   {
     title: "Girl Force",

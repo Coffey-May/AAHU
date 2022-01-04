@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Ingredients } from "./Ingredients";
 
 export const RecipeComponent = (recipe: {
@@ -28,14 +28,17 @@ export const RecipeComponent = (recipe: {
     };
   };
 }) => {
+  useEffect(() => {}, []);
+
   return (
     <div
+      id="recipeDiv"
       style={{
         // padding: "1em",
         margin: "1em",
         display: "inline-block",
 
-        width: window.innerWidth > 900 ? "33vw" : "100vw",
+        minWidth: "33vw",
 
         backgroundColor: "rgba(240,250,250)",
         borderRadius: "99px 0px 99px 0px",

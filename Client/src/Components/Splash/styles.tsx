@@ -129,6 +129,9 @@ export const useStyles = makeStyles((theme) => ({
       //  height: '60vh',
     },
   },
+  first: {
+    initialLetter: 2,
+  },
 
   stars: {
     position: "absolute",

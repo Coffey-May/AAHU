@@ -11,6 +11,9 @@
   /* border: none; */
   scroll-behavior: smooth;
 }
+/* div:not(.overlay):not(#home):not(#title) {
+  filter: invert(1);
+} */
 /* hr{
   color:white;
 } */

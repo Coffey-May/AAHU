@@ -21,7 +21,7 @@ export default function ImgMediaCard(
       style={{
         border: ` 5px solid ${projectData.bgColor}`,
         color: "rgba(100,100,100)",
-        padding: "2em",
+        padding: "4em",
         minHeight: "70vh",
         width: "100%",
         margin: "0 auto",

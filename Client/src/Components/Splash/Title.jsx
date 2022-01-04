@@ -58,6 +58,7 @@ const Title = () => {
         
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <motion.div
+            id="title"
               className={classes.nameTitle}
               animate={{
                 x: 40,
@@ -118,7 +119,8 @@ const Title = () => {
                       style={{
                         color: "white",
                         backgroundColor: "#d1006c",
-                        width: "13rem",
+                        width: "14rem",
+                        // border:'2px solid black'
                       }}
                       color="inherit"
                       variant="outlined"
@@ -170,6 +172,7 @@ const Title = () => {
                       display: "inline-block",
                       color: "white",
                       boxShadow: "0px 5px 10px 0px #0000009E",
+                      borderLeft:'2px solid #999'
                     }}
                     className="dot"
                   >
@@ -239,6 +242,8 @@ const Title = () => {
               {/* <img style={{ background: 'radial-gradient(white,white,transparent,transparent)', filter: 'invert(1)' }} className={classes.memphis} src={`${Memphis}`} alt="memphis design" /> */}
             </motion.div>
             <h1 className="reveal" style={{
+              fontFamily: 'Cedarville Cursive, cursive', 
+fontFamily: 'Waiting for the Sunrise, cursive',
               color: 'white', position: 'absolute', marginLeft: '3em', top: '36vh', display: 'none'
             }}><em>“That brain of mine is something more <br></br>than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>
           </Grid>

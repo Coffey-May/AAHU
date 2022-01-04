@@ -56,7 +56,7 @@ const Splash = () => {
             left: 0,
             bottom: 0,
             width: "100%",
-            height: "87.5%",
+            height: "88.65%",
             background: "rgb(10,10,10,0.8)",
           }}
         >
@@ -103,8 +103,9 @@ const Splash = () => {
 
         <Title />
       </div>
-
-      <About />
+      <div style={{ filter: "invert(1)" }}>
+        <About />
+      </div>
 
       <Projects />
     </>
