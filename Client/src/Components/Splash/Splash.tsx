@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "./Title";
 import About from "./About";
 import { useStyles } from "./styles";
 // import Aside from "./Aside";
 import { CssBaseline } from "@material-ui/core";
 import Projects from "../Projects/Projects";
+import Switch from "@material-ui/core/Switch";
 
 // let url = 'http://localhost:3000'
 
@@ -33,7 +34,15 @@ import Projects from "../Projects/Projects";
   });
 }
 
+const handleChange = () => {
+  document.querySelector<HTMLElement>("#invertDiv")!.style.filter = "invert(1)"
+    ? (document.querySelector<HTMLElement>("#invertDiv")!.style.filter = "none")
+    : (document.querySelector<HTMLElement>("#invertDiv")!.style.filter =
+        "invert(1)");
+};
+
 const Splash = () => {
+  const [checked, setcChecked] = useState(false);
   const classes = useStyles();
 
   // const Waves = useMemo(() => {
@@ -103,7 +112,20 @@ const Splash = () => {
 
         <Title />
       </div>
-      <div style={{ filter: "invert(1)" }}>
+      <div style={checked ? { filter: "invert(1)" } : { filter: "invert(0)" }}>
+        <span
+          style={{
+            marginLeft: "45%",
+            marginTop: "8em",
+            position: "absolute",
+          }}
+        >
+          <Switch
+            // checked={checked}
+            onChange={() => setcChecked(!checked)}
+            inputProps={{ "aria-label": "controlled" }}
+          />
+        </span>
         <About />
       </div>
 

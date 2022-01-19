@@ -3,7 +3,7 @@ import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
 import { Stepper } from "react-form-stepper";
-import {useStyles }from "./styles";
+import { useStyles } from "./styles";
 // import axios from "axios";
 import { Button, Typography } from "@material-ui/core";
 import MessageList from "./MessageList";
@@ -18,28 +18,28 @@ const Form = () => {
     userName: "",
     nationality: "",
     other: "",
-    id: 0
+    id: 0,
   };
   const [error, setError] = useState(false);
   const [page, setPage] = useState(0);
-  const [list, setList] = useState([{
-     email: "demo@demo.com",
-    password: "MSFDemo1!",
-    confirmPassword: "MSFDemo1!",
-    firstName: "John",
-    lastName: "Demo",
-    userName: "J Demo",
-    nationality: "Antarctica",
-    other: "Its cold here, please bring a jacket...",
-    id: 0
-  }]);
+  const [list, setList] = useState([
+    {
+      email: "demo@demo.com",
+      password: "MSFDemo1!",
+      confirmPassword: "MSFDemo1!",
+      firstName: "John",
+      lastName: "Demo",
+      userName: "J Demo",
+      nationality: "Antarctica",
+      other: "Its cold here, please bring a jacket...",
+      id: 0,
+    },
+  ]);
   const [formData, setFormData] = useState(initialState);
 
   const classes = useStyles();
 
-  useEffect(() => {
-
-  }, [list])
+  useEffect(() => {}, [list]);
 
   // axios
   //   .get("http://localhost:5000", {
@@ -86,8 +86,8 @@ const Form = () => {
   };
 
   const handleEdit = () => {
-    alert('recahed')
-  }
+    alert("recahed");
+  };
 
   console.log("list1", list, formData);
   return (
@@ -97,7 +97,7 @@ const Form = () => {
         width: "100vw",
         backgroundColor: "rgba(232,232,232)",
         paddingTop: "13vh",
-         paddingBottom: "13vh",
+        paddingBottom: "13vh",
       }}
     >
       <div className={classes.formWrap}>
@@ -161,7 +161,6 @@ const Form = () => {
                   margin: "1em",
                 }}
                 onClick={() => {
-
                   if (page === FormTitles.length - 3) {
                     //  alert('first')
                     if (
@@ -199,14 +198,14 @@ const Form = () => {
                       userName: formData.userName,
                       nationality: formData.nationality,
                       other: formData.other,
-                      id: Math.random() * 5000 
+                      id: Math.random() * 5000,
                     };
                     setList((list) => [...list, newEntry]);
 
                     setFormData(initialState);
                     setPage(0);
                     console.log("list", list);
-                    setError(false)
+                    setError(false);
                   } else {
                     setPage((currPage) => currPage + 1);
                   }

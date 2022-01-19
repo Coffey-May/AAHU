@@ -74,7 +74,7 @@ export const Recipe = () => {
               color: "black",
             }}
             onChange={captureInput}
-            placeholder="Search recipes"
+            placeholder="Enter Ingredient"
             type="text"
           />
         </form>

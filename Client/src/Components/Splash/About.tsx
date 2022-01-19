@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useStyles } from "./styles";
 import Memphis from "../../assets/memphis.png";
 import Container from "@material-ui/core/Container";
+
 import best from "../../assets/Screen-Shot-2021-12-21-at-3.14.35-AM.webp";
 import best1 from "../../assets/Screen-Shot-2022-01-03-at-10.21.41-PM.webp";
 
@@ -33,7 +34,7 @@ const About = () => {
           minWidth: "100vw",
           backgroundColor: "rgba(245,245,245)",
           // marginTop: "0.5em",
-          // paddingTop: "1em",
+          // paddingTop: "1px",
         }}
       >
         <img
@@ -46,8 +47,8 @@ const About = () => {
             // top: "50.75vh",
 
             // zIndex: "-1",
-            margin: "10.55em 3em 0em 0em",
-            // padding: "0em 5em -2em 0em",
+            margin: "7em 3em 0em 0em",
+            padding: "0em 5em -2em 0em",
 
             // position: "relative",
           }}
@@ -58,13 +59,14 @@ const About = () => {
           <div style={{ width: "80%", margin: "0 auto", paddingBottom: "4em" }}>
             <h1
               style={{
-                padding: "1.5em 0em 2em 0em ",
+                // marginTop: "2",
+                padding: "1.5em 0em 1.5em 0em ",
                 color: "#d1006c",
                 borderBottom: "1px solid #d1006c",
                 fontSize: "3em",
               }}
             >
-              ABOUT ME
+              ABOUT ME{" "}
             </h1>
 
             <p
@@ -88,7 +90,21 @@ const About = () => {
                     }
               }
             >
-              <span
+              &nbsp;&nbsp; &nbsp; &nbsp;Hello, My name is Coffey May. I am a
+              JavaScript developer who is proficient with React.js. I enjoy
+              working at all levels of the development process, from
+              wireframing/ implimenting a design system, building a front end,
+              connecting it to an api and finally to maintaining through CI/CD.
+              Although I am a full stack developer I do enjoy making applcations
+              that are beautiful and responsive. interface components and
+              implementing them following well-known React.js workflows (such as
+              Flux or Redux). I aim to ensure that these components and the
+              overall application are robust and easy to maintain. You will
+              coordinate with the rest of the team working on different layers
+              of the infrastructure. Therefore, a commitment to collaborative
+              problem solving, sophisticated design, and quality product is
+              important.
+              {/* <span
                 style={{
                   fontSize: "1.25em",
                   // fontWeight: "lighter",
@@ -122,7 +138,7 @@ const About = () => {
               stones to traverse a creek without getting wet. Toss a stone, hop
               on it, toss the second stone, pickup the first, and repeat. The
               challange is through navigativing next steps. Now what if the
-              water gets too deep for the stone?
+              water gets too deep for the stone? */}
             </p>
             <div
               style={{
@@ -131,7 +147,7 @@ const About = () => {
                 justifyContent: "space-around",
                 backgroundColor: "#222",
                 borderRadius: "15px",
-                filter: "invert(1)",
+                // filter: "invert(1)",
               }}
             >
               <img

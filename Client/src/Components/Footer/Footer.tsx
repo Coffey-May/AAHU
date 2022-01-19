@@ -14,7 +14,16 @@ const Footer = () => {
       <CssBaseline />
 
       <Grid container className={classes.foot}>
-        <Grid item xs={12} sm={3}>
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography style={{ fontWeight: "bolder" }} variant="h5">
             Coffey May
           </Typography>
@@ -30,7 +39,16 @@ const Footer = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={3}>
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography style={{ fontWeight: "bolder" }} variant={"h5"}>
             About Us
           </Typography>
@@ -45,11 +63,6 @@ const Footer = () => {
               TESTIMONIALS
             </Link>
           </Box>
-          <Box>
-            <Link href="/" color="inherit">
-              PRODUCT DETAILS
-            </Link>
-          </Box>
           <Box pb={2}>
             <Link href="/" color="inherit">
               FAQ
@@ -57,7 +70,16 @@ const Footer = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={3}>
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography style={{ fontWeight: "bolder" }} variant={"h5"}>
             Stay Connected
           </Typography>

@@ -120,7 +120,9 @@ const Title = () => {
                         color: "white",
                         backgroundColor: "#d1006c",
                         width: "14rem",
-                        // border:'2px solid black'
+                        // filter:'invert(1)',
+                        // border: '1px solid white',
+                        // webkitTextStroke: '.25px white'
                       }}
                       color="inherit"
                       variant="outlined"
