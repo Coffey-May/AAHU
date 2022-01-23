@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Title from "./Title";
 import About from "./About";
 import { useStyles } from "./styles";
-// import Aside from "./Aside";
 import { CssBaseline } from "@material-ui/core";
 import Projects from "../Projects/Projects";
 import Switch from "@material-ui/core/Switch";
+// import Aside from "./Aside";
 
 // let url = 'http://localhost:3000'
 
@@ -42,7 +42,7 @@ const handleChange = () => {
 };
 
 const Splash = () => {
-  const [checked, setcChecked] = useState(false);
+  const [checked, setcChecked] = useState<boolean | null>(false);
   const classes = useStyles();
 
   // const Waves = useMemo(() => {
@@ -70,28 +70,18 @@ const Splash = () => {
           }}
         >
           {/* <div style={{ fontSize: '3em', marginTop: '43vh',marginLeft:'50vw',color:'white' }}>
-                     <i style={{padding:'10px'}} className="devicon-html5-plain"></i>
-                       <i style={{padding:'10px'}}  className="devicon-css3-plain"></i>
-                      <i style={{padding:'10px'}}  className="devicon-express-original"></i>
-                      <i style={{padding:'10px'}}  className="devicon-javascript-plain"></i>
-                      <i style={{padding:'10px'}}  className="devicon-typescript-plain"></i>
-
-                      <i style={{padding:'10px'}}  className="devicon-nodejs-plain"></i>
-                       <i style={{padding:'10px'}}  className="devicon-react-original"></i>
+                    <i style={{padding:'10px'}} className="devicon-html5-plain"></i>
+                    <i style={{padding:'10px'}}  className="devicon-css3-plain"></i>
+                    <i style={{padding:'10px'}}  className="devicon-express-original"></i>
+                    <i style={{padding:'10px'}}  className="devicon-javascript-plain"></i>
+                    <i style={{padding:'10px'}}  className="devicon-typescript-plain"></i>
+                    <i style={{padding:'10px'}}  className="devicon-nodejs-plain"></i>
+                    <i style={{padding:'10px'}}  className="devicon-react-original"></i>
                     <i style={{padding:'10px'}}  className="devicon-redux-original"></i>
                     <i style={{padding:'10px'}}  className="devicon-csharp-plain"></i>
                     <i style={{padding:'10px'}}  className="devicon-dotnetcore-plain"></i>
-                    
-             
                     <i style={{padding:'10px'}}  className="devicon-git-plain"></i>
-                    
-                   
-                   
-                    
-                  
-                   
-                    
-                    </div>
+                </div>
           */}
 
           {/* 
@@ -128,7 +118,6 @@ const Splash = () => {
         </span>
         <About />
       </div>
-
       <Projects />
     </>
   );

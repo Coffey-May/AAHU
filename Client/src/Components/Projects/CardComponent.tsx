@@ -31,7 +31,7 @@ export default function ImgMediaCard(
         flexWrap: "wrap",
         justifyContent: "space-evenly",
         alignItems: "center",
-        boxShadow: "inset 1px 1px 5px 2px #000000",
+        boxShadow: `inset 1px 1px 25px 2px ${projectData.bgColor}`,
       }}
     >
       <Grid
@@ -117,8 +117,16 @@ export default function ImgMediaCard(
             </div>
           </CardContent>
           <CardActions>
-            <Button>
+            <Button
+              style={{
+                margin: "0 auto",
+                filter: "invert(1)",
+                backgroundColor: `${projectData.bgColor}`,
+              }}
+              variant="contained"
+            >
               <a
+                style={{ textDecoration: "none", color: "black" }}
                 rel="noreferrer"
                 href={projectData.linkMultiForm}
                 target={
@@ -127,7 +135,7 @@ export default function ImgMediaCard(
                     : undefined
                 }
               >
-                View Project{" "}
+                View Project
               </a>
 
               {/* <Link target="_blank" to={projectData.linkMultiForm}>View Project </Link> */}

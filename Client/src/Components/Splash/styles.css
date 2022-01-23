@@ -4,25 +4,22 @@
   /* left: -10vw; */
   bottom: 0;
   pointer-events: none;
- 
 }
 
 .wave-line .inner[data-v-c0cb0066] {
-
-    margin-top:-70vh;
+  margin-top: -70vh;
   max-width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   transform: scaleX(4) rotate(100deg);
 }
 
 .wave-line .line[data-v-c0cb0066] {
-
   opacity: 0.1;
   /* position: relative; */
-  left: 300px;
-  top: -150px;
+  /* left: 300px; */
+  /* top: -150px; */
   width: 1000px;
-  height: 1200px;
+  /* height: 1200px; */
   border: 40px solid #d1006c;
   border-radius: 24%;
   transform-origin: 50% 49%;
@@ -109,10 +106,9 @@
   }
 }
 
-
 :root {
   --colorMain: #c0c0c0;
-  --brShadow: -6px 6px 15px rgba(0,0,0,0.5);
+  --brShadow: -6px 6px 15px rgba(0, 0, 0, 0.5);
   --tlShadow: 6px -6px 15px rgba(255, 255, 255, 0.8);
 }
 body {
@@ -131,20 +127,18 @@ body {
   font-weight: bold;
   font-family: sans-serif;
   text-transform: uppercase;
-  text-shadow: var(--brShadow), 
-               var(--tlShadow);
+  text-shadow: var(--brShadow), var(--tlShadow);
   position: relative;
 }
-  .text::before, .text::after {
-    
-    position: absolute;
-    background: var(--colorMain);
-    content: '';
-    border-radius: 10%;
-    
-  }
-  
-    /* .text::before {
+.text::before,
+.text::after {
+  position: absolute;
+  background: var(--colorMain);
+  content: "";
+  border-radius: 10%;
+}
+
+/* .text::before {
       left: 0;
     width: 100px;
     height: 100px;
@@ -154,7 +148,7 @@ body {
                 inset var(--tlShadow) ;
       
     } */
-    /* .text::after {
+/* .text::after {
       left: -50px;
       width: 200px;
       height: 200px;

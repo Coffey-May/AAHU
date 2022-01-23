@@ -76,34 +76,22 @@ const GraphQl = () => {
 
       <hr />
       <StyledP style={width < 900 ? { columnCount: 1 } : { columnCount: 2 }}>
-        &nbsp;&nbsp;&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Ratione quod repudiandae numquam quidem, quae, a
-        necessitatibus sapiente consequatur, ex ullam nesciunt.
-        {/* <HeaderImg></HeaderImg> */}
-        Possimus dolor atque quis a voluptates beatae quo sit praesentium! Eaque
-        odit at quis provident, laboriosam fugiat temporibus nulla, perspiciatis
-        molestias dolorem cumque eligendi magnam voluptate voluptates ut porro,
-        itaque error corporis. Accusantium harum aperiam rerum maiores fuga
-        fugit iusto! Aliquam, non ullam qui corporis odio sapiente hic vel
-        deleniti? Fugit pariatur error adipisci quos? In qui, iste accusantium,
-        {/* <Markdown children={input}></Markdown> */}
-        voluptatum sint vero voluptatibus mollitia cupiditate obcaecati. Quae
-        velit minima totam, cum necessitatibus amet laborum. Explicabo
-        cupiditate similique exercitationem quae, ullam nemo quidem odit,
-        praesentium accusantium voluptatem nulla sint deserunt fugiat? Id, nihil
-        deserunt dolor voluptas ipsum quod! Aspernatur, qui magnam
-        necessitatibus consequatur eum ut? Excepturi illo ullam iusto eius
-        quaerat rerum illum blanditiis nemo repellendus aut, quod sapiente
-        officiis perspiciatis totam sint, dolorem quis natus iste iure? Natus
-        odio inventore, obcaecati illum provident quod? Fugiat, consequuntur
-        necessitatibus, libero, inventore voluptas voluptatibus aperiam totam
-        iste quisquam obcaecati veniam optio nemo dicta quaerat! Aut dolorum id
-        iure voluptas culpa? Amet placeat explicabo dolor reiciendis facere
-        possimus? Exercitationem itaque ab
-        <HeaderImg1></HeaderImg1>ipsum molestias corrupti incidunt enim odio
-        eius numquam quam, consequatur perspiciatis iste minima in. Reiciendis,
-        excepturi natus. Quam doloribus unde dolor, libero dolores ab magnam
-        provident culpa.
+        &nbsp;&nbsp;&nbsp;&nbsp;This project utilizes a GraphQL schema that acts
+        as a database access layer. This API connects to a MongoDB database to
+        persist data. It returns numerous queries from the client side, and
+        includes a filter that accesses data via dates that are parsed from ISO
+        format to UTC, and back again. A query cheat sheet is provided in the
+        README documentation on github, along with instructions to clone and set
+        up the project. Full Crud operations are employed and resource
+        relationships are considered using foreign keys. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Odit placeat saepe quaerat harum ea
+        et cumque cum nam vitae eius?Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Magni, explicabo quia consequuntur architecto, eos
+        distinctio voluptatem cupiditate, commodi blanditiis repudiandae
+        dignissimos quam repellat corrupti molestias debitis quas accusantium
+        mollitia. Enim ipsa quo earum obcaecati dolore assumenda exercitationem
+        modi molestias atque.
+        <HeaderImg1></HeaderImg1>
       </StyledP>
     </StyledContainer>
   );

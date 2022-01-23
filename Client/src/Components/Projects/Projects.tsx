@@ -8,11 +8,12 @@ import Grocery from "../../assets/Screen-Shot-2021-12-22-at-11.39.44-PM.webp";
 import MultiStep from "../../assets/Screen Shot 2021-12-22 at 11.55.46 PM.png";
 import Recipe from "../../assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp";
 import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
-import DogNasium from "../../assets/dogNasium4.jpg";
+import DogNasium from "../../assets/dogNasium3.jpg";
 // Client/src/assets/Screen Shot 2022-01-07 at 1.01.05 AM.png
 // Client/src/assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp
 
 import TravelShare from "../../assets/Screen-Shot-2021-03-11-at-11.53.18-AM.webp";
+import { Container, Typography } from "@material-ui/core";
 
 let decriptions = {
   TravelShare:
@@ -29,7 +30,8 @@ let decriptions = {
     "This Project makes user dependant queries to multiple external apis for complete data fetching, National weather data, as well as select dropdowns populatable via a Country/State/City NPM resource, and MapGl combine to make the ultimate interactive international weather search experience. The ultimate fetch call, truly international, and instantaneous. An expoloration into the component lifecycles via the functional component pardigm",
   BonesMalone:
     "Full e-commerce JAMStack application, built using Stripe and CommerceJs.  Fill Shopping cart with products, proceed to checkout, place order through secure stripe api, and recieve customer/vendor confirmations, as well as detail invoices provided by CommerceJs CMS.",
-  DogNasium: "Tndsnfdnfsnflkdnsfl",
+  DogNasium:
+    "Welcome To Dog-Nasium. The Giant indoor dog park with numerous amenities. Explore plans for varying levels of access and custom build the plan for you.",
 
   BloodPressure:
     "Track blood pressure and heart rate measures by the day in this easy to use plotting chart. Data is visualized, easily editable and kept in the local storage object.",
@@ -173,6 +175,31 @@ const projectData = [
 const Projects = () => {
   return (
     <>
+      <div
+        style={{
+          backgroundColor: "#EEE",
+          filter: "invert(1)",
+          boxShadow: "inset 0px 0px 150px 0px #d1006c3E",
+        }}
+      >
+        <div
+          style={{
+            padding: "3em 0em",
+            width: "70%",
+            margin: "0 auto",
+          }}
+        >
+          <h1
+            style={{
+              color: "#d1006c",
+              fontSize: "3em",
+            }}
+          >
+            PROJECTS
+          </h1>
+        </div>
+      </div>
+
       <div>
         {projectData.map((projectData, index) => {
           return <Card projectData={projectData} key={index} />;

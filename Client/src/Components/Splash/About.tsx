@@ -3,8 +3,11 @@ import { useStyles } from "./styles";
 import Memphis from "../../assets/memphis.png";
 import Container from "@material-ui/core/Container";
 
-import best from "../../assets/Screen-Shot-2021-12-21-at-3.14.35-AM.webp";
-import best1 from "../../assets/Screen-Shot-2022-01-03-at-10.21.41-PM.webp";
+// import best from "../../assets/Screen-Shot-2021-12-21-at-3.14.35-AM.webp";
+// import best1 from "../../assets/Screen-Shot-2022-01-03-at-10.21.41-PM.webp";
+// import performance from "../../assets/Screen Shot 2022-01-22 at 7.44.10 PM.png";
+// import pWA from "../../assets/Screen Shot 2022-01-22 at 7.51.14 PM.png";
+import lightHouse from "../../assets/Screen Shot 2022-01-22 at 7.57.54 PM.png";
 
 function useWindowDimensions() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -66,7 +69,7 @@ const About = () => {
                 fontSize: "3em",
               }}
             >
-              ABOUT ME{" "}
+              ABOUT ME
             </h1>
 
             <p
@@ -79,97 +82,120 @@ const About = () => {
                       padding: "2em 0em 2em 0em",
                       lineHeight: "2em",
                       fontSize: "1.25em",
+                      fontWeight: "lighter",
                     }
                   : {
-                      color: "black",
+                      color: "#333",
                       columnCount: 2,
                       padding: "2em 0em 2em 0em",
-                      lineHeight: "1.5em",
-                      fontSize: "1.50em",
+                      lineHeight: "1.25em",
+                      fontSize: "1.65em",
                       fontWeight: "lighter",
                     }
               }
             >
               &nbsp;&nbsp; &nbsp; &nbsp;Hello, My name is Coffey May. I am a
-              JavaScript developer who is proficient with React.js. I enjoy
-              working at all levels of the development process, from
-              wireframing/ implimenting a design system, building a front end,
-              connecting it to an api and finally to maintaining through CI/CD.
-              Although I am a full stack developer I do enjoy making applcations
-              that are beautiful and responsive. interface components and
-              implementing them following well-known React.js workflows (such as
-              Flux or Redux). I aim to ensure that these components and the
-              overall application are robust and easy to maintain. You will
-              coordinate with the rest of the team working on different layers
-              of the infrastructure. Therefore, a commitment to collaborative
-              problem solving, sophisticated design, and quality product is
-              important.
-              {/* <span
-                style={{
-                  fontSize: "1.25em",
-                  // fontWeight: "lighter",
-                  // float: "left",
-                  shapeOutside: "inset(1% round 90%)",
-                  // padding: "50px",
-                  // marginLeft: "-.69em",
-                }}
-              >
-                &nbsp;&nbsp; &nbsp; &nbsp;B
-              </span>
-              ecoming fluent and intuitive with programming is a wonderful
-              feeling. Why paint in 10 brushstrokes what could be achieived with
-              one? Why program a function in ten lines rather than one? Why
-              learn through rote, brute force memorization, as opposed to a
-              blend of exposure, collaboration, and blended methodologies?{" "}
-              <br /> &nbsp;&nbsp; &nbsp; &nbsp;The Analogues between realist oil
-              painting, skateboarding, frizbee golf, bonsai, or any other,
-              essentially existential pursuit; that requires extended practice,
-              all share similar characteristics with code writing. Time... plus
-              experimentation, all help to determine success through trial and
-              error.
-              <br /> &nbsp;&nbsp; &nbsp; &nbsp; This is the nature of mastery.
-              However, I am eager to work with likeminded individuals. In this
-              way, new problems can be navigated with combined experience. While
-              it is good to be a strong programmer, the nature of well
-              constructed software consists of collaborative efforts and a
-              shared outcome.
-              <br /> &nbsp;&nbsp; &nbsp; &nbsp; This Website illustrates some of
-              what I can offer as a developer. Coding is like using only two
-              stones to traverse a creek without getting wet. Toss a stone, hop
-              on it, toss the second stone, pickup the first, and repeat. The
-              challange is through navigativing next steps. Now what if the
-              water gets too deep for the stone? */}
+              JavaScript and React.js developer. I particulary enjoy front end
+              work, but as a full stack developer, I am comfortable with working
+              at all levels of the development process; from wireframing and
+              implimenting a design system, onto integrating a back end and
+              database. Beautiful and responsive UI, as well as clean
+              maintainable code are important to me. I thrive in a team that
+              values collaborative problem solving, sophisticated design, and
+              quality work. I am a veresatile developer who adapts to new
+              challanges ,technologies, and methodolgies. This project was built
+              using a variety of technologies. Typescript, ReactJS, NodeJs,
+              MaterialUI, GraphQL, and numerous others. Please Enjoy...
+              <br />
             </p>
+            <p
+              style={
+                width < 900
+                  ? {
+                      border: "1px solid black",
+                      color: "black",
+                      // columnCount: 1,
+                      padding: "2em 2em 2em 2em",
+                      lineHeight: "2em",
+                      fontSize: "1.25em",
+                    }
+                  : {
+                      color: "#333",
+                      // columnCount: 2,
+                      padding: "2em 2em 2em 2em",
+                      lineHeight: "1.25em",
+                      fontSize: "1em",
+                      fontWeight: "lighter",
+                      border: "1px solid #999",
+                    }
+              }
+            >
+              <strong>What I can bring to your team </strong>
+              <hr />
+              <br />
+              •Developing the latest user-facing features using React.js <br />
+              •Designing a modern highly responsive web-based user interface
+              <br />
+              •Building reusable components and front-end libraries for future
+              use
+              <br />
+              •Translating designs and wireframes into high-quality code
+              <br />
+              •Learn and understand user interactions <br />
+              • Optimizing components for maximum performance across a vast
+              array of web-capable devices and browsers <br />
+              •Coordinating with various teams working on distinct layers
+              <br />
+              •Full involvement from conception to completion with projects that
+              are technologically sound and aesthetically impressive. <br />
+              •Strong proficiency in JavaScript, including DOM manipulation and
+              the JavaScript object model
+              <br />
+              •Thorough understanding of React.js and its core principles
+              <br />
+              •Prior experience with popular React.js workflows (such as Flux or
+              Redux)
+              <br /> •Familiarity with more current specifications of EcmaScript
+              <br /> •Familiarity with RESTful APIs
+              <br /> •Familiarity with HTML / CSS
+              <br /> •GIT experience, Team work-flows, and remote coordination
+              <br />
+              •Knowledge of modern authorization mechanisms, such as JSON Web
+              Token
+              <br /> •Familiarity with modern front-end build pipelines and
+              tools• <br />
+              •Experience with common front-end development tools such as Babel,
+              Webpack, NPM, etc. <br />
+              •Ability to understand business requirements and translate them
+              into technical requirements
+            </p>
+            <div style={{ textAlign: "center", padding: "2em" }}>
+              <strong>
+                My goals are to always strive for performant and optimized
+                applications.
+              </strong>
+            </div>
+
             <div
               style={{
                 display: "flex",
                 alignItems: "flex-start",
+                // padding: "2em",
                 justifyContent: "space-around",
                 backgroundColor: "#222",
                 borderRadius: "15px",
-                // filter: "invert(1)",
               }}
             >
               <img
                 style={{
                   // marginTop: "-20vh",
 
-                  width: "5rem",
-                  opacity: "0.7",
+                  width: "50%",
+                  // opacity: "0.7",
                   borderRadius: "15px",
+                  // marginTop: "-1vh",
                 }}
-                src={best}
-                alt="devtools lighthouse report stats"
-              />
-              <img
-                style={{
-                  // marginTop: "-20vh",
-
-                  width: "5rem",
-                  opacity: "0.7",
-                  borderRadius: "15px",
-                }}
-                src={best1}
+                src={lightHouse}
                 alt="devtools lighthouse report stats"
               />
             </div>

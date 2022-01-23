@@ -55,10 +55,10 @@ const Title = () => {
       <Box>
 
         <Grid container>
-        
+
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <motion.div
-            id="title"
+              id="title"
               className={classes.nameTitle}
               animate={{
                 x: 40,
@@ -83,7 +83,7 @@ const Title = () => {
               >
                 <Typography
                   className={classes.title}
-                  style={{ fontWeight: 900 }}
+                  style={{ fontWeight: 200 }}
                   variant={"h2"}
                 >
 
@@ -91,7 +91,7 @@ const Title = () => {
                 </Typography>
                 <Typography
                   className={classes.subtitle1}
-                  style={{ fontWeight: 900 }}
+                  style={{ fontWeight: 100 }}
                   variant={"h5"}
                 >
                   Software Engineer
@@ -101,7 +101,7 @@ const Title = () => {
                   style={{
                     padding: " 10px 0px 15px 0px",
                     fontSize: "medium",
-                    fontWeight: 600,
+                    fontWeight: 200,
 
                   }}
                 >
@@ -138,7 +138,7 @@ const Title = () => {
               </div>
             </motion.div>
           </Grid>
-        
+
 
           <Grid item lg={6} md={6} sm={12} xs={12}>
             <motion.div
@@ -174,7 +174,7 @@ const Title = () => {
                       display: "inline-block",
                       color: "white",
                       boxShadow: "0px 5px 10px 0px #0000009E",
-                      borderLeft:'2px solid #999'
+                      borderLeft: '2px solid #999'
                     }}
                     className="dot"
                   >
@@ -244,12 +244,16 @@ const Title = () => {
               {/* <img style={{ background: 'radial-gradient(white,white,transparent,transparent)', filter: 'invert(1)' }} className={classes.memphis} src={`${Memphis}`} alt="memphis design" /> */}
             </motion.div>
             <h1 className="reveal" style={{
-              fontFamily: 'Cedarville Cursive, cursive', 
-fontFamily: 'Waiting for the Sunrise, cursive',
-              color: 'white', position: 'absolute', marginLeft: '3em', top: '36vh', display: 'none'
+              fontWeight:'100',
+               WebkitBoxReflect:
+                    "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
+              fontFamily: 'Cedarville Cursive, cursive',
+              fontFamily: 'Waiting for the Sunrise, cursive',
+             
+              color: 'white', position: 'absolute', marginLeft: '3em', top: '25vh', display: 'none'
             }}><em>“That brain of mine is something more <br></br>than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>
           </Grid>
-          </Grid>
+        </Grid>
 
       </Box>
     </Container>

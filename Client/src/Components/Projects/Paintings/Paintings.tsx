@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// import Bp from "../../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
+
 import cSharpSnip from "../../../assets/cSharpsnip.png";
+import cSharpSnip1 from "../../../assets/Screen Shot 2022-01-22 at 7.25.04 PM.png";
+// Client/src/assets/Screen Shot 2022-01-22 at 7.25.04 PM.png
 import Markdown from "markdown-to-jsx";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
@@ -37,26 +39,25 @@ const StyledP = styled.p`
   padding-bottom: 3em;
 `;
 const HeaderImg = styled.img.attrs({
-  src: ` ${cSharpSnip}`,
+  src: ` ${cSharpSnip1}`,
 })`
-  width: 13rem;
-  height: 13rem;
-  border: 1px solid blue;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
   float: left;
-  margin: 1vw 2vw;
+  margin: 1vw 0vw;
 `;
 const HeaderImg1 = styled.img.attrs({
   src: ` ${cSharpSnip}`,
 })`
   width: 100%;
-  height: auto;
+  overflow: scroll;
   float: right;
-  margin: 2vw 0vw;
   padding: -2em;
 `;
 // const input = "```code in your Markdown file.```";
 
-const GraphQl = () => {
+const Paintings = () => {
   const { width } = useWindowDimensions();
   return (
     <StyledContainer>
@@ -76,37 +77,20 @@ const GraphQl = () => {
 
       <hr />
       <StyledP style={width < 900 ? { columnCount: 1 } : { columnCount: 2 }}>
-        &nbsp;&nbsp;&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Ratione quod repudiandae numquam quidem, quae, a
-        necessitatibus sapiente consequatur, ex ullam nesciunt.
+        &nbsp;&nbsp;&nbsp;&nbsp;This application served as my Back End Capstone
+        during my time in software school. Coded in C# and using ASP.NET core,
+        this application considers complex resources and their relationships.
         <HeaderImg></HeaderImg>
-        Possimus dolor atque quis a voluptates beatae quo sit praesentium! Eaque
-        odit at quis provident, laboriosam fugiat temporibus nulla, perspiciatis
-        molestias dolorem cumque eligendi magnam voluptate voluptates ut porro,
-        itaque error corporis. Accusantium harum aperiam rerum maiores fuga
-        fugit iusto! Aliquam, non ullam qui corporis odio sapiente hic vel
-        deleniti? Fugit pariatur error adipisci quos? In qui, iste accusantium,
-        {/* <Markdown children={input}></Markdown> */}
-        voluptatum sint vero voluptatibus mollitia cupiditate obcaecati. Quae
-        velit minima totam, cum necessitatibus amet laborum. Explicabo
-        cupiditate similique exercitationem quae, ullam nemo quidem odit,
-        praesentium accusantium voluptatem nulla sint deserunt fugiat? Id, nihil
-        deserunt dolor voluptas ipsum quod! Aspernatur, qui magnam
-        necessitatibus consequatur eum ut? Excepturi illo ullam iusto eius
-        quaerat rerum illum blanditiis nemo repellendus aut, quod sapiente
-        officiis perspiciatis totam sint, dolorem quis natus iste iure? Natus
-        odio inventore, obcaecati illum provident quod? Fugiat, consequuntur
-        necessitatibus, libero, inventore voluptas voluptatibus aperiam totam
-        iste quisquam obcaecati veniam optio nemo dicta quaerat! Aut dolorum id
-        iure voluptas culpa? Amet placeat explicabo dolor reiciendis facere
-        possimus? Exercitationem itaque ab
-        <HeaderImg1></HeaderImg1>ipsum molestias corrupti incidunt enim odio
-        eius numquam quam, consequatur perspiciatis iste minima in. Reiciendis,
-        excepturi natus. Quam doloribus unde dolor, libero dolores ab magnam
-        provident culpa.
+        <br></br>
+        &nbsp;&nbsp;&nbsp;&nbsp;MVC architecture and SQL server database have
+        been implimented in order to organize data access layers and the
+        business logic. Different user roles handled by Identity fraamework and
+        a built in CMS ensure a unique experiences for each user. Entity
+        framework and migrations are used to manage UI and application state
+        <HeaderImg1></HeaderImg1>
       </StyledP>
     </StyledContainer>
   );
 };
 
-export default GraphQl;
+export default Paintings;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import BM from "../../../assets/Screen Shot 2022-01-19 at 3.20.06 PM.png";
-import GQL from "../../../assets/gqlsnip.png";
+import eStore from "../../../assets/e-store.png";
 import Markdown from "markdown-to-jsx";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
@@ -43,10 +43,9 @@ const HeaderImg = styled.img.attrs({
   height: auto;
   border: 1px solid blue;
   float: left;
-  margin: 1vw 0vw;
 `;
 const HeaderImg1 = styled.img.attrs({
-  src: ` ${GQL}`,
+  src: ` ${eStore}`,
 })`
   width: 100%;
   height: auto;
@@ -73,43 +72,23 @@ const GraphQl = () => {
           ></i>
         </a>
       </StyledHeader>
-
       <hr />
       <StyledP style={width < 900 ? { columnCount: 1 } : { columnCount: 2 }}>
-        &nbsp;&nbsp;&nbsp;&nbsp;Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Ratione quod repudiandae numquam quidem, quae, a
-        necessitatibus sapiente consequatur, ex ullam nesciunt.
+        &nbsp;&nbsp;&nbsp;&nbsp;This Fully functional JAM stack E-Commerce
+        application leverages Stripe and CommerceJS, to provide the user with
+        the affordances to purchase gourmet dog treats.
         <HeaderImg></HeaderImg>
-        <video width="100%" height="auto" controls>
-          <source
-            src="Videos/screen recording 2020-03-01 at 11.21.56 am.mp4"
-            type="video/mp4"
-          />
-        </video>
-        Possimus dolor atque quis a voluptates beatae quo sit praesentium! Eaque
-        odit at quis provident, laboriosam fugiat temporibus nulla, perspiciatis
-        molestias dolorem cumque eligendi magnam voluptate voluptates ut porro,
-        itaque error corporis. Accusantium harum aperiam rerum maiores fuga
-        fugit iusto! Aliquam, non ullam qui corporis odio sapiente hic vel
-        deleniti? Fugit pariatur error adipisci quos? In qui, iste accusantium,
-        {/* <Markdown children={input}></Markdown> */}
-        voluptatum sint vero voluptatibus mollitia cupiditate obcaecati. Quae
-        velit minima totam, cum necessitatibus amet laborum. Explicabo
-        cupiditate similique exercitationem quae, ullam nemo quidem odit,
-        praesentium accusantium voluptatem nulla sint deserunt fugiat? Id, nihil
-        deserunt dolor voluptas ipsum quod! Aspernatur, qui magnam
-        necessitatibus consequatur eum ut? Excepturi illo ullam iusto eius
-        quaerat rerum illum blanditiis nemo repellendus aut, quod sapiente
-        officiis perspiciatis totam sint, dolorem quis natus iste iure? Natus
-        odio inventore, obcaecati illum provident quod? Fugiat, consequuntur
-        necessitatibus, libero, inventore voluptas voluptatibus aperiam totam
-        iste quisquam obcaecati veniam optio nemo dicta quaerat! Aut dolorum id
-        iure voluptas culpa? Amet placeat explicabo dolor reiciendis facere
-        possimus? Exercitationem itaque ab
-        <HeaderImg1></HeaderImg1>ipsum molestias corrupti incidunt enim odio
-        eius numquam quam, consequatur perspiciatis iste minima in. Reiciendis,
-        excepturi natus. Quam doloribus unde dolor, libero dolores ab magnam
-        provident culpa.
+        The Chec.io CMS is utilized for the admin to update products and their
+        quantities. Users can then select products and populate their shoppiing
+        cart. Once the user is ready for checkout they are presented with a
+        Stripe multi-step form component that collects their necessary
+        information to complete the order. Once the order is placed, the product
+        quantities are maintained in state, and both the admin and customer
+        recieve confirmation emails with the order information.<br></br>
+        <HeaderImg1></HeaderImg1>
+        <strong style={{ color: "#888" }}>
+          The shape of the order object that is recieved by CommerceJS.
+        </strong>
       </StyledP>
     </StyledContainer>
   );

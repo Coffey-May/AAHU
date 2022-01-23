@@ -31,14 +31,14 @@ export const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     fontSize: "2.5rem",
-
+    letterSpacing: ".05em",
     [theme.breakpoints.down(550)]: {
       fontSize: ".75rem",
     },
   },
   subtitle1: {
     fontSize: "2.5rem",
-    letterSpacing: ".20em",
+    letterSpacing: ".18em",
     [theme.breakpoints.down(550)]: {
       padding: ".45rem",
       fontSize: "1.4rem",

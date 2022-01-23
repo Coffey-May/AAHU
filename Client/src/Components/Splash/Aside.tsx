@@ -1,13 +1,6 @@
 // import { motion } from 'framer-motion'
 import React, { useEffect, memo } from "react";
 import { useStyles } from "./styles";
-// import Box from '@material-ui/core/Box'
-
-// let pine = '#157A6E'
-// let shamRock = '#499F68'
-// let ashGray = '#C2C5BB'
-// let darkSea = '#77B28C'
-// let brownSugar = '#B4654A'
 import cloud1 from "../../assets/cloud1.png";
 import cloud2 from "../../assets/cloud2.png";
 import cloud3 from "../../assets/cloud3.png";
