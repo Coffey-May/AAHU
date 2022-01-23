@@ -4,7 +4,7 @@ let apiKey = process.env.REACT_APP_MAPBOX_TOKEN
 
 
 export default function Map({ latitude, longitude, flag, city }) {
-    //  const [selectedCity, setSelectedCity] = useState("");
+     const [selectedCity, setSelectedCity] = useState("");
     const [open, setOpen] = useState(false);
     const [viewport, setViewport] = useState({
         latitude:0,
