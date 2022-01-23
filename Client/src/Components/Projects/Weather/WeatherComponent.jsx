@@ -1,13 +1,10 @@
 import React from "react";
-
-
 import Pic from "../Weather/WeatherImages/weathergif.gif";
 import Pic2 from "../Weather/WeatherImages/cloudygif.gif";
 import Pic3 from "../Weather/WeatherImages/raingif.gif";
 import Pic4 from "../Weather/WeatherImages/snowgif.gif";
 import Pic5 from "../Weather/WeatherImages/foggif.gif";
 
-import Container from "@material-ui/core/Container";
 var image;
 function imageFilter(x) {
   if (
@@ -114,8 +111,8 @@ const WeatherComponent = ({
               color: "rgba(70,70,70,0.7)",
               //   background: 'rgba(0,0,0,0.0)',
               textTransform: "uppercase",
-              textShadow:
-                "-3px 3px 4px rgba(0, 0, 0), 2px -2px 6px rgb(255, 255, 255,0.7)",
+              // textShadow:
+              //   "-3px 3px 4px rgba(0, 0, 0), 2px -2px 6px rgb(255, 255, 255,0.7)",
               fontSize: "6vw",
               margin: "0 0 0 0",
               textAlign: "center",

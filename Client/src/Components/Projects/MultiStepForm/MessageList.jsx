@@ -1,20 +1,11 @@
-import React, { useState } from "react";
-import {useStyles} from "./styles";
-import SingleListItem from './SingleListItem'
-import Button from "@material-ui/core/Button"
-import Typography from "@material-ui/core/Typography"
+import React from "react";
+import SingleListItem from './SingleListItem';
+import Typography from "@material-ui/core/Typography";
 
 const MessageList = ({ list, handleDelete, handleEdit ,setFormData, formData,setList,setError }) => {
- const classes = useStyles();
-
-
-
-  
-
 
   return (
     <div
-      // className={classes.messages}
       style={{
         display: "inline-block",
         overflowX: 'auto',

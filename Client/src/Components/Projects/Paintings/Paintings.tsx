@@ -63,6 +63,7 @@ const Paintings = () => {
       <StyledHeader>
         Contemporary Realism and C#
         <a
+          rel="noreferrer"
           style={{ textDecoration: "none", color: "#666" }}
           target="_blank"
           href="https://github.com/Coffey-May/MyPaintingsMVC"

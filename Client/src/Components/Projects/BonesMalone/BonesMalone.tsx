@@ -61,6 +61,7 @@ const GraphQl = () => {
       <StyledHeader>
         Bones Malone
         <a
+          rel="noreferrer"
           style={{ textDecoration: "none", color: "#666" }}
           target="_blank"
           href="https://github.com/Coffey-May/e-store"

@@ -8,10 +8,8 @@ import { useStyles } from "./styles";
 const SingleListItem = ({ elem, handleDelete, handleEdit, setFormData, formData, setList, setError, list }) => {
 
     const [modal, setModal] = useState(false)
-    const [email, setEmail] = useState(elem.email)
-
     document.addEventListener("click", e => {
-      
+
         if (e.target.id === "overlayClose") {
             setModal(false)
         }
@@ -19,10 +17,9 @@ const SingleListItem = ({ elem, handleDelete, handleEdit, setFormData, formData,
 
     function openModal() {
         setModal(true);
-      
-    
-    }
 
+
+    }
 
     const ShowModal = ({ elem }) => {
 
@@ -42,38 +39,34 @@ const SingleListItem = ({ elem, handleDelete, handleEdit, setFormData, formData,
         const [edit, setEdit] = useState(initialState)
 
         const submitEdit = (e, id) => {
-          e.preventDefault()
-           
+            e.preventDefault()
+
             let filteredList = list.filter((el) => {
                 if (el.id === id) {
-                              el.email = edit.email
-                        el.password = edit.password
-                        el.confirmPassword = edit.confirmPassword
-                        el.firstName = edit.firstName
-                        el.lastName = edit.lastName
-                            el.userName = edit.userName
-                        el.nationality = edit.nationality
-                        el.other = edit.other
-                            el.id = id
+                    el.email = edit.email
+                    el.password = edit.password
+                    el.confirmPassword = edit.confirmPassword
+                    el.firstName = edit.firstName
+                    el.lastName = edit.lastName
+                    el.userName = edit.userName
+                    el.nationality = edit.nationality
+                    el.other = edit.other
+                    el.id = id
                     return el
                 }
-                else{
-                return list
+                else {
+                    return list
                 }
             });
-          
-setList(filteredList)
-setModal(false);
+
+            setList(filteredList)
+            setModal(false);
         }
-
-
-
-
-
+        
         return (
             <>
 
-                <Box id="overlayClose" style={{ top: '0', left: '0', position: 'absolute', width: '100vw', height: '100%',backgroundColor: "rgba(0,0,0,0.7)" }}>
+                <Box id="overlayClose" style={{ top: '0', left: '0', position: 'absolute', width: '100vw', height: '100%', backgroundColor: "rgba(0,0,0,0.7)" }}>
                     <div className={classes.modalForm}
                         style={{ backgroundColor: 'white', margin: '0 auto', marginTop: '28vh', borderRadius: '15px', padding: '5em' }}>
                         <h1>UPDATE ENTRY</h1>
@@ -232,7 +225,7 @@ setModal(false);
 
 
                             <Button onClick={() => setModal(false)} style={{ backgroundColor: 'tomato', color: 'white' }}>CANCEL</Button>
-                            <Button onClick={(e)=>{submitEdit( e, elem.id)}} style={{ backgroundColor: 'teal', color: 'white' }} >SAVE CHANGES</Button>
+                            <Button onClick={(e) => { submitEdit(e, elem.id) }} style={{ backgroundColor: 'teal', color: 'white' }} >SAVE CHANGES</Button>
 
                         </div>
 

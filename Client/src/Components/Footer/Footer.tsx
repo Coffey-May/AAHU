@@ -1,9 +1,7 @@
 import React, { memo } from "react";
 import { Grid, Box, Link, CssBaseline, Typography } from "@material-ui/core";
-
 import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import CopyrightIcon from "@material-ui/icons/Copyright";
 import useStyles from "./styles";
 import GitHub from "@material-ui/icons/GitHub";
 

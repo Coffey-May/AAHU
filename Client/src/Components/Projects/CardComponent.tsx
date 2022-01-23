@@ -50,6 +50,7 @@ export default function ImgMediaCard(
           {projectData.description}
         </h3>
         <a
+          rel="noreferrer"
           style={{ textDecoration: "none", color: "#666" }}
           target="_blank"
           href={projectData.gitHubLink}

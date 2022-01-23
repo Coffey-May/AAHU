@@ -35,15 +35,15 @@ const StyledP = styled.p`
   letter-spacing: 1px;
   padding-bottom: 3em;
 `;
-const HeaderImg = styled.img.attrs({
-  src: ` ${Bp}`,
-})`
-  width: 13rem;
-  height: 13rem;
-  border: 1px solid blue;
-  float: left;
-  margin: 1vw 2vw;
-`;
+// const HeaderImg = styled.img.attrs({
+//   src: ` ${Bp}`,
+// })`
+//   width: 13rem;
+//   height: 13rem;
+//   border: 1px solid blue;
+//   float: left;
+//   margin: 1vw 2vw;
+// `;
 const HeaderImg1 = styled.img.attrs({
   src: ` ${GQL}`,
 })`
@@ -62,6 +62,7 @@ const GraphQl = () => {
       <StyledHeader>
         GraphQL Custom API
         <a
+          rel="noreferrer"
           style={{ textDecoration: "none", color: "#666" }}
           target="_blank"
           href="https://github.com/Coffey-May/graphql-api"

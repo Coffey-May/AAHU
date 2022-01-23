@@ -14,7 +14,6 @@ import cSharpSnip1 from "../../assets/Screen Shot 2022-01-22 at 7.25.04 PM.png";
 // Client/src/assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp
 
 import TravelShare from "../../assets/Screen-Shot-2021-03-11-at-11.53.18-AM.webp";
-import { Container, Typography } from "@material-ui/core";
 
 let decriptions = {
   TravelShare:

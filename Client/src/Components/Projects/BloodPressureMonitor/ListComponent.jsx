@@ -1,5 +1,5 @@
 import React from 'react'
-import { List } from './List'
+
 const pStyle = { margin: '5px', fontSize: 'medium', textAlign: 'left' }
 
 

@@ -4,12 +4,12 @@ import { Country, State, City } from "country-state-city";
 
 
 const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelectedFlag, flag, setLatitude, setLongitude, city }) => {
-  const [isocode, setIsoCode] = useState("");
+  // const [isocode, setIsoCode] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [countries, setCountries] = useState([]);
-  const [selectedState, setSelectedState] = useState("");
+  // const [selectedState, setSelectedState] = useState("");
   const [states, setStates] = useState([]);
-  const [selectedCity, setSelectedCity] = useState("");
+  // const [selectedCity, setSelectedCity] = useState("");
   const [cities, setCities] = useState([]);
 
 
@@ -22,9 +22,9 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
     };
     fetchCountries();
   }, [countries]);
-  {
-    console.log("country", selectedCountry, states, cities, flag);
-  }
+  // {
+  //   console.log("country", selectedCountry, states, cities, flag);
+  // }
 
   // const filteredCity = () => cities.filter(c => {
 

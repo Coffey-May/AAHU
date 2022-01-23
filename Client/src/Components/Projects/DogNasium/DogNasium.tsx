@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import BM from "../../../assets/Screen Shot 2022-01-19 at 3.20.06 PM.png";
-import GQL from "../../../assets/gqlsnip.png";
+
 import DogNasium1 from "../../../assets/dogNasium4.jpg";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
@@ -36,15 +35,15 @@ const StyledP = styled.p`
   letter-spacing: 1px;
   padding-bottom: 3em;
 `;
-const HeaderImg = styled.img.attrs({
-  src: ` ${BM}`,
-})`
-  width: 100%;
-  height: auto;
-  border: 1px solid blue;
-  float: left;
-  margin: 1vw 0vw;
-`;
+// const HeaderImg = styled.img.attrs({
+//   src: ` ${BM}`,
+// })`
+//   width: 100%;
+//   height: auto;
+//   border: 1px solid blue;
+//   float: left;
+//   margin: 1vw 0vw;
+// `;
 const HeaderImg1 = styled.img.attrs({
   src: ` ${DogNasium1}`,
 })`
@@ -63,6 +62,7 @@ const DogNasium = () => {
       <StyledHeader>
         Dog-Nasium
         <a
+          rel="noreferrer"
           style={{ textDecoration: "none", color: "#666" }}
           target="_blank"
           href="https://github.com/Coffey-May/DogNasium"
