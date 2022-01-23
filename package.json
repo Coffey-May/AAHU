@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Coffey-May/AAHU/issues"
   },
-  "homepage": "https://github.com/Coffey-May/AAHU#readme"
+  "homepage": "https://github.com/Coffey-May/AAHU#readme",
+  "dependencies": {
+    "styled-components": "^5.3.3"
+  }
 }
