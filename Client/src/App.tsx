@@ -11,6 +11,7 @@ import BonesMalone from "./Components/Projects/BonesMalone/BonesMalone";
 import GraphQl from "./Components/Projects/GraphQl/GraphQl";
 import DogNasium from "./Components/Projects/DogNasium/DogNasium";
 import { Bp } from "./Components/Projects/BloodPressureMonitor/BP";
+import Info from "./Components/Splash/Info";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/BonesMalone" component={BonesMalone} />
           <Route path="/GraphQl" component={GraphQl} />
           <Route path="/DogNasium" component={DogNasium} />
+          <Route path="/Info" component={Info} />
         </Switch>
       </Router>
       <Footer />

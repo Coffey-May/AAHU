@@ -19,9 +19,13 @@ export default makeStyles((theme) => ({
   boxWrap: {
     display: "flex",
     flexDirection: "row",
+    margin: "0 auto",
+    width: "80%",
     justifyContent: "space-evenly",
     [theme.breakpoints.down(600)]: {
-      justifyContent: "space-between",
+      // justifyContent: "space-between",
+      marginLeft: "0",
+      // ustifyContent: "space-between",
     },
   },
   hr: {

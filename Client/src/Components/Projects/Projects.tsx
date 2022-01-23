@@ -9,6 +9,7 @@ import MultiStep from "../../assets/Screen Shot 2021-12-22 at 11.55.46 PM.png";
 import Recipe from "../../assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp";
 import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
 import DogNasium from "../../assets/dogNasium3.jpg";
+import cSharpSnip1 from "../../assets/Screen Shot 2022-01-22 at 7.25.04 PM.png";
 // Client/src/assets/Screen Shot 2022-01-07 at 1.01.05 AM.png
 // Client/src/assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp
 
@@ -155,7 +156,7 @@ const projectData = [
   {
     title: "Contemporary Realism and C#",
     description: `${decriptions.ContemporaryRealism}`,
-    image: `${Memphis}`,
+    image: `${cSharpSnip1}`,
     linkMultiForm: "/ContemporaryRealism",
     bgColor: "#F44708",
     gitHubLink: "https://github.com/Coffey-May/MyPaintingsMVC",

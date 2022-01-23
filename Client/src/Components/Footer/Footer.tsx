@@ -29,7 +29,11 @@ const Footer = () => {
           </Typography>
 
           <Box>
-            <Link href="/" color="inherit">
+            <Link
+              href="https://en.wikipedia.org/wiki/Nashville,_Tennessee"
+              color="inherit"
+              target="_blank"
+            >
               NASHVILLE, TN.
             </Link>
           </Box>
@@ -54,17 +58,17 @@ const Footer = () => {
           </Typography>
 
           <Box>
-            <Link href="/" color="inherit">
+            <Link href="/Info" color="inherit">
               HISTORY
             </Link>
           </Box>
           <Box>
-            <Link href="/" color="inherit">
+            <Link href="/Info" color="inherit">
               TESTIMONIALS
             </Link>
           </Box>
           <Box pb={2}>
-            <Link href="/" color="inherit">
+            <Link href="/Info" color="inherit">
               FAQ
             </Link>
           </Box>

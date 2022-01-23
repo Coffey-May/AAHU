@@ -31,7 +31,7 @@ export default function ImgMediaCard(
         flexWrap: "wrap",
         justifyContent: "space-evenly",
         alignItems: "center",
-        boxShadow: `inset 1px 1px 25px 2px ${projectData.bgColor}`,
+        boxShadow: `inset 1px 1px 5px 2px ${projectData.bgColor}`,
       }}
     >
       <Grid

@@ -105,7 +105,14 @@ const About = () => {
               quality work. I am a veresatile developer who adapts to new
               challanges ,technologies, and methodolgies. This project was built
               using a variety of technologies. Typescript, ReactJS, NodeJs,
-              MaterialUI, GraphQL, and numerous others. Please Enjoy...
+              MaterialUI, GraphQL, and numerous others. Please visit my{" "}
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://github.com/Coffey-May"
+              >
+                GitHub
+              </a>{" "}
+              , Give me a star, explore, and enjoy...
               <br />
             </p>
             <p
@@ -115,13 +122,15 @@ const About = () => {
                       border: "1px solid black",
                       color: "black",
                       // columnCount: 1,
+
                       padding: "2em 2em 2em 2em",
                       lineHeight: "2em",
-                      fontSize: "1.25em",
+                      fontSize: ".75em",
                     }
                   : {
                       color: "#333",
                       // columnCount: 2,
+
                       padding: "2em 2em 2em 2em",
                       lineHeight: "1.25em",
                       fontSize: "1em",
@@ -133,41 +142,41 @@ const About = () => {
               <strong>What I can bring to your team </strong>
               <hr />
               <br />
-              •Developing the latest user-facing features using React.js <br />
-              •Designing a modern highly responsive web-based user interface
+              • Developing the latest user-facing features using React.js <br />
+              • Designing a modern highly responsive web-based user interface
               <br />
-              •Building reusable components and front-end libraries for future
+              • Building reusable components and front-end libraries for future
               use
               <br />
-              •Translating designs and wireframes into high-quality code
+              • Translating designs and wireframes into high-quality code
               <br />
-              •Learn and understand user interactions <br />
+              • Learn and understand user interactions <br />
               • Optimizing components for maximum performance across a vast
               array of web-capable devices and browsers <br />
-              •Coordinating with various teams working on distinct layers
-              <br />
-              •Full involvement from conception to completion with projects that
-              are technologically sound and aesthetically impressive. <br />
-              •Strong proficiency in JavaScript, including DOM manipulation and
+              • Coordinating with various teams working on distinct layers
+              <br />• Full involvement from conception to completion with
+              projects that are technologically sound and aesthetically
+              impressive. <br />
+              • Strong proficiency in JavaScript, including DOM manipulation and
               the JavaScript object model
               <br />
-              •Thorough understanding of React.js and its core principles
+              • Thorough understanding of React.js and its core principles
               <br />
-              •Prior experience with popular React.js workflows (such as Flux or
-              Redux)
-              <br /> •Familiarity with more current specifications of EcmaScript
-              <br /> •Familiarity with RESTful APIs
-              <br /> •Familiarity with HTML / CSS
-              <br /> •GIT experience, Team work-flows, and remote coordination
+              • Prior experience with popular React.js workflows (such as Flux
+              or Redux)
+              <br /> • Familiarity with more current specifications of
+              EcmaScript
+              <br /> • Familiarity with RESTful APIs
+              <br /> • Familiarity with HTML / CSS
+              <br /> • GIT experience, Team work-flows, and remote coordination
               <br />
-              •Knowledge of modern authorization mechanisms, such as JSON Web
+              • Knowledge of modern authorization mechanisms, such as JSON Web
               Token
-              <br /> •Familiarity with modern front-end build pipelines and
-              tools• <br />
-              •Experience with common front-end development tools such as Babel,
-              Webpack, NPM, etc. <br />
-              •Ability to understand business requirements and translate them
-              into technical requirements
+              <br /> • Familiarity with modern front-end build pipelines and
+              tools. <br />
+              • Experience with common front-end development tools such as
+              Babel, Webpack, NPM, etc. <br />• Ability to understand business
+              requirements and translate them into technical requirements
             </p>
             <div style={{ textAlign: "center", padding: "2em" }}>
               <strong>
