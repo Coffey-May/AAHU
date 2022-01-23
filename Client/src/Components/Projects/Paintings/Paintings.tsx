@@ -4,7 +4,6 @@ import styled from "styled-components";
 import cSharpSnip from "../../../assets/cSharpsnip.png";
 import cSharpSnip1 from "../../../assets/Screen Shot 2022-01-22 at 7.25.04 PM.png";
 // Client/src/assets/Screen Shot 2022-01-22 at 7.25.04 PM.png
-import Markdown from "markdown-to-jsx";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
 

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import BM from "../../../assets/Screen Shot 2022-01-19 at 3.20.06 PM.png";
 import GQL from "../../../assets/gqlsnip.png";
 import DogNasium1 from "../../../assets/dogNasium4.jpg";
-import Markdown from "markdown-to-jsx";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
 

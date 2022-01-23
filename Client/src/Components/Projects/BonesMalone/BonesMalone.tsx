@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import BM from "../../../assets/Screen Shot 2022-01-19 at 3.20.06 PM.png";
 import eStore from "../../../assets/e-store.png";
-import Markdown from "markdown-to-jsx";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
 
