@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
-import { Country, State, City } from "country-state-city";
+// import {  State, City } from "country-state-city";
+import Country from "country-state-city";
+import State from "country-state-city";
+import City from "country-state-city";
+// import State from "country-state-city";
+// import City from "country-state-city";
 
 
-const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelectedFlag, flag, setLatitude, setLongitude, city }) => {
+const WeatherForm = ({ searchWeather, setCity,  setSelectedFlag, setLatitude, setLongitude, city }) => {
   // const [isocode, setIsoCode] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [countries, setCountries] = useState([]);
@@ -12,18 +17,19 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
   // const [selectedCity, setSelectedCity] = useState("");
   const [cities, setCities] = useState([]);
 
-
+// console.log("states",State.getStatesOfCountry("United States"))
   // const getCitiesOfCountry = City.getCitiesOfCountry("AU")
   // console.log(getCitiesOfCountry)
+  
   useEffect(() => {
     const fetchCountries = async () => {
       let countriesList = await Country.getAllCountries();
-      setCountries(countriesList);
+     setCountries(countriesList);
     };
     fetchCountries();
   }, [countries]);
   // {
-  //   console.log("country", selectedCountry, states, cities, flag);
+    // console.log("country", selectedCountry, states, cities, flag);
   // }
 
   // const filteredCity = () => cities.filter(c => {
@@ -59,8 +65,6 @@ let coords
     return
   }
 
-
-
   return (
     <Container>
       <div style={{ display: 'none' }}>{`${selectedState}`}</div>
@@ -78,14 +82,12 @@ let coords
           onChange={(e) => {
             setSelectedCountry(e.target.value);
             setStates(State.getStatesOfCountry(e.target.value));
-
-
           }}
         >
-          <option value="" selected disabled hidden>Choose Country</option>
+          <option value="" disabled hidden>Choose Country</option>
           {countries.map((c) => (
 
-            <option key={c.flag} value={c.isoCode} >
+            <option key={c.name} value={c.isoCode} >
               {c.name}{c.flag}
             </option>
           ))}
