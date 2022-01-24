@@ -35,20 +35,19 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
 
   // })
 
-  const handleCoords = () => (
-    cities.filter(c => {
+  const handleCoords = () => {
+    cities.filter((c )=>{
       // console.log(c.name, city)
       // alert("yeaah boy")
       if (c.name === city) {
-
-        setLongitude(c.longitude),
-         setLatitude(c.latitude)
-       
-        }
-      else {return  console.log("nope") }
-    })
-   
-  )
+      setLongitude(c.longitude),
+        setLatitude(c.latitude)
+    }
+    else { return console.log("nope") }
+    }
+    )
+  
+  }
   const handleFlag = () => {
  
     countries.filter(c => {
