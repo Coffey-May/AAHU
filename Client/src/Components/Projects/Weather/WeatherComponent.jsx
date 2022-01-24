@@ -104,15 +104,16 @@ const WeatherComponent = ({
         <div>
           <h1
             style={{
-              textShadow:
-                "inset -10px 14px 21px -4px rgba(255, 255, 255, 0.753)",
-              "inset 17px 22px 21px 4px rgba(0, 0, 0, 0.46)":
-                "1px 16px 29px 9px rgba(0, 0, 0, 0.932)",
+              // textShadow:
+              //   "inset -10px 14px 21px -4px rgba(255, 255, 255, 0.753)",
+              //   "inset 17px 22px 21px 4px rgba(0, 0, 0, 0.46)":
+              //   "1px 16px 29px 9px rgba(0, 0, 0, 0.932)",
+              
               color: "rgba(70,70,70,0.7)",
               //   background: 'rgba(0,0,0,0.0)',
               textTransform: "uppercase",
-              // textShadow:
-              //   "-3px 3px 4px rgba(0, 0, 0), 2px -2px 6px rgb(255, 255, 255,0.7)",
+              textShadow:
+                "-3px 3px 4px rgba(0, 0, 0), 2px -2px 6px rgb(255, 255, 255,0.7)",
               fontSize: "6vw",
               margin: "0 0 0 0",
               textAlign: "center",

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Bp from "../../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
 import GQL from "../../../assets/gqlsnip.png";
 
 // import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";

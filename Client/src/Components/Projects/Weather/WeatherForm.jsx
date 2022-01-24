@@ -37,19 +37,22 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
 
   const handleCoords = () => {
     cities.filter(c => {
-      console.log(c.name, city)
-      if (c.name == city) {
+      // console.log(c.name, city)
+      // alert("yeaah boy")
+      if (c.name === city) {
         setLongitude(c.longitude);
         setLatitude(c.latitude)
+        return
       }
-      else { console.log("nope") }
+      else {return  console.log("nope") }
     })
   }
   const handleFlag = () => {
  
     countries.filter(c => {
-      if (c.isoCode == selectedCountry) {
+      if (c.isoCode === selectedCountry) {
         setSelectedFlag(c.flag)
+        return
       }
       else { return }
     })
@@ -72,7 +75,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
         <select
           onChange={(e) => (
             setSelectedCountry(e.target.value),
-            setStates(State.getStatesOfCountry(e.target.value),
+            setStates(State.getStatesOfCountry(e.target.value)
 
             
             )

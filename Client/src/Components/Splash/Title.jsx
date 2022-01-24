@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import { useStyles } from "./styles";
-import { Parallax } from "react-scroll-parallax";
+// import { Parallax } from "react-scroll-parallax";
 // import Memphis from '../../assets/memphis.png'
 // import Resume from '../../PDFS/CoffeyMayResume2021.pdf'
 import Resume from "../../PDFS/CoffeyMayResume2021.pdf";
@@ -162,7 +162,7 @@ const Title = () => {
                   style={{ margin: "0 auto", padding: "0", right: "0vw" }}
                 >
                   <span
-                    className={classes.memphis}
+                    // className={classes.memphis}
                     style={{
                       zIndex: "99",
                       height: "87.5vh",
@@ -248,7 +248,7 @@ const Title = () => {
                WebkitBoxReflect:
                     "below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1), rgba(0,0,0,0.3))",
               fontFamily: 'Cedarville Cursive, cursive',
-              fontFamily: 'Waiting for the Sunrise, cursive',
+              // fontFamily: 'Waiting for the Sunrise, cursive',
              
               color: 'white', position: 'absolute', marginLeft: '3em', top: '25vh', display: 'none'
             }}><em>“That brain of mine is something more <br></br>than merely mortal; as time will show.” </em><blockquote>Ada Lovelace, 1844</blockquote> </h1>

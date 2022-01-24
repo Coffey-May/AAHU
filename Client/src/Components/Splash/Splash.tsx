@@ -16,30 +16,28 @@ import Switch from "@material-ui/core/Switch";
 //   window.location.href === `${url}/#Projets`
 // )
 
-{
-  document.addEventListener("scroll", function (e) {
-    let elem = document.querySelector<HTMLElement>(".overlay") || null;
+document.addEventListener("scroll", function (e) {
+  let elem = document.querySelector<HTMLElement>(".overlay") || null;
 
-    const hideCheck = () => {
-      if (!elem) {
-        return;
-      }
-      if (window.pageYOffset <= 0) {
-        elem!.style.background = "rgb(10,10,10,0.8)";
-      } else if (window.pageYOffset > 0 || window.pageYOffset < 100) {
-        elem!.style.background = "rgb(5,5,5,0)";
-      }
-    };
-    hideCheck();
-  });
-}
+  const hideCheck = () => {
+    if (!elem) {
+      return;
+    }
+    if (window.pageYOffset <= 0) {
+      elem!.style.background = "rgb(10,10,10,0.8)";
+    } else if (window.pageYOffset > 0 || window.pageYOffset < 100) {
+      elem!.style.background = "rgb(5,5,5,0)";
+    }
+  };
+  hideCheck();
+});
 
-const handleChange = () => {
-  document.querySelector<HTMLElement>("#invertDiv")!.style.filter = "invert(1)"
-    ? (document.querySelector<HTMLElement>("#invertDiv")!.style.filter = "none")
-    : (document.querySelector<HTMLElement>("#invertDiv")!.style.filter =
-        "invert(1)");
-};
+// const handleChange = () => {
+//   document.querySelector<HTMLElement>("#invertDiv")!.style.filter = "invert(1)"
+//     ? (document.querySelector<HTMLElement>("#invertDiv")!.style.filter = "none")
+//     : (document.querySelector<HTMLElement>("#invertDiv")!.style.filter =
+//         "invert(1)");
+// };
 
 const Splash = () => {
   const [checked, setcChecked] = useState<boolean | null>(false);

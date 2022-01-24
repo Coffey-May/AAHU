@@ -17,6 +17,7 @@ export default function Map({ latitude, longitude, flag, city }) {
 
    
     useEffect(() => {
+     
         const listener = e => {
             if (e.key === "Escape") {
                 setSelectedCity(null);
