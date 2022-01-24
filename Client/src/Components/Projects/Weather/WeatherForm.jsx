@@ -40,8 +40,8 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
       // console.log(c.name, city)
       // alert("yeaah boy")
       if (c.name === city) {
-      setLongitude(c.longitude),
-        setLatitude(c.latitude)
+        setLongitude(c.longitude);
+        setLatitude(c.latitude);
     }
     else { return console.log("nope") }
     }
