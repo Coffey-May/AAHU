@@ -79,12 +79,12 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
   */}
 
         <select
-          onChange={(e) => (
-          (  setSelectedCountry(e.target.value),
-            setStates(State.getStatesOfCountry(e.target.value))
-)
+          onChange={(e) => {
+            setSelectedCountry(e.target.value);
+            setStates(State.getStatesOfCountry(e.target.value));
 
-          )}
+
+          }}
         >
           <option value="" selected disabled hidden>Choose Country</option>
           {countries.map((c) => (
@@ -96,16 +96,16 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
         </select>
 
         <select
-          onChange={(e) => (
-          (  setSelectedState(e.target.value),
+          onChange={(e) => {
+          setSelectedState(e.target.value);
 
             setCities(
-              City.getCitiesOfState(`${selectedCountry}`, e.target.value)
-            ))
-          )}
+              City.getCitiesOfState(`${selectedCountry}`, e.target.value));
+
+           } }
         >
           {states.map((c) => (
-            <option key={c.name} value={c.isoCode} onChange={setLatitude(c.latitude), setLongitude(c.longitude)
+            <option key={c.name} value={c.isoCode} onChange={(e) => { setLatitude(c.latitude); setLongitude(c.longitude); }
             }  >
               {c.name}
             </option>
@@ -117,7 +117,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
         }>
           {cities.map((c) => (
             <option key={c.name} value={c.name}
-              onChange={setLatitude(c.latitude), setLongitude(c.longitude)
+              onChange={(e) => { setLatitude(c.latitude); setLongitude(c.longitude); }
               }>
               {c.name}
             </option>
