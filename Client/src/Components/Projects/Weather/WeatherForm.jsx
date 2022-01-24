@@ -128,7 +128,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
                     type="text" name="city" placeholder="City..." /> */}
         <div className="svg">
           <button
-            onClick={handleFlag(),handleCoords()}
+            onClick={(e) => { handleFlag(); handleCoords(); }}
             className="form-btn button" style={{ margin: "0 auto" }}>
             <span>Get Weather</span>
           </button>
