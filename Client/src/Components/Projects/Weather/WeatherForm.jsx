@@ -40,11 +40,11 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
       // console.log(c.name, city)
       // alert("yeaah boy")
       if (c.name === city) {
-      
-        setLongitude(c.longitude);
-        setLatitude(c.latitude)
-          return
-      }
+
+         setLongitude(c.longitude),
+         setLatitude(c.latitude);
+        return
+        }
       else {return  console.log("nope") }
     })
     return
@@ -53,10 +53,10 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
  
     countries.filter(c => {
       if (c.isoCode === selectedCountry) {
-       setSelectedFlag(c.flag)
-        return 
+        return   setSelectedFlag(c.flag)
+     
       }
-      else { return }
+      else { return "" }
     })
     return
   }
