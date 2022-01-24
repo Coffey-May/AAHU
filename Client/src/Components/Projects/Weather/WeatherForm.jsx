@@ -34,40 +34,36 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
   //   else{return}
 
   // })
-
+let coords
   const handleCoords = () => {
-    cities.filter((c )=>{
-      // console.log(c.name, city)
-      // alert("yeaah boy")
+
+    coords = cities.filter((c) => {
+     
       if (c.name === city) {
-      
         setLongitude(c.longitude);
         setLatitude(c.latitude);
-          return 1
-    }
-    else { return 1 }
-     
-    }
-    )
-  
+      }
+      return coords
+    })
+    
   }
   const handleFlag = () => {
- 
+
     countries.filter(c => {
       if (c.isoCode === selectedCountry) {
-        return   setSelectedFlag(c.flag)
-     
+        return setSelectedFlag(c.flag)
+
       }
       else { return "" }
     })
     return
   }
 
-  
+
 
   return (
     <Container>
- <div style={{display:'none'}}>{`${selectedState}`}</div>
+      <div style={{ display: 'none' }}>{`${selectedState}`}</div>
       <form
         style={{ position: "absolute", marginTop: "-33vh", display: 'flex', flexDirection: ' column' }}
         onSubmit={searchWeather}
@@ -97,12 +93,12 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
 
         <select
           onChange={(e) => {
-          setSelectedState(e.target.value);
+            setSelectedState(e.target.value);
 
             setCities(
               City.getCitiesOfState(`${selectedCountry}`, e.target.value));
 
-           } }
+          }}
         >
           {states.map((c) => (
             <option key={c.name} value={c.isoCode} onChange={(e) => { setLatitude(c.latitude); setLongitude(c.longitude); }
