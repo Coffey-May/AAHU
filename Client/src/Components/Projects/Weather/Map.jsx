@@ -52,6 +52,7 @@ export default function Map({ latitude, longitude, flag, city }) {
                     longitude={parseInt(longitude)}
 
                 >
+                    <div style={{display:'none'}}>{`${ selectedCity}`}</div>
                     <button
                         style={{textAlign:'left', backgroundColor: "transparent", color: 'white', border: 'none' }}
                         onClick={e => {
