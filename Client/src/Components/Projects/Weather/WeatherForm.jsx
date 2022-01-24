@@ -78,8 +78,8 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
 
         <select
           onChange={(e) => (
-            setSelectedCountry(e.target.value),
-            setStates(State.getStatesOfCountry(e.target.value)
+          (  setSelectedCountry(e.target.value),
+            setStates(State.getStatesOfCountry(e.target.value))
 )
 
           )}
@@ -95,11 +95,11 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
 
         <select
           onChange={(e) => (
-            setSelectedState(e.target.value),
+          (  setSelectedState(e.target.value),
 
             setCities(
               City.getCitiesOfState(`${selectedCountry}`, e.target.value)
-            )
+            ))
           )}
         >
           {states.map((c) => (
