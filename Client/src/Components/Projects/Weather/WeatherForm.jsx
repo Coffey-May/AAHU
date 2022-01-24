@@ -43,7 +43,7 @@ const WeatherForm = ({ searchWeather, setCity, setCountry, countrys, setSelected
 
          setLongitude(c.longitude),
          setLatitude(c.latitude);
-        return
+       
         }
       else {return  console.log("nope") }
     })
