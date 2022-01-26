@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     // backgroundColor: 'black',
     margin: "0 auto",
 
-    background: `linear-gradient(rgba(0, 0, 0, 1) ,transparent)`,
+    background: `linear-gradient(rgba(0, 0, 0) ,transparent)`,
     // background: 'rgba(0, 0, 0, .7)',
     boxShadow: "none",
   },
@@ -24,37 +24,46 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
 
-    justifyContent: "space-around",
+    justifyContent: "space-between",
   },
 
   navDisplaySmall: {
     position: "static",
+    // display: "flex",
+    flexDirection: "row",
+    margin: "0",
+
     "& :nth-child(1)": {
-      padding: "10px",
+      padding: "1px",
+      margin: "0",
     },
     "& :nth-child(2)": {
-      padding: "10px",
+      padding: "1px",
+      margin: "0",
     },
     "& :nth-child(3)": {
-      padding: "10px",
+      padding: "1px",
+      margin: "0",
     },
     "& :nth-child(4)": {
-      padding: "10px",
+      padding: "1px",
+      margin: "0",
     },
     "& :nth-child(5)": {
-      padding: "10px",
+      padding: "1px",
+      margin: "0",
     },
     listStyleType: "none",
     [theme.breakpoints.up(600)]: {
       display: "flex",
       // flexDirection: "column",
     },
-    [theme.breakpoints.up(600)]: {
-      width: "40vw",
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-    },
+    // [theme.breakpoints.up(600)]: {
+    //   width: "40vw",
+    //   display: "flex",
+    //   flexDirection: "row",
+    //   justifyContent: "space-around",
+    // },
   },
 
   navDisplay: {

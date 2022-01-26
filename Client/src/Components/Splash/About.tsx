@@ -81,7 +81,7 @@ const About = () => {
                       columnCount: 1,
                       padding: "2em 0em 2em 0em",
                       lineHeight: "2em",
-                      fontSize: "1.25em",
+                      fontSize: "1em",
                       fontWeight: "lighter",
                     }
                   : {
@@ -125,7 +125,7 @@ const About = () => {
 
                       padding: "2em 2em 2em 2em",
                       lineHeight: "2em",
-                      fontSize: ".75em",
+                      fontSize: ".5em",
                     }
                   : {
                       color: "#333",

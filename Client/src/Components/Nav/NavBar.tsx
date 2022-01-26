@@ -53,7 +53,7 @@ const Navbar = () => {
 
     return (
       <ul className={wide}>
-        <li style={{ marginLeft: "7em" }}>
+        <li style={isOpen ? { marginLeft: "0em" } : { marginLeft: "7em" }}>
           <Button color="inherit">
             <h3>
               <Profile />
@@ -61,23 +61,23 @@ const Navbar = () => {
           </Button>
         </li>
 
-        <li style={{ marginLeft: "7em" }}>
+        <li style={isOpen ? { marginLeft: "0em" } : { marginLeft: "7em" }}>
           <Button href="/#About" color="inherit">
             <h3> ABOUT</h3>
           </Button>
         </li>
 
-        <li style={{ marginLeft: "7em" }}>
+        <li style={isOpen ? { marginLeft: "0em" } : { marginLeft: "7em" }}>
           <Button href="/#Projects" color="inherit">
             <h3> PROJECTS </h3>
           </Button>
         </li>
         {user ? (
-          <li style={{ marginLeft: "7em" }}>
+          <li style={isOpen ? { marginLeft: "0em" } : { marginLeft: "7em" }}>
             <LogoutButton />
           </li>
         ) : (
-          <li style={{ marginLeft: "7em" }}>
+          <li style={isOpen ? { marginLeft: "0em" } : { marginLeft: "7em" }}>
             <LoginButton />
           </li>
         )}
