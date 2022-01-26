@@ -123,9 +123,10 @@ export default function ImgMediaCard(
               style={{
                 margin: "0 auto",
 
-                backgroundColor: "navyblue",
+                // backgroundColor: "navyblue",
               }}
               variant="contained"
+              color="primary"
             >
               <a
                 style={{ textDecoration: "none", color: "white" }}

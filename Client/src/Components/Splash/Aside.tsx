@@ -51,7 +51,7 @@ const Aside = () => {
               height: "auto",
             }}
             src={`${cloud1}`}
-            alt=""
+            alt="cloud animation"
           />
 
           <img

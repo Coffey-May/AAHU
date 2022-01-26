@@ -5,7 +5,7 @@ import { useStyles } from "./styles";
 import { CssBaseline } from "@material-ui/core";
 import Projects from "../Projects/Projects";
 import Switch from "@material-ui/core/Switch";
-// import Aside from "./Aside";
+import Aside from "./Aside";
 
 // let url = 'http://localhost:3000'
 
@@ -96,7 +96,7 @@ const Splash = () => {
           </div>
            */}
 
-          {/* <Aside /> */}
+          <Aside />
         </div>
 
         <Title />
