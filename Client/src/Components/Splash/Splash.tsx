@@ -59,11 +59,12 @@ const Splash = () => {
           className="overlay"
           style={{
             position: "absolute",
+            // marginTop: 0,
             top: 0,
             left: 0,
             bottom: 0,
             width: "100%",
-            height: "88.65%",
+            minHeight: "100%",
             background: "rgb(10,10,10,0.8)",
           }}
         >
