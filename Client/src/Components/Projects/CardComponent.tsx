@@ -21,7 +21,7 @@ export default function ImgMediaCard(
       style={{
         border: ` 5px solid ${projectData.bgColor}`,
         color: "rgba(100,100,100)",
-        padding: "4em",
+        padding: "3em",
         minHeight: "70vh",
         width: "100%",
         margin: "0 auto",
@@ -36,7 +36,7 @@ export default function ImgMediaCard(
     >
       <Grid
         item
-        xs={10}
+        xs={12}
         sm={5}
         md={5}
         lg={4}
@@ -62,7 +62,7 @@ export default function ImgMediaCard(
         </a>
       </Grid>
 
-      <Grid item xs={10} sm={5} md={5} lg={4}>
+      <Grid item xs={12} sm={5} md={5} lg={4}>
         <Card style={{ boxShadow: "0px 5px 17px 6px rgba(0,0,0,0.88)" }}>
           <CardMedia
             component="img"
@@ -101,9 +101,9 @@ export default function ImgMediaCard(
                       backgroundColor: `${projectData.bgColor}`,
                       borderRadius: "99px",
                       padding: ".5rem",
-                      fontSize: ".75rem",
+                      // fontSize: ".75rem",
                       verticalAlign: "middle",
-                      width: "8rem",
+                      width: "8em",
                       color: "white",
                       textAlign: "center",
                       display: "flex",

@@ -97,11 +97,12 @@ const Title = () => {
                   Software Engineer
                 </Typography>
                 <Typography
-                  className={classes.subtitle}
+                  className={classes.subtitle2}
                   style={{
-                    padding: " 10px 0px 15px 0px",
-                    fontSize: "medium",
-                    fontWeight: 200,
+                    // padding: " 10px 0px 15px 0px",
+                    // fontSize: "medium",
+                    // fontWeight: 200,
+                    
 
                   }}
                 >

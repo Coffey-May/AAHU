@@ -40,8 +40,20 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "2.5rem",
     letterSpacing: ".18em",
     [theme.breakpoints.down(550)]: {
-      padding: ".45rem",
+      // padding: ".45rem",
       fontSize: "1.4rem",
+      letterSpacing: "0em",
+    },
+  },
+  subtitle2: {
+    // fontSize: "2.5rem",
+    // letterSpacing: ".18em",
+    padding: " 9px 0px 15px 0px",
+    fontSize: "medium",
+    fontWeight: 200,
+    [theme.breakpoints.down(550)]: {
+      padding: " 0px 0px 15px 0px",
+      fontSize: ".75rem",
       letterSpacing: "0em",
     },
   },
