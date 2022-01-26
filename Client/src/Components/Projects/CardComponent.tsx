@@ -99,10 +99,11 @@ export default function ImgMediaCard(
                       clipPath:
                         " polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0%)",
                       backgroundColor: `${projectData.bgColor}`,
-                      borderRadius: "99px",
+                      borderRadius: "0px 99px 99px 0px",
                       padding: ".5rem",
-                      // fontSize: ".75rem",
+                      fontSize: ".75rem",
                       verticalAlign: "middle",
+                      alignItems: "center",
                       width: "8em",
                       color: "white",
                       textAlign: "center",
@@ -111,7 +112,7 @@ export default function ImgMediaCard(
                     }}
                     // variant="body2"
                   >
-                    • {t}
+                    {t}
                   </p>
                 )
               )}
@@ -121,13 +122,13 @@ export default function ImgMediaCard(
             <Button
               style={{
                 margin: "0 auto",
-                filter: "invert(1)",
-                backgroundColor: `${projectData.bgColor}`,
+
+                backgroundColor: "navyblue",
               }}
               variant="contained"
             >
               <a
-                style={{ textDecoration: "none", color: "black" }}
+                style={{ textDecoration: "none", color: "white" }}
                 rel="noreferrer"
                 href={projectData.linkMultiForm}
                 target={

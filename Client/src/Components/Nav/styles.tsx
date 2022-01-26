@@ -16,7 +16,7 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   burger: {
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up(1100)]: {
       display: "none",
     },
   },
@@ -72,11 +72,11 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: "right",
     width: "90vw",
 
-    [theme.breakpoints.up(600)]: {
+    [theme.breakpoints.up(1100)]: {
       display: "flex",
       flexDirection: "row",
     },
-    [theme.breakpoints.down(600)]: {
+    [theme.breakpoints.down(1100)]: {
       display: "none",
     },
   },
