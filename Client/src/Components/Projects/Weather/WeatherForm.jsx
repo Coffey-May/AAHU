@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
-// import {  State, City } from "country-state-city";
-import Country from "country-state-city";
-import State from "country-state-city";
-import City from "country-state-city";
+// import { Country, State, City } from "country-state-city";
+import { Country, State, City } from 'country-state-city';
+// import Country from "country-state-city ";
+// import State from "country-state-city";
+// import City from "country-state-city";
 // import State from "country-state-city";
 // import City from "country-state-city";
 
 
-const WeatherForm = ({ searchWeather, setCity,  setSelectedFlag, setLatitude, setLongitude, city }) => {
-  // const [isocode, setIsoCode] = useState("");
+
+const WeatherForm = ({ searchWeather, setCity, setSelectedFlag, setLatitude, setLongitude, city }) => {
+  const [isocode, setIsoCode] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [countries, setCountries] = useState([]);
   const [selectedState, setSelectedState] = useState("");
@@ -17,19 +19,17 @@ const WeatherForm = ({ searchWeather, setCity,  setSelectedFlag, setLatitude, se
   // const [selectedCity, setSelectedCity] = useState("");
   const [cities, setCities] = useState([]);
 
-// console.log("states",State.getStatesOfCountry("United States"))
-  // const getCitiesOfCountry = City.getCitiesOfCountry("AU")
-  // console.log(getCitiesOfCountry)
-  
+
+
   useEffect(() => {
     const fetchCountries = async () => {
-      let countriesList = await Country.getAllCountries();
-     setCountries(countriesList);
+      let countriesList = Country.getAllCountries();
+      setCountries(countriesList);
     };
     fetchCountries();
   }, [countries]);
   // {
-    // console.log("country", selectedCountry, states, cities, flag);
+  // console.log("country", selectedCountry, states, cities, flag);
   // }
 
   // const filteredCity = () => cities.filter(c => {
@@ -40,18 +40,18 @@ const WeatherForm = ({ searchWeather, setCity,  setSelectedFlag, setLatitude, se
   //   else{return}
 
   // })
-let coords
+  let coords
   const handleCoords = () => {
 
     coords = cities.filter((c) => {
-     
+
       if (c.name === city) {
         setLongitude(c.longitude);
         setLatitude(c.latitude);
       }
       return coords
     })
-    
+
   }
   const handleFlag = () => {
 
@@ -65,6 +65,39 @@ let coords
     return
   }
 
+  //  console.log("REACHED", State.getStatesOfCountry("IN"))
+
+
+
+  const handleCountry = async (e) => {
+    
+    // setSelectedCountry(e.target.value)
+    
+
+    // setSelectedCountry((prevState) => {
+    //   return e.target.value
+    // });
+
+    // console.log(selectedCountry)
+
+      // let chosenCountry = countries.filter(c => { return c.isoCode === selectedCountry })
+      //  setStates(State.getStatesOfCountry(chosenCountry[0].isoCode));
+ 
+    // console.log(chosenCountry)
+ 
+ 
+  }
+   console.log(selectedCountry)
+    const handleState = async (e) => {
+    setSelectedState(e.target.value);
+    console.log(selectedState)
+    let chosenState = await State.getCitiesOfState().filter(c => { return c.stateCode === selectedState })
+      console.log(chosenState)
+      // setCities(
+      //          City.getCitiesOfState(`${selectedCountry}`, e.target.value));
+    // setCities(State.getStatesOfCountry(chosenCountry[0].isoCode));
+    // console.log(states)
+  }
   return (
     <Container>
       <div style={{ display: 'none' }}>{`${selectedState}`}</div>
@@ -78,13 +111,14 @@ let coords
                     type="text" name="country" placeholder="Country..." />
   */}
 
-        <select
-          onChange={(e) => {
-            setSelectedCountry(e.target.value);
-            setStates(State.getStatesOfCountry(e.target.value));
-          }}
-        >
-          <option value="" disabled hidden>Choose Country</option>
+        <select onChange={(e) => {
+          setSelectedCountry(e.target.value);
+          console.log(selectedCountry)
+          console.log(countries.filter(c => { return c.isoCode === selectedCountry}))
+          let chosenCountry = countries.filter(c => { return c.isoCode === selectedCountry });
+            setStates(State.getStatesOfCountry(chosenCountry[0].isoCode));
+        }}>
+          <option value=""  >Choose Country</option>
           {countries.map((c) => (
 
             <option key={c.name} value={c.isoCode} >
@@ -94,13 +128,12 @@ let coords
         </select>
 
         <select
-          onChange={(e) => {
-            setSelectedState(e.target.value);
-
-            setCities(
-              City.getCitiesOfState(`${selectedCountry}`, e.target.value));
-
-          }}
+          onChange={handleState}
+          // onChange={(e) => {
+          //   setSelectedState(e.target.value);
+          //   setCities(
+          //     City.getCitiesOfState(`${selectedCountry}`, e.target.value));
+          // }}
         >
           {states.map((c) => (
             <option key={c.name} value={c.isoCode} onChange={(e) => { setLatitude(c.latitude); setLongitude(c.longitude); }

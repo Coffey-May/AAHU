@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "medium",
     fontWeight: 200,
     [theme.breakpoints.down(550)]: {
-      padding: " 0px 0px 15px 0px",
+      padding: " 0px 0px 16px 0px",
       fontSize: ".75rem",
       letterSpacing: "0em",
     },
