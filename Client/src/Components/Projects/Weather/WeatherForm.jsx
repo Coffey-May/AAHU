@@ -11,7 +11,7 @@ import { Country, State, City } from 'country-state-city';
 
 
 const WeatherForm = ({ searchWeather, setCity, setSelectedFlag, setLatitude, setLongitude, city }) => {
-  const [isocode, setIsoCode] = useState("");
+  // const [isocode, setIsoCode] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const [countries, setCountries] = useState([]);
   const [selectedState, setSelectedState] = useState("");
@@ -26,8 +26,11 @@ const WeatherForm = ({ searchWeather, setCity, setSelectedFlag, setLatitude, set
       let countriesList = Country.getAllCountries();
       setCountries(countriesList);
     };
+
     fetchCountries();
-  }, [countries]);
+
+
+  }, [countries, selectedCountry]);
   // {
   // console.log("country", selectedCountry, states, cities, flag);
   // }
@@ -65,39 +68,8 @@ const WeatherForm = ({ searchWeather, setCity, setSelectedFlag, setLatitude, set
     return
   }
 
-  //  console.log("REACHED", State.getStatesOfCountry("IN"))
+ let chosenCountry
 
-
-
-  const handleCountry = async (e) => {
-    
-    // setSelectedCountry(e.target.value)
-    
-
-    // setSelectedCountry((prevState) => {
-    //   return e.target.value
-    // });
-
-    // console.log(selectedCountry)
-
-      // let chosenCountry = countries.filter(c => { return c.isoCode === selectedCountry })
-      //  setStates(State.getStatesOfCountry(chosenCountry[0].isoCode));
- 
-    // console.log(chosenCountry)
- 
- 
-  }
-   console.log(selectedCountry)
-    const handleState = async (e) => {
-    setSelectedState(e.target.value);
-    console.log(selectedState)
-    let chosenState = await State.getCitiesOfState().filter(c => { return c.stateCode === selectedState })
-      console.log(chosenState)
-      // setCities(
-      //          City.getCitiesOfState(`${selectedCountry}`, e.target.value));
-    // setCities(State.getStatesOfCountry(chosenCountry[0].isoCode));
-    // console.log(states)
-  }
   return (
     <Container>
       <div style={{ display: 'none' }}>{`${selectedState}`}</div>
@@ -111,29 +83,38 @@ const WeatherForm = ({ searchWeather, setCity, setSelectedFlag, setLatitude, set
                     type="text" name="country" placeholder="Country..." />
   */}
 
-        <select onChange={(e) => {
-          setSelectedCountry(e.target.value);
-          console.log(selectedCountry)
-          console.log(countries.filter(c => { return c.isoCode === selectedCountry}))
-          let chosenCountry = countries.filter(c => { return c.isoCode === selectedCountry });
-            setStates(State.getStatesOfCountry(chosenCountry[0].isoCode));
+        <select
+          onChange={async (e) => {
+           chosenCountry = await countries.filter(c => { return c.isoCode === e.target.value });
+          // console.log(chosenCountry[0].isoCode)
+            setSelectedCountry(chosenCountry[0].isoCode)
+          setStates(State.getStatesOfCountry(chosenCountry[0].isoCode));
+          console.log(states)
         }}>
-          <option value=""  >Choose Country</option>
-          {countries.map((c) => (
-
-            <option key={c.name} value={c.isoCode} >
-              {c.name}{c.flag}
-            </option>
-          ))}
+          <option value="" >Choose Country</option>
+              {countries.map((c) => (
+              <option key={c.name} value={c.isoCode} >
+               {c.name}{c.flag}
+              </option>
+            ))}
         </select>
 
         <select
-          onChange={handleState}
-          // onChange={(e) => {
-          //   setSelectedState(e.target.value);
-          //   setCities(
-          //     City.getCitiesOfState(`${selectedCountry}`, e.target.value));
-          // }}
+            onChange={async (e) => {
+            console.log(e.target.value)
+            let chosenState = await states.filter(s => { return s.isoCode === e.target.value });
+
+            console.log("chosenState", chosenState[0].isoCode);
+            setSelectedState(e.target.value);
+            console.log(selectedCountry)
+            setCities(
+              City.getCitiesOfState(`${selectedCountry}`,e.target.value));
+            console.log(cities)
+
+            // setSelectedState(e.target.value);
+            // setCities(
+            //   City.getCitiesOfState(`${selectedCountry}`, e.target.value));
+          }}
         >
           {states.map((c) => (
             <option key={c.name} value={c.isoCode} onChange={(e) => { setLatitude(c.latitude); setLongitude(c.longitude); }
