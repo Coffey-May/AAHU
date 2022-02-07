@@ -1,4 +1,6 @@
 import { Container } from "@material-ui/core";
+import Comments from "./CommentsSection/Comments";
+import "./index.css";
 
 const Info = () => {
   return (
@@ -32,7 +34,14 @@ const Info = () => {
           recusandae. Id pariatur quis aspernatur? Iste excepturi facere
           voluptas. Nulla tempora autem hic fugiat.
         </p>
-        <h2>COMMENT</h2>
+
+        <div>
+          {/* <h1>Comments</h1> */}
+          <Comments
+            commentsUrl="http://localhost:3004/comments"
+            currentUserId="1"
+          />
+        </div>
       </Container>
     </div>
   );

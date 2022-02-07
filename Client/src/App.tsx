@@ -11,7 +11,7 @@ import BonesMalone from "./Components/Projects/BonesMalone/BonesMalone";
 import GraphQl from "./Components/Projects/GraphQl/GraphQl";
 import DogNasium from "./Components/Projects/DogNasium/DogNasium";
 import { Bp } from "./Components/Projects/BloodPressureMonitor/BP";
-import Info from "./Components/Splash/Info";
+import Info from "./Components/Splash/Info/Info";
 
 function App() {
   return (

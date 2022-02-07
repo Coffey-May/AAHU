@@ -49,7 +49,7 @@ const HeaderImg1 = styled.img.attrs({
   width: 100%;
   height: auto;
   float: right;
-  margin: 2vw 0vw;
+  margin: 0vw 0vw;
   padding: -2em;
 `;
 // const input = "```code in your Markdown file.```";
@@ -82,14 +82,7 @@ const GraphQl = () => {
         format to UTC, and back again. A query cheat sheet is provided in the
         README documentation on github, along with instructions to clone and set
         up the project. Full Crud operations are employed and resource
-        relationships are considered using foreign keys. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Odit placeat saepe quaerat harum ea
-        et cumque cum nam vitae eius?Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Magni, explicabo quia consequuntur architecto, eos
-        distinctio voluptatem cupiditate, commodi blanditiis repudiandae
-        dignissimos quam repellat corrupti molestias debitis quas accusantium
-        mollitia. Enim ipsa quo earum obcaecati dolore assumenda exercitationem
-        modi molestias atque.
+        relationships are considered using foreign keys.
         <HeaderImg1></HeaderImg1>
       </StyledP>
     </StyledContainer>

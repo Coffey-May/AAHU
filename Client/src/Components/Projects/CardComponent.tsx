@@ -95,6 +95,7 @@ export default function ImgMediaCard(
                     | undefined
                 ) => (
                   <p
+                    key={Math.random()}
                     style={{
                       clipPath:
                         " polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0%)",

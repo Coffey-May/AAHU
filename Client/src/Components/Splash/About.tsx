@@ -79,17 +79,19 @@ const About = () => {
                   ? {
                       color: "black",
                       columnCount: 1,
-                      padding: "2em 0em 2em 0em",
-                      lineHeight: "2em",
-                      fontSize: "1em",
+                      padding: "1em 0em 1em 0em",
+                      lineHeight: "1.5em",
+                      width: "100%",
+                      fontSize: "18px",
                       fontWeight: "lighter",
                     }
                   : {
                       color: "#333",
                       columnCount: 2,
                       padding: "2em 0em 2em 0em",
-                      lineHeight: "1.25em",
-                      fontSize: "1.65em",
+                      lineHeight: "1.5em",
+                      // fontSize: "1.65em",
+                      fontSize: "18px",
                       fontWeight: "lighter",
                     }
               }
@@ -139,8 +141,7 @@ const About = () => {
                     }
               }
             >
-              <strong>What I can bring to your team </strong>
-              <hr />
+              <strong>What I can bring to your team</strong>
               <br />
               • Developing the latest user-facing features using React.js <br />
               • Designing a modern highly responsive web-based user interface
