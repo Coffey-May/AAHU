@@ -1,15 +1,19 @@
 import Card from "./CardComponent";
 import Memphis from "../../assets/memphis.png";
 import ArtSite from "../../assets/Screen-Shot-2020-12-10-at-4.41.07-PM.webp";
-import WeatherSite from "../../assets/Screen Shot 2021-02-04 at 12.52.31 PM.png";
-import BonesMalone from "../../assets/Screen Shot 2022-01-19 at 3.20.06 PM.png";
-// import BonesMalone from "../../assets/Screen Shot 2020-02-20 at 9.40.16 PM.png";
+import WeatherSite from "../../assets/Screen-Shot-2021-02-04-at-1.09.57-PM.webp";
+
+import BonesMalone from "../../assets/Screen-Shot-2022-01-19-at-3.20.06-PM.webp";
+
 import Grocery from "../../assets/Screen-Shot-2021-12-22-at-11.39.44-PM.webp";
-import MultiStep from "../../assets/Screen Shot 2021-12-22 at 11.55.46 PM.png";
+import MultiStep from "../../assets/Screen-Shot-2021-12-22-at-11.55.46-PM.webp";
+// Client/src/assets/Screen-Shot-2021-12-22-at-11.55.46-PM.webp
 import Recipe from "../../assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp";
-import Bp from "../../assets/Screen Shot 2022-01-07 at 1.01.05 AM.png";
-import DogNasium from "../../assets/dogNasium3.jpg";
-import cSharpSnip1 from "../../assets/Screen Shot 2022-01-22 at 7.25.04 PM.png";
+import Bp from "../../assets/Screen-Shot-2022-01-07-at-1.01.05-AM.webp";
+// Client/src/assets/Screen-Shot-2022-01-07-at-1.01.05-AM.webp
+import DogNasium from "../../assets/dogNasium3.webp";
+import cSharpSnip1 from "../../assets/Screen-Shot-2022-01-22-at-7.25.04-PM.webp";
+
 // Client/src/assets/Screen Shot 2022-01-07 at 1.01.05 AM.png
 // Client/src/assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp
 

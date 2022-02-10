@@ -7,7 +7,8 @@ import Container from "@material-ui/core/Container";
 // import best1 from "../../assets/Screen-Shot-2022-01-03-at-10.21.41-PM.webp";
 // import performance from "../../assets/Screen Shot 2022-01-22 at 7.44.10 PM.png";
 // import pWA from "../../assets/Screen Shot 2022-01-22 at 7.51.14 PM.png";
-import lightHouse from "../../assets/Screen Shot 2022-01-22 at 7.57.54 PM.png";
+import lightHouse from "../../assets/Screen-Shot-2022-01-22-at-7.57.54-PM.webp";
+// Client/src/assets/Screen-Shot-2022-01-22-at-7.57.54-PM.webp
 
 function useWindowDimensions() {
   const [width, setWidth] = useState(window.innerWidth);

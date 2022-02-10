@@ -171,7 +171,7 @@ const Title = () => {
                       width: "50vw",
                       background:
                         "linear-gradient(to right,#d1006c, transparent)",
-                      borderRadius: "355px 0px 0px 355px",
+                      borderRadius: "460px 0px 0px 460px",
                       display: "inline-block",
                       color: "white",
                       boxShadow: "0px 5px 10px 0px #0000009E",
