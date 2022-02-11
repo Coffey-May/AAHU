@@ -68,7 +68,7 @@ export default function ImgMediaCard(
             component="img"
             alt={projectData.title}
             height="auto"
-            min-width="300px"
+            min-width="100%"
             image={projectData.image}
           />
           <CardContent>

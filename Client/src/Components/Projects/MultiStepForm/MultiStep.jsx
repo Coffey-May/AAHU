@@ -41,13 +41,6 @@ const Form = () => {
 
   useEffect(() => {}, [list]);
 
-  // axios
-  //   .get("http://localhost:5000", {
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //   })
-  //   .then((response) => console.log("response:", response));
 
   const FormTitles = ["Sign Up", "Personal Info", "Other"];
 

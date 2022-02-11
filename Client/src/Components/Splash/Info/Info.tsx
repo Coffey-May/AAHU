@@ -1,8 +1,10 @@
 import { Container } from "@material-ui/core";
 import Comments from "./CommentsSection/Comments";
 import "./index.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Info = () => {
+  const { user } = useAuth0();
   return (
     <div style={{ minHeight: "80vh", marginTop: "15vh" }}>
       <Container>
@@ -36,10 +38,9 @@ const Info = () => {
         </p>
 
         <div>
-          {/* <h1>Comments</h1> */}
           <Comments
             commentsUrl="http://localhost:3004/comments"
-            currentUserId="1"
+            currentUserId={`${user?.email}`}
           />
         </div>
       </Container>
