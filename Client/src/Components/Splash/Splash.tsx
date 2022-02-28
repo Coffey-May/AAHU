@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import Title from "./Title";
-import About from "./About";
+import loadable from "@loadable/component";
+
+// import Title from "./Title";
+// import About from "./About";
 import { useStyles } from "./styles";
 import { CssBaseline } from "@material-ui/core";
-import Projects from "../Projects/Projects";
+// import Projects from "../Projects/Projects";
 import Switch from "@material-ui/core/Switch";
+const Title = loadable(() => import("./Title"));
+const About = loadable(() => import("./About"));
+const Projects = loadable(() => import("../Projects/Projects"));
 // import Aside from "./Aside";
 
 // let url = 'http://localhost:3000'

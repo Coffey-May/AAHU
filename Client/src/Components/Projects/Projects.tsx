@@ -1,5 +1,5 @@
 import Card from "./CardComponent";
-import Memphis from "../../assets/memphis.png";
+import Memphis from "../../assets/memphis.c443141c.webp";
 import ArtSite from "../../assets/Screen-Shot-2020-12-10-at-4.41.07-PM.webp";
 import WeatherSite from "../../assets/Screen-Shot-2021-02-04-at-1.09.57-PM.webp";
 

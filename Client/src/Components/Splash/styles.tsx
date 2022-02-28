@@ -14,14 +14,17 @@ import dots from "../../assets/dots.webp";
 
 export const useStyles = makeStyles((theme) => ({
   title: {
-    fontSize: "4rem",
+    // fontSize: "4rem",
+    fontSize: "4.5vw",
     // letterSpacing: ' .4rem',
     overflow: "hidden",
 
     letterSpacing: ".25em",
-    [theme.breakpoints.down(550)]: {
-      fontSize: "3em",
+    [theme.breakpoints.down(850)]: {
+      // fontSize: "3em",
+      fontSize: "8vw",
       letterSpacing: " 0em",
+      margin: "0 auto",
     },
   },
   vanish: {
@@ -37,11 +40,13 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle1: {
-    fontSize: "2.5rem",
+    // fontSize: "2.5rem",
+    fontSize: "2.8vw",
     letterSpacing: ".18em",
-    [theme.breakpoints.down(550)]: {
+    [theme.breakpoints.down(850)]: {
       // padding: ".45rem",
-      fontSize: "1.4rem",
+      // fontSize: "1.4rem",
+      fontSize: "5vw",
       letterSpacing: "0em",
     },
   },
@@ -68,6 +73,10 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "21.75vh",
       textAlign: "center",
       width: "70vw",
+      margin: "0 auto",
+      // marginLeft: "0 auto",
+      // marginRight: "0 auto",
+      paddingRight: "80px",
     },
   },
   splashLeft: {

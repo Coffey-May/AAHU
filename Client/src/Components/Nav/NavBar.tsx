@@ -12,7 +12,7 @@ import LogoutButton from "../Auth/LogoutButton";
 import LoginButton from "../Auth/LoginButton";
 import Profile from "../Auth/Profile";
 import { Button } from "@material-ui/core";
-import logi3 from "../../assets/logi3.png";
+import logi3 from "../../assets/logi3.webp";
 
 import Container from "@material-ui/core/Container";
 
@@ -97,7 +97,11 @@ const Navbar = () => {
               className={classes.menuButton}
               href="/#Home"
             >
-              <img style={{ height: "60px" }} src={`${logi3}`} alt="" />
+              <img
+                style={{ height: "60px", width: "auto" }}
+                src={`${logi3}`}
+                alt="coffey may website logo"
+              />
             </IconButton>
 
             {!isOpen ? <NavItems /> : null}

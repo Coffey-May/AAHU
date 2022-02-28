@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useStyles } from "./styles";
-import Memphis from "../../assets/memphis.png";
+import Memphis from "../../assets/memphis.c443141c.webp";
 import Container from "@material-ui/core/Container";
 
 // import best from "../../assets/Screen-Shot-2021-12-21-at-3.14.35-AM.webp";
@@ -46,7 +46,8 @@ const About = () => {
             background: "radial-gradient(black,black,transparent,transparent)",
             transform: "rotate(70deg)",
             position: "absolute",
-            width: "16vw",
+            width: "15%",
+            height: "auto",
             left: "-7vw",
             // top: "50.75vh",
 
@@ -60,15 +61,32 @@ const About = () => {
           alt="memphis design"
         />
         <Container>
-          <div style={{ width: "80%", margin: "0 auto", paddingBottom: "4em" }}>
+          {/* style={isLoggedIn ? { display:'block' } : { display:'none' }} */}
+          <div
+            style={
+              width > 850
+                ? { width: "80%", margin: "0 auto", paddingBottom: "4em" }
+                : { width: "95%", margin: "0 auto", paddingBottom: "4em" }
+            }
+          >
             <h1
-              style={{
+              style={
                 // marginTop: "2",
-                padding: "1.5em 0em 1.5em 0em ",
-                color: "#d1006c",
-                borderBottom: "1px solid #d1006c",
-                fontSize: "3em",
-              }}
+                width > 850
+                  ? {
+                      padding: "1.5em 0em 1.5em 0em ",
+                      color: "#d1006c",
+                      borderBottom: "1px solid #d1006c",
+                      fontSize: "3em",
+                    }
+                  : {
+                      padding: "1.5em 0em 1.5em 0em ",
+                      color: "#d1006c",
+                      borderBottom: "1px solid #d1006c",
+                      fontSize: "3em",
+                      textAlign: "center",
+                    }
+              }
             >
               ABOUT ME
             </h1>
@@ -198,12 +216,14 @@ const About = () => {
               }}
             >
               <img
+                loading="lazy"
                 style={{
                   // marginTop: "-20vh",
-
+                  height: "auto",
                   width: "50%",
                   // opacity: "0.7",
                   borderRadius: "15px",
+
                   // marginTop: "-1vh",
                 }}
                 src={lightHouse}

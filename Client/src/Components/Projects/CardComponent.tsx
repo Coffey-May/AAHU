@@ -37,7 +37,7 @@ export default function ImgMediaCard(
       <Grid
         item
         xs={12}
-        sm={5}
+        sm={12}
         md={5}
         lg={4}
         style={{ padding: "0em 0em 2em 0em" }}
@@ -62,13 +62,14 @@ export default function ImgMediaCard(
         </a>
       </Grid>
 
-      <Grid item xs={12} sm={5} md={5} lg={4}>
+      <Grid item xs={12} sm={12} md={5} lg={4}>
         <Card style={{ boxShadow: "0px 5px 17px 6px rgba(0,0,0,0.88)" }}>
           <CardMedia
             component="img"
             alt={projectData.title}
+            loading="lazy"
             height="auto"
-            min-width="100%"
+            max-width="100%"
             image={projectData.image}
           />
           <CardContent>
