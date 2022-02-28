@@ -74,18 +74,10 @@ const Title = () => {
                   zIndex: 99,
                 }}
               >
-                <Typography
-                  className={classes.title}
-                  style={{ fontWeight: 200 }}
-                  // variant={"h2"}
-                >
+                <Typography className={classes.title} style={{}} variant={"h2"}>
                   Coffey May
                 </Typography>
-                <Typography
-                  className={classes.subtitle1}
-                  style={{ fontWeight: 100 }}
-                  // variant={"h5"}
-                >
+                <Typography className={classes.subtitle1} variant={"h5"}>
                   Software Engineer
                 </Typography>
                 <Typography

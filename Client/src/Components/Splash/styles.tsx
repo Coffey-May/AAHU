@@ -18,7 +18,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "4.5vw",
     // letterSpacing: ' .4rem',
     overflow: "hidden",
-
+    fontWeight: 200,
     letterSpacing: ".25em",
     [theme.breakpoints.down(850)]: {
       // fontSize: "3em",
@@ -42,6 +42,7 @@ export const useStyles = makeStyles((theme) => ({
   subtitle1: {
     // fontSize: "2.5rem",
     fontSize: "2.8vw",
+    fontWeight: 100,
     letterSpacing: ".18em",
     [theme.breakpoints.down(850)]: {
       // padding: ".45rem",
