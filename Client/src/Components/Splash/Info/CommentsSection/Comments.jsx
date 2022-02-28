@@ -3,12 +3,12 @@ import axios from "axios";
 import CommentForm from "./CommentForm";
 import Comment from "./Comment";
 
-import {
-  // getComments as getCommentsApi,
-  // createComment as createCommentApi,
-  updateComment as updateCommentApi,
-  deleteComment as deleteCommentApi,
-} from "../api";
+// import {
+//   getComments as getCommentsApi,
+//   createComment as createCommentApi,
+//   updateComment as updateCommentApi,
+//   deleteComment as deleteCommentApi,
+// } from "../api";
 
 const Comments = ({ commentsUrl, currentUserId }) => {
   const [comments, setComments] = useState([]);
