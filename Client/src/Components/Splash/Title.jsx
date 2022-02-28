@@ -77,14 +77,14 @@ const Title = () => {
                 <Typography
                   className={classes.title}
                   style={{ fontWeight: 200 }}
-                  variant={"h2"}
+                  // variant={"h2"}
                 >
                   Coffey May
                 </Typography>
                 <Typography
                   className={classes.subtitle1}
                   style={{ fontWeight: 100 }}
-                  variant={"h5"}
+                  // variant={"h5"}
                 >
                   Software Engineer
                 </Typography>
