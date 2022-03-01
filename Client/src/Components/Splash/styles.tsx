@@ -17,7 +17,6 @@ export const useStyles = makeStyles((theme) => ({
     // fontSize: "4rem",
     fontSize: "4.15vw",
     // letterSpacing: ' .4rem',
-    overflow: "hidden",
     fontWeight: 200,
     letterSpacing: ".25em",
     [theme.breakpoints.down(850)]: {
@@ -142,7 +141,6 @@ export const useStyles = makeStyles((theme) => ({
     position: "absolute",
     top: 0,
     left: 0,
-
     bottom: 0,
     width: "100%",
 

@@ -65,6 +65,7 @@ const Splash = () => {
           style={{
             position: "absolute",
             // marginTop: 0,
+            overflow: "hidden",
             top: 0,
             left: 0,
             bottom: 0,
