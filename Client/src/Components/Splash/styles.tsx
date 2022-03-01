@@ -15,14 +15,14 @@ import dots from "../../assets/dots.webp";
 export const useStyles = makeStyles((theme) => ({
   title: {
     // fontSize: "4rem",
-    fontSize: "4.5vw",
+    fontSize: "4.15vw",
     // letterSpacing: ' .4rem',
     overflow: "hidden",
     fontWeight: 200,
     letterSpacing: ".25em",
     [theme.breakpoints.down(850)]: {
       // fontSize: "3em",
-      fontSize: "8vw",
+      fontSize: "10vw",
       letterSpacing: " 0em",
       margin: "0 auto",
     },
@@ -33,15 +33,15 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
-    fontSize: "2.5rem",
+    fontSize: "1.25vw",
     letterSpacing: ".05em",
-    [theme.breakpoints.down(550)]: {
-      fontSize: ".75rem",
+    [theme.breakpoints.down(850)]: {
+      fontSize: "3.5vw",
     },
   },
   subtitle1: {
     // fontSize: "2.5rem",
-    fontSize: "2.8vw",
+    fontSize: "2.5vw",
     fontWeight: 100,
     letterSpacing: ".18em",
     [theme.breakpoints.down(850)]: {
@@ -55,25 +55,27 @@ export const useStyles = makeStyles((theme) => ({
     // fontSize: "2.5rem",
     // letterSpacing: ".18em",
     padding: " 9px 0px 15px 0px",
-    fontSize: "medium",
+    fontSize: "1.15vw",
     fontWeight: 200,
-    [theme.breakpoints.down(550)]: {
-      padding: " 0px 0px 16px 0px",
-      fontSize: ".75rem",
+    [theme.breakpoints.down(850)]: {
+      padding: " 10px 0px 16px 0px",
+      fontSize: "2.5vw",
       letterSpacing: "0em",
     },
   },
   nameTitle: {
-    marginTop: "20.5vh",
+    marginTop: "15vh",
+    paddingTop: "2em",
     textTransform: "uppercase",
     fontFamily: "verdana",
     color: "#f5f5f5",
     textShadow: " 0 0 0.05em currentColor",
+    width: "70vw",
 
     [theme.breakpoints.down(900)]: {
-      marginTop: "21.75vh",
+      marginTop: "19.75vh",
       textAlign: "center",
-      width: "70vw",
+      width: "95vw",
       margin: "0 auto",
       // marginLeft: "0 auto",
       // marginRight: "0 auto",
@@ -143,13 +145,10 @@ export const useStyles = makeStyles((theme) => ({
 
     bottom: 0,
     width: "100%",
-    // height: '80%',
+
     background: "rgb(177,177,177)",
 
     opacity: "0.5",
-    [theme.breakpoints.down(960)]: {
-      //  height: '60vh',
-    },
   },
   first: {
     initialLetter: 2,

@@ -81,16 +81,7 @@ const Title = () => {
                 <Typography className={classes.subtitle1} variant={"p"}>
                   Software Engineer
                 </Typography>
-                <Typography
-                  className={classes.subtitle2}
-                  style={
-                    {
-                      // padding: " 10px 0px 15px 0px",
-                      // fontSize: "medium",
-                      // fontWeight: 200,
-                    }
-                  }
-                >
+                <Typography className={classes.subtitle2}>
                   Progressive Web Applications in React, NodeJs, and more...
                 </Typography>
 
@@ -105,7 +96,8 @@ const Title = () => {
                       style={{
                         color: "white",
                         backgroundColor: "#d1006c",
-                        width: "14rem",
+                        // width: "13rem",
+                        // fontSize: "1.25vw",
                         // filter:'invert(1)',
                         // border: '1px solid white',
                         // webkitTextStroke: '.25px white'
@@ -113,7 +105,7 @@ const Title = () => {
                       color="inherit"
                       variant="outlined"
                     >
-                      <Typography variant={"body1"}>
+                      <Typography variant={"p"}>
                         Download Rèsumè &#10095;
                       </Typography>
                     </Button>
