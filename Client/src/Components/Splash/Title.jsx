@@ -77,6 +77,7 @@ const Title = () => {
                 <Typography className={classes.title} style={{}} variant={"p"}>
                   Coffey May
                 </Typography>
+                <br></br>
                 <Typography className={classes.subtitle1} variant={"p"}>
                   Software Engineer
                 </Typography>
