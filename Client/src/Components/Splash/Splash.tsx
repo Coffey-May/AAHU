@@ -58,14 +58,18 @@ const Splash = () => {
     <>
       <CssBaseline />
 
-      <div id="Home" className={classes.splashWrapper}>
+      <div
+        id="Home"
+        style={{ overflow: "hidden" }}
+        className={classes.splashWrapper}
+      >
         <div
           id="overlay"
           className="overlay"
           style={{
             position: "absolute",
             // marginTop: 0,
-            overflow: "hidden",
+
             top: 0,
             left: 0,
             bottom: 0,
