@@ -42,7 +42,7 @@ let decriptions = {
   GirlForce:
     "This Multi-National NGO has helped ensure the human rights of women and girls the world over. With over 15 years in charitable contributions and direct action, Girl Force has and continues to advocate for womens rights across numerous national borders.",
   ContemporaryRealism:
-    "This project was built using ASP.Net Core, C#, and impliments entity and identity frameworks. This application showcases a gallery  of realist paintings and allows users the ability to interact with the resources at differing levels of access depending on their admin status. This project follows the MVC architectural design pattern and persists data in a SQL Swerver database.",
+    "This project was built using ASP.Net Core, C#, and impliments entity and identity frameworks. This application showcases a gallery  of realist paintings and allows users the ability to interact with the resources at differing levels of access depending on their admin status. This project follows the MVC architectural design pattern and persists data in a SQL Server database.",
   GraphQl:
     "This project is an exploration into performing queries and database operations using a custom built graphql api. The api exposes data related to popular current rappers.",
 };

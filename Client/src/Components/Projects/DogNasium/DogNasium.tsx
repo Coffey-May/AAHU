@@ -21,12 +21,12 @@ function useWindowDimensions() {
 }
 
 const StyledContainer = styled.section`
-  max-width: 70vw;
+  max-width: 80vw;
   padding-top: 100px;
   margin: 0 auto;
 `;
 const StyledHeader = styled.h1`
-  font-size: 6vh;
+  font-size: 5vw;
   color: #666;
   text-align: center;
 `;

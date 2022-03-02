@@ -63,14 +63,14 @@ export const RecipeComponent = (recipe: {
             style={{
               maxWidth: "30vw",
               color: "black",
-              fontSize: "2em",
+              fontSize: "2vw",
               overflowWrap: "break-word",
             }}
           >
             {recipe.recipe.recipe.label}
           </h2>
         </div>
-        <div>
+        <div style={{ fontSize: "1.5vw" }}>
           <p style={{ color: "black" }}>
             Calories: {parseInt(recipe.recipe.recipe.calories)}
           </p>
@@ -78,7 +78,7 @@ export const RecipeComponent = (recipe: {
             Cuisine Type: {recipe.recipe.recipe.cuisineType}
           </p>
         </div>
-        <div style={{ color: "black", lineHeight: "1em" }}>
+        <div style={{ color: "black", lineHeight: "1em", fontSize: "1.5vw" }}>
           INGREDIENTS:
           {recipe.recipe.recipe.ingredients.map((item, index) => (
             <Ingredients key={index} item={item} />

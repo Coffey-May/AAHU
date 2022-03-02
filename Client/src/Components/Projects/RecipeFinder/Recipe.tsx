@@ -44,7 +44,8 @@ export const Recipe = () => {
       style={{
         minHeight: "100vh",
         backgroundColor: "rgba(170,50,50)",
-        marginTop: "-3vh",
+
+        marginTop: "-10vh",
       }}
     >
       <Container>
@@ -52,11 +53,11 @@ export const Recipe = () => {
           <h1
             style={{
               color: "white",
-              paddingTop: "2em",
+              paddingTop: "15vh",
               display: "block",
               textAlign: "center",
 
-              fontSize: "4em",
+              fontSize: "8vw",
             }}
           >
             DINNER SOLVER
@@ -66,9 +67,9 @@ export const Recipe = () => {
             style={{
               display: "block",
               margin: "2em auto",
-              fontSize: "2em",
+              fontSize: "2vw",
               width: "70%",
-              padding: "1em",
+              padding: "1vw",
               backgroundColor: "rgba(250, 255, 147, 0.8)",
               borderRadius: "99px",
               color: "black",

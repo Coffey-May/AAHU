@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import GroceryForm from "./GroceryForm";
 import GroceryList from "./GroceryList";
 
-
 const GroceryListApp = () => {
   // const { currentUser } = useAuth();
   const [inputText, setInputText] = useState("");
@@ -52,29 +51,33 @@ const GroceryListApp = () => {
   };
 
   return (
-   
     <>
-
       <div
-      id="mondrian"
-      style={{  overflow:' hidden', display: "flex", flexDirection: "row", flexWrap: "wrap",justifyContent:'space-around' }}
-    >
-  
-            <div style={{marginLeft:'5vw'}}>
-        <GroceryForm
-          currentId={currentId}
-          setCurrentId={setCurrentId}
-          editMessage={editMessage}
-          setEditMessage={setEditMessage}
-          todos={todos}
-          setTodos={setTodos}
-          inputText={inputText}
-          setInputText={setInputText}
-          setStatus={setStatus}
-          status={status} />
-            </div>
-            
-            <div >
+        id="mondrian"
+        style={{
+          overflow: " hidden",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+        }}
+      >
+        <div>
+          <GroceryForm
+            currentId={currentId}
+            setCurrentId={setCurrentId}
+            editMessage={editMessage}
+            setEditMessage={setEditMessage}
+            todos={todos}
+            setTodos={setTodos}
+            inputText={inputText}
+            setInputText={setInputText}
+            setStatus={setStatus}
+            status={status}
+          />
+        </div>
+
+        <div>
           <GroceryList
             currentId={currentId}
             setCurrentId={setCurrentId}
@@ -85,14 +88,10 @@ const GroceryListApp = () => {
             todos={todos}
             setTodos={setTodos}
             filteredTodos={filteredTodos}
-            />
-          
-          </div>
-            
-        
+          />
+        </div>
       </div>
     </>
-   
   );
 };
 
