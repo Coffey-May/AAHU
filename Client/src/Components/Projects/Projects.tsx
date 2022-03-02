@@ -1,4 +1,5 @@
-import Card from "./CardComponent";
+// import Card from "./CardComponent";
+
 import Memphis from "../../assets/memphis.c443141c.webp";
 import ArtSite from "../../assets/Screen-Shot-2020-12-10-at-4.41.07-PM.webp";
 import WeatherSite from "../../assets/Screen-Shot-2021-02-04-at-1.09.57-PM.webp";
@@ -18,7 +19,8 @@ import cSharpSnip1 from "../../assets/Screen-Shot-2022-01-22-at-7.25.04-PM.webp"
 // Client/src/assets/Screen-Shot-2022-01-04-at-12.29.42-AM.webp
 
 import TravelShare from "../../assets/Screen-Shot-2021-03-11-at-11.53.18-AM.webp";
-
+import loadable from "@loadable/component";
+const Card = loadable(() => import("./CardComponent"));
 let decriptions = {
   TravelShare:
     "This Full stack MERN application leverages backend technologies to offer a unique user experience. State management, handled client side via Redux, communicates with the express server after authentication via Google OAuth or local login/signup is completed. This project performs CRUD opertations on multi depth JSON formatted resources. Users  are allowed affordances common to social media style posts; i,e. likes and edit capabilities, all persisted through a MongoDb database.",
